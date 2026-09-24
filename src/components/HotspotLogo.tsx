@@ -2,10 +2,11 @@ import {interpolate, useCurrentFrame} from 'remotion';
 import {episode} from '../episode';
 
 /** Original code-drawn mark: a point with three expanding news/signal arcs. */
-export const HotspotLogo: React.FC = () => {
-  const frame = useCurrentFrame();
+export const HotspotLogo: React.FC<{inverse?: boolean; frameOverride?: number}> = ({inverse = false, frameOverride}) => {
+  const currentFrame = useCurrentFrame();
+  const frame = frameOverride ?? currentFrame;
   return (
-    <div style={{display: 'flex', alignItems: 'center', gap: 13}}>
+    <div style={{display: 'flex', alignItems: 'center', gap: 13, color: inverse ? '#F7FAF8' : '#1C1D1B'}}>
       <svg width="56" height="56" viewBox="0 0 56 56" aria-label="热点君图标">
         <rect x="0" y="0" width="56" height="56" rx="8" fill="#E34B35" />
         <circle cx="17" cy="39" r="5" fill="#F7F3EB" />

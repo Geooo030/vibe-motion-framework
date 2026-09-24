@@ -1,8 +1,8 @@
 # 热点君 / Remotion 科技解说框架
 
-An original 9:16 code-first framework for concise science and technology commentary. It now uses an editorial paper-and-ink layout, an original animated 热点君 mark, kinetic typography, staggered diagrams, and a progress bar. The included 18-second silent demo asks whether a model's benchmark score predicts real-world usefulness. Its numbers are **illustrative, not a product evaluation**.
+An original 9:16 code-first framework for concise science and technology commentary. It includes two compositions: an 18-second paper-and-ink layout test (`TechExplainerDemo`, with **illustrative** numbers), and a 60-second graphite-and-cyan DeepSeek V4 Flash 0731 explainer (`DeepSeekV4Flash`, with source-checked numbers). Both are silent visual drafts with an original animated 热点君 mark.
 
-The editing approach was informed by a visual study of [this Bilibili video](https://www.bilibili.com/video/BV1abuA6pES2/); see [the analysis](docs/reference-analysis.md). For future motion work, the relevant starred reference is [vibe-motion/remotion-code-motion-explainer](https://github.com/vibe-motion/remotion-code-motion-explainer), not the unrelated `GurYN/vibe-motion` workbench. Its semantic shot planning, persistent-object handoffs, searchable editable shot library, and frame-level QC are useful directions. This demo has a persistent brand shell and four independent central scenes; it does **not** yet implement that reference's continuous spatial storytelling or import its shot library. No footage, logo, narration, music, or script from the Bilibili video is included.
+The editing approach was informed by a visual study of [this Bilibili video](https://www.bilibili.com/video/BV1abuA6pES2/); see [the observed-frame analysis](docs/reference-analysis.md) and the [DeepSeek episode's original script, sources, and design](docs/deepseek-v4-flash-design.md). The relevant starred motion reference is [vibe-motion/remotion-code-motion-explainer](https://github.com/vibe-motion/remotion-code-motion-explainer). We use its principles of semantic shot planning and frame-level QC, but have not copied its shot code. The 60-second example holds a common brand shell and progress/data line across eight shots; full continuous-object choreography remains future work. The Bilibili video's full transcript was unavailable, so this is **not** a line-by-line or frame-by-frame replica. No third-party footage, logo, narration, or music is included.
 
 ## Run
 
@@ -11,11 +11,11 @@ npm install
 npm run dev
 ```
 
-Open the `TechExplainerDemo` composition in Remotion Studio. To check a frame or render the whole silent demo:
+Open `DeepSeekV4Flash` or `TechExplainerDemo` in Remotion Studio. To check a frame or render the newer silent DeepSeek draft:
 
 ```bash
-npx remotion still TechExplainerDemo --frame=80 out/frame.png
-npx remotion render TechExplainerDemo out/tech-explainer-demo.mp4
+npx remotion still DeepSeekV4Flash --frame=520 out/deepseek-frame.png
+npx remotion render DeepSeekV4Flash out/deepseek-v4-flash-original-60s.mp4
 ```
 
 ## Reuse the framework
@@ -26,6 +26,8 @@ npx remotion render TechExplainerDemo out/tech-explainer-demo.mp4
 - `src/components/SceneCaption.tsx` — readable caption strip.
 - `src/scenes/` — four editable beats: question, comparison, mechanism, takeaway. Each can render a code-native motion graphic or scene-wide media; combine footage and graphics by editing the scene composition.
 - `src/Composition.tsx` — scene timing and transitions; `src/Root.tsx` — dimensions and total duration.
+- `src/deepseek/` — the dark tech frame, 8-shot timeline, script/caption data, and deterministic graphics for the DeepSeek example.
+- Codex Storyboard project `project-muf8qszi-14qf3n` — matching shot list in the local video-script workbench (host-specific; not part of Git).
 - `skills/tech-explainer-video/SKILL.md` — instructions for a Codex agent adapting this project to new topics.
 
-For a new episode: verify the claim and sources, write a timed script and shot list, edit `src/episode.ts`, add original or licensed media under `public/`, then adapt each scene's code graphic. The central stage and outer shell are reusable, but a finished video still needs episode-specific motion timing, narration, captions, music rights, and an editorial review. Replace all demonstration facts and labels; supply narration only with a voice you have the right to use. This repository intentionally contains no cloned voice or third-party media. The local font stack prefers Noto Sans SC and falls back to Microsoft YaHei/PingFang SC; bundle a licensed font for reproducible rendering across machines.
+For a new episode: verify the claim and sources, write a timed script and shot list (in Codex Storyboard if available), adapt a frame and the code-native shots to each semantic beat, then align narration and captions. The central stage and outer shell are reusable, but a finished video still needs episode-specific pacing, evidence, motion, audio, and editorial review. Supply narration only with a voice you have the right to use. This repository intentionally contains no cloned voice or third-party media. The font stack prefers locally installed Noto Sans SC and Bahnschrift; bundle licensed fonts for reproducible rendering across machines.
