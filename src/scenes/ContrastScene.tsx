@@ -1,30 +1,31 @@
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
+import {episode} from '../episode';
+import {MediaSlot} from '../components/MediaSlot';
 import {SceneCaption} from '../components/SceneCaption';
-
-const rows = [
-  {label: '基准测试', width: 410, color: '#4be9dd'},
-  {label: '多步任务', width: 295, color: '#a9e968'},
-  {label: '失败恢复', width: 180, color: '#ffad6b'},
-];
 
 export const ContrastScene: React.FC = () => {
   const frame = useCurrentFrame();
   return (
-    <AbsoluteFill style={{padding: '52px 40px 120px'}}>
-      <div style={{fontSize: 25, color: '#6cebe2', letterSpacing: 4, fontWeight: 800}}>02 / CONTRAST</div>
-      <div style={{fontSize: 51, fontWeight: 900, marginTop: 32, lineHeight: 1.25}}>真实任务，比<br />一道考题更复杂</div>
-      <div style={{marginTop: 30, padding: '20px 22px', border: '1px solid rgba(156,227,226,.35)', borderRadius: 22, background: 'rgba(3,16,20,.65)'}}>
-        {rows.map((row, i) => (
-          <div key={row.label} style={{marginBottom: i === 2 ? 0 : 18}}>
-            <div style={{fontSize: 26, marginBottom: 13, fontWeight: 800}}>{row.label}</div>
-            <div style={{height: 26, borderRadius: 18, background: '#1d353b'}}>
-              <div style={{width: interpolate(frame, [6 + i * 14, 35 + i * 14], [0, row.width], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}), height: 26, borderRadius: 18, background: row.color, boxShadow: `0 0 20px ${row.color}77`}} />
-            </div>
+    <AbsoluteFill style={{background: '#F8F6F0', overflow: 'hidden'}}>
+      {episode.assets.contrast ? <MediaSlot asset={episode.assets.contrast} label="对比材料 / 标明日期与来源" /> : (
+        <>
+          <div style={{position: 'absolute', left: 35, top: 30, fontFamily: 'Georgia, Noto Sans SC, serif', fontSize: 21, fontWeight: 900}}>02 / 对照</div>
+          <div style={{position: 'absolute', left: 35, top: 77, fontSize: 46, fontWeight: 900, letterSpacing: -2}}>同一模型，两种视角</div>
+          <div style={{position: 'absolute', left: 35, top: 164, width: 255, height: 298, background: '#1C1D1B', color: '#F8F6F0', padding: '25px 22px', translate: `${interpolate(frame, [0,19], [-280,0], {extrapolateRight: 'clamp'})}px 0`}}>
+            <div style={{fontSize: 23, fontWeight: 800}}>基准测试</div>
+            <div style={{fontFamily: 'Georgia, serif', fontSize: 104, lineHeight: 1.55, fontWeight: 900}}>96<span style={{fontSize: 42, color: '#F46D4E'}}>.4</span></div>
+            <div style={{position: 'absolute', bottom: 27, left: 22, fontSize: 19, opacity: .8}}>单项示意分数</div>
           </div>
-        ))}
-      </div>
-      <div style={{marginTop: 15, fontSize: 19, color: '#a4bdc1'}}>概念示意，不代表任何产品测评结果</div>
-      <SceneCaption>跑分是线索，任务完成率才是答案。</SceneCaption>
+          <div style={{position: 'absolute', left: 324, top: 164, width: 255, height: 298, border: '2px solid #1C1D1B', padding: '25px 22px', translate: `${interpolate(frame, [7,27], [280,0], {extrapolateRight: 'clamp'})}px 0`}}>
+            <div style={{fontSize: 23, fontWeight: 800}}>真实任务</div>
+            <div style={{fontFamily: 'Georgia, serif', fontSize: 150, lineHeight: 1.05, fontWeight: 900, color: '#E34B35', textAlign: 'center', scale: interpolate(frame, [20,35], [.6,1], {extrapolateRight: 'clamp'})}}>?</div>
+            <div style={{position: 'absolute', bottom: 27, left: 22, fontSize: 19}}>稳定 · 速度 · 成本</div>
+          </div>
+          <div style={{position: 'absolute', left: 37, top: 489, fontSize: 19, color: '#5D5E59'}}>示意图，不代表任何产品的真实测评结果</div>
+          <div style={{position: 'absolute', left: 37, top: 530, width: interpolate(frame, [35,70], [0,530], {extrapolateRight: 'clamp'}), height: 3, background: '#E34B35'}} />
+        </>
+      )}
+      <SceneCaption number="02">{episode.captions.contrast}</SceneCaption>
     </AbsoluteFill>
   );
 };

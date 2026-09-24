@@ -1,41 +1,36 @@
 import type {ReactNode} from 'react';
-import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
+import {AbsoluteFill, interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
+import {episode} from '../episode';
+import {HotspotLogo} from './HotspotLogo';
 
-const manuscript = [
-  'A benchmark is a measurement, not a complete user experience.',
-  'Real work includes tools, retries, verification and the cost of errors.',
-  'A useful model should be judged within a complete workflow.',
-  'Latency, stability and reasoning matter after the leaderboard.',
-];
-
+/** Editorial shell. The middle story stage is the replaceable part of an episode. */
 export const VideoFrame: React.FC<{children: ReactNode}> = ({children}) => {
   const frame = useCurrentFrame();
+  const {durationInFrames} = useVideoConfig();
   return (
-    <AbsoluteFill style={{background: '#05090d', color: '#f4f8f8', overflow: 'hidden'}}>
-      <AbsoluteFill style={{background: 'radial-gradient(circle at 48% 36%, rgba(0,214,215,.14), transparent 38%), linear-gradient(145deg, #08131b, #04070b 64%)'}} />
-      <div style={{position: 'absolute', left: -90, top: -40, width: 930, height: 1340, opacity: .2, color: '#86a8ae', fontFamily: 'Georgia, serif', fontSize: 22, lineHeight: 2.2, transform: `perspective(900px) rotateY(-15deg) rotateZ(-7deg) translateY(${interpolate(frame, [0,540], [0,-90])}px)`, filter: 'blur(1.5px)'}}>
-        {Array.from({length: 13}, (_, i) => <div key={i}>{manuscript[i % manuscript.length]}</div>)}
+    <AbsoluteFill style={{background: '#ECEAE3', color: '#1C1D1B', overflow: 'hidden', fontFamily: 'Noto Sans SC, Microsoft YaHei, sans-serif'}}>
+      <div style={{position: 'absolute', inset: 0, opacity: .22, backgroundImage: 'repeating-linear-gradient(90deg, transparent 0, transparent 63px, #A9AAA4 64px)', backgroundSize: '64px 100%'}} />
+      <div style={{position: 'absolute', top: -170, right: -150, width: 580, height: 580, border: '1px solid rgba(28,29,27,.13)', borderRadius: '50%', scale: interpolate(frame, [0,durationInFrames], [1,1.27])}} />
+      <div style={{position: 'absolute', top: 47, left: 48}}><HotspotLogo /></div>
+      <div style={{position: 'absolute', top: 55, right: 48, textAlign: 'right'}}>
+        <div style={{fontSize: 19, fontWeight: 900, letterSpacing: 2}}>{episode.category}</div>
+        <div style={{fontSize: 14, marginTop: 4, letterSpacing: 2}}>第 {episode.number} 期</div>
       </div>
-      <div style={{position: 'absolute', left: -180, top: 210 + interpolate(frame, [0,540], [0,100]), width: 490, height: 490, borderRadius: '50%', background: 'rgba(0,221,222,.13)', filter: 'blur(100px)'}} />
-      <div style={{position: 'absolute', left: 34, top: 76, width: 652, height: 1108, borderRadius: 32, border: '2px solid rgba(220,249,249,.55)', background: 'linear-gradient(145deg, rgba(22,37,44,.94), rgba(9,17,23,.98))', boxShadow: '0 0 26px rgba(151,240,239,.33), inset 0 0 20px rgba(205,245,248,.12)', overflow: 'hidden'}}>
-        <div style={{height: 92, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 34px', borderBottom: '1px solid rgba(168,225,227,.22)', background: 'rgba(255,255,255,.055)'}}>
-          <div style={{display: 'flex', gap: 10, alignItems: 'center'}}>
-            <div style={{width: 12, height: 12, background: '#36e3dd', transform: 'rotate(45deg)'}} />
-            <span style={{fontSize: 30, fontWeight: 900, letterSpacing: 2}}>TECH / BRIEF</span>
-          </div>
-          <span style={{fontSize: 18, color: '#a8c5c8', fontWeight: 700}}>NO. 001</span>
-        </div>
-        <div style={{position: 'absolute', top: 92, bottom: 275, left: 0, right: 0, overflow: 'hidden', background: 'radial-gradient(circle at 70% 35%, #15444c, #071116 67%)'}}>{children}</div>
-        <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 275, padding: '32px 34px', borderTop: '1px solid rgba(255,255,255,.15)', background: 'linear-gradient(180deg, rgba(30,44,50,.98), rgba(16,24,30,.98))'}}>
-          <div style={{fontSize: 20, letterSpacing: 4, color: '#63e2db', fontWeight: 800}}>热点科技 · 原创演示</div>
-          <div style={{fontSize: 56, fontWeight: 900, lineHeight: 1.25, marginTop: 12}}>跑分赢了，<br />体验就赢了吗？</div>
-          <div style={{display: 'flex', gap: 8, marginTop: 17}}>
-            <div style={{width: 205, height: 6, background: '#23d6d1', transform: 'skewX(-18deg)'}} />
-            <div style={{width: 118, height: 6, background: '#9fea54', transform: 'skewX(-18deg)'}} />
-          </div>
-        </div>
+      <div style={{position: 'absolute', top: 145, left: 48, width: 624, height: 3, background: '#1C1D1B'}} />
+      <div style={{position: 'absolute', top: 179, left: 48, right: 48, fontSize: 55, fontWeight: 900, lineHeight: 1.12, letterSpacing: -3}}>
+        {episode.title[0]}<br /><span style={{color: '#E34B35'}}>{episode.title[1]}</span>
       </div>
-      <div style={{position: 'absolute', left: 51, bottom: 40, fontSize: 18, letterSpacing: 3, color: '#6d8a92'}}>TECH EXPLAINER / ORIGINAL DEMO</div>
+      <div style={{position: 'absolute', top: 350, left: 48, width: 624, height: 690, background: '#F8F6F0', border: '2px solid #1C1D1B', boxShadow: '8px 8px 0 rgba(28,29,27,.16)', overflow: 'hidden'}}>
+        {children}
+      </div>
+      <div style={{position: 'absolute', top: 1095, left: 48, right: 48, display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: 17, fontWeight: 800, letterSpacing: 2}}>
+        <span>{episode.footer}</span><span>资料核实 · 原创图解</span>
+      </div>
+      <div style={{position: 'absolute', top: 1150, left: 48, width: 624, height: 6, background: 'rgba(28,29,27,.2)'}}>
+        <div style={{height: '100%', width: `${Math.min(100, 100 * frame / (durationInFrames - 1))}%`, background: '#E34B35'}} />
+      </div>
+      <div style={{position: 'absolute', top: 1187, left: 48, fontSize: 15, fontWeight: 800, letterSpacing: 2}}>热点君  /  把热点说清楚</div>
+      <div style={{position: 'absolute', top: 1187, right: 48, fontSize: 15, fontWeight: 800}}>NO. {episode.number}</div>
     </AbsoluteFill>
   );
 };
