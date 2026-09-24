@@ -1,54 +1,29 @@
-# Remotion video
+# Tech Explainer Remotion Framework
 
-<p align="center">
-  <a href="https://github.com/remotion-dev/logo">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-dark.apng">
-      <img alt="Animated Remotion Logo" src="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-light.gif">
-    </picture>
-  </a>
-</p>
+An original 9:16 code-first framework for concise science and technology commentary. The included 18-second silent demo asks whether a model's benchmark score predicts real-world usefulness. Its numbers and bars are **illustrative, not a product evaluation**.
 
-Welcome to your Remotion project!
+The frame and editing approach were informed by a visual study of [this Bilibili video](https://www.bilibili.com/video/BV1abuA6pES2/); see [the analysis](docs/reference-analysis.md). No footage, logo, narration, music, or script from that video is included.
 
-## Commands
+## Run
 
-**Install Dependencies**
-
-```console
-npm i
-```
-
-**Start Preview**
-
-```console
+```bash
+npm install
 npm run dev
 ```
 
-**Render video**
+Open the `TechExplainerDemo` composition in Remotion Studio. To check a frame or render the whole silent demo:
 
-```console
-npx remotion render
+```bash
+npx remotion still TechExplainerDemo --frame=80 out/frame.png
+npx remotion render TechExplainerDemo out/tech-explainer-demo.mp4
 ```
 
-**Upgrade Remotion**
+## Reuse the framework
 
-```console
-npx remotion upgrade
-```
+- `src/components/VideoFrame.tsx` — background, brand-independent frame, fixed topic panel.
+- `src/components/SceneCaption.tsx` — dedicated readable caption strip.
+- `src/scenes/` — four editable storytelling beats: hook, contrast, mechanism, takeaway.
+- `src/Composition.tsx` — scene timing and crossfades; `src/Root.tsx` — dimensions and total duration.
+- `skills/tech-explainer-video/SKILL.md` — instructions for a Codex agent adapting this project to new topics.
 
-## Docs
-
-Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).
-
-## Help
-
-We provide help on our [Discord server](https://discord.gg/6VzzNDwUwV).
-
-## Issues
-
-Found an issue with Remotion? [File an issue here](https://github.com/remotion-dev/remotion/issues/new).
-
-## License
-
-Note that for some entities a company license is needed. [Read the terms here](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md).
+For an actual news episode, replace all demonstration facts and labels, attach primary sources, use original or licensed images, and supply narration only with a voice you have the right to use. Keep captions aligned with the final audio. This repository intentionally contains no cloned voice or third-party media.

@@ -1,10 +1,16 @@
-import "./index.css";
-import { MyComposition } from "./Composition";
+import {Composition} from 'remotion';
+import {TechExplainer} from './Composition';
+import './index.css';
 
 export const RemotionRoot: React.FC = () => {
   return (
-    <>
-      <MyComposition />
-    </>
+    <Composition
+      id="TechExplainerDemo"
+      component={TechExplainer}
+      durationInFrames={540}
+      fps={30}
+      width={720}
+      height={1280}
+    />
   );
 };
