@@ -2,7 +2,7 @@
 
 An original 9:16 code-first framework for concise science and technology commentary. It now uses an editorial paper-and-ink layout, an original animated 热点君 mark, kinetic typography, staggered diagrams, and a progress bar. The included 18-second silent demo asks whether a model's benchmark score predicts real-world usefulness. Its numbers are **illustrative, not a product evaluation**.
 
-The editing approach was informed by a visual study of [this Bilibili video](https://www.bilibili.com/video/BV1abuA6pES2/); see [the analysis](docs/reference-analysis.md). The modular workflow was also informed by [GurYN/vibe-motion](https://github.com/GurYN/vibe-motion): separate assets, editable Remotion code, Studio preview, and export. That repository is a workbench, not a source of ready-made visual effects; this project's motion components are original. No footage, logo, narration, music, or script from the Bilibili video is included.
+The editing approach was informed by a visual study of [this Bilibili video](https://www.bilibili.com/video/BV1abuA6pES2/); see [the analysis](docs/reference-analysis.md). For future motion work, the relevant starred reference is [vibe-motion/remotion-code-motion-explainer](https://github.com/vibe-motion/remotion-code-motion-explainer), not the unrelated `GurYN/vibe-motion` workbench. Its semantic shot planning, persistent-object handoffs, searchable editable shot library, and frame-level QC are useful directions. This demo has a persistent brand shell and four independent central scenes; it does **not** yet implement that reference's continuous spatial storytelling or import its shot library. No footage, logo, narration, music, or script from the Bilibili video is included.
 
 ## Run
 
