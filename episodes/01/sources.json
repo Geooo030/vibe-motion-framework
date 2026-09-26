@@ -1,0 +1,6 @@
+[
+  {"id":"c2pa-spec","title":"C2PA Technical Specification","url":"https://spec.c2pa.org/specifications/specifications/2.2/specs/C2PA_Specification.html","publisher":"C2PA","type":"primary","claim":"Content Credentials use signed manifests and assertions to record provenance; validation does not assert the truth of depicted events."},
+  {"id":"content-credentials","title":"How Content Credentials work","url":"https://contentcredentials.org/how-it-works","publisher":"Content Authenticity Initiative","type":"primary","claim":"Credentials can expose origin and edit history and can be inspected by viewers."},
+  {"id":"synthid","title":"SynthID","url":"https://deepmind.google/models/synthid/","publisher":"Google DeepMind","type":"vendor-primary","claim":"SynthID embeds imperceptible watermarks and provides detection methods; robustness depends on medium and transformation."}
+]
+

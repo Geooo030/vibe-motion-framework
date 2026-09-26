@@ -1,0 +1,10 @@
+{"fps":30,"endExclusive":true,"shots":[
+ {"id":"s010","from":0,"to":257,"scene":"hook","assetIds":[]},
+ {"id":"s020","from":257,"to":489,"scene":"split","assetIds":[]},
+ {"id":"s030","from":489,"to":728,"scene":"chain","assetIds":[]},
+ {"id":"s040","from":728,"to":885,"scene":"truth","assetIds":[]},
+ {"id":"s050","from":885,"to":1027,"scene":"break","assetIds":[]},
+ {"id":"s060","from":1027,"to":1230,"scene":"checklist","assetIds":[]},
+ {"id":"s070","from":1230,"to":1470,"scene":"end","assetIds":[]}
+]}
+

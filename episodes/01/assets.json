@@ -1,0 +1,6 @@
+[
+  {"id":"visuals","kind":"code-native","source":"Original Remotion vector graphics","license":"Repository-owned original","attribution":"None","sha256":"computed during QC"},
+  {"id":"voice","kind":"tts","source":"Microsoft Edge standard voice zh-CN-YunxiNeural via edge-tts 7.2.8","license":"Microsoft service terms apply; not a cloned voice","attribution":"Recorded in production notes"},
+  {"id":"bgm","kind":"audio","source":"Original deterministic FFmpeg sine synthesis","license":"Repository-owned original recipe","attribution":"None"}
+]
+
