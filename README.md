@@ -6,6 +6,8 @@ The editing approach was informed by a visual study of [this Bilibili video](htt
 
 ## Run
 
+The latest visual prototype is `BlenderBenchmarkDemo`: a seven-second Blender + Remotion graphite-frame study. See [build instructions](docs/blender-motion-study.md). It includes quiet original effects, but **narration is not yet mixed into the video**. Two stock Chinese TTS auditions and their generated subtitles are in `public/blender/narration/`; these are not creator voice clones. See [episode production workflow](docs/episode-production.md) for the three-episode production handoff and Git conventions.
+
 ```bash
 npm install
 npm run dev
