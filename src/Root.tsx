@@ -4,9 +4,13 @@ import {DeepSeekEpisode} from './deepseek/DeepSeekEpisode';
 import {DEEPSEEK_DURATION} from './deepseek/data';
 import {BlenderBenchmarkDemo} from './blender/BlenderBenchmarkDemo';
 import './index.css';
+import {EpisodeCover, HotspotEpisode} from './hotspot/HotspotEpisode';
+import {EPISODE_DURATION} from './hotspot/episodeData';
 
 export const RemotionRoot: React.FC = () => {
   return <>
+    <Composition id="HotspotEpisode" component={HotspotEpisode} durationInFrames={EPISODE_DURATION} fps={30} width={720} height={1280}/>
+    <Composition id="HotspotCover" component={EpisodeCover} durationInFrames={1} fps={30} width={720} height={1280}/>
     <Composition
       id="BlenderBenchmarkDemo"
       component={BlenderBenchmarkDemo}
