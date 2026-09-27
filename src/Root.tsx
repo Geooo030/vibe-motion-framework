@@ -4,9 +4,12 @@ import {DeepSeekEpisode} from './deepseek/DeepSeekEpisode';
 import {DEEPSEEK_DURATION} from './deepseek/data';
 import {BlenderBenchmarkDemo} from './blender/BlenderBenchmarkDemo';
 import './index.css';
+import {TomcatFusion, TomcatFusionCover, TOMCAT_FUSION_DURATION} from './tomcat/TomcatFusion';
 
 export const RemotionRoot: React.FC = () => {
   return <>
+    <Composition id="TomcatFusion" component={TomcatFusion} durationInFrames={TOMCAT_FUSION_DURATION} fps={30} width={720} height={1280}/>
+    <Composition id="TomcatFusionCover" component={TomcatFusionCover} durationInFrames={1} fps={30} width={720} height={1280}/>
     <Composition
       id="BlenderBenchmarkDemo"
       component={BlenderBenchmarkDemo}
