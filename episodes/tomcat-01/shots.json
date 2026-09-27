@@ -1,16 +1,15 @@
 {
   "fps": 30,
   "endExclusive": true,
-  "targetDurationFrames": 1980,
+  "targetDurationFrames": 2160,
   "shots": [
     {"id":"s010","from":0,"to":90,"durationSec":3,"medium":"Blender","narration":"一亿度，为什么没把这台机器烧穿？","visual":"近距离穿过发光等离子体环，快速拉出到原创托卡马克剖切腔体与线圈；角标：科学示意","handoff":"镜头停在同一剖面角度，交给 Remotion 连续图解"},
-    {"id":"s020","from":90,"to":330,"durationSec":8,"medium":"Remotion + licensed still","narration":"2025 年 1 月 20 日……不是已经商业发电。","visual":"同一剖面缩小到右侧；左侧数字 1066 s 与日期，底部明确历史纪录/研究装置","handoff":"1066 数字压缩成时间轴刻度"},
-    {"id":"s030","from":330,"to":630,"durationSec":10,"medium":"Remotion","narration":"第一个关键……总热量没有数字听起来那么夸张。","visual":"核心保持；用相同体积对比稀薄等离子体少量发光粒子与高密度固体点阵；只比较粒子数密度概念，不给无来源比例","handoff":"稀薄粒子沿环形磁力线开始运动"},
-    {"id":"s040","from":630,"to":960,"durationSec":11,"medium":"Remotion","narration":"第二个关键……让核心尽量不直接碰壁。","visual":"剖面放大，磁力线绕成环面，带电粒子螺旋运动；壁面与核心保持明显间距","handoff":"少量粒子和辐射越过理想化边界"},
-    {"id":"s050","from":960,"to":1200,"durationSec":8,"medium":"Remotion","narration":"但磁场不是绝热罩……仍会把能量送到材料上。","visual":"磁场护栏出现缺口式解释：光子直线、逃逸粒子、DT 中子三条能量路径；字幕强调‘不是绝热罩’","handoff":"三条路径汇聚到底部偏滤器"},
-    {"id":"s060","from":1200,"to":1530,"durationSec":11,"medium":"Remotion","narration":"所以第三层……每平方米十兆瓦。","visual":"偏滤器区域高亮，热流导向钨靶；水冷管道由红转蓝；10 MW/m² 大数字标注 ITER 设计值","handoff":"热流表稳定在安全控制区而非归零"},
-    {"id":"s070","from":1530,"to":1800,"durationSec":9,"medium":"Remotion","narration":"答案不是机器不怕热……一起争取时间。","visual":"三层答案依次套在同一托卡马克：稀薄、磁约束、主动排热；连续画面不重置","handoff":"三层合并成一条稳定运行时间轴"},
-    {"id":"s080","from":1800,"to":1980,"durationSec":6,"medium":"Remotion","narration":"能维持多久……必须跨过的门槛。","visual":"时间轴由 1066 s 延伸向未来电站问号；落版大厂汤姆猫与资料来源提示","handoff":"片尾保持 1 秒"}
+    {"id":"s020","from":90,"to":316,"durationSec":7.533,"medium":"Remotion","narration":"关键不是哪块金属……核心温度不等于壁面温度。","visual":"延续同一剖面，从发光核心拉到冷色壁面；中心与壁面分别标注，不给未经来源的壁温数值","handoff":"核心发光粒子疏散成稀薄分布"},
+    {"id":"s030","from":316,"to":559,"durationSec":8.1,"medium":"Remotion","narration":"温度反映粒子运动……热负荷仍然巨大。","visual":"只解释粒子运动剧烈与等离子体稀薄；不与铁水做无定量总能量比较；红色热流警示始终保留","handoff":"带电粒子开始沿磁力线螺旋"},
+    {"id":"s040","from":559,"to":895,"durationSec":11.2,"medium":"Remotion","narration":"真正的第一道防线……核心尽量不直接碰壁。","visual":"剖面放大，磁力线绕成环面，带电粒子螺旋运动；壁面与核心保持明显间距","handoff":"视图切为能量路径分层"},
+    {"id":"s050","from":895,"to":1247,"durationSec":11.733,"medium":"Remotion","narration":"但磁场不是绝热罩……主要由包层吸收并转成热。","visual":"三条路径明确分开：边缘带电粒子沿磁力线去偏滤器；辐射散向广泛壁面；未来 DT 中子穿越磁场进入包层。屏幕注明‘未来氘氚工况’，不贴在 EAST 纪录画面上","handoff":"路径保持分离进入各自部件"},
+    {"id":"s060","from":1247,"to":1675,"durationSec":14.267,"medium":"Remotion + WEST labelled photo","narration":"工程硬仗……每平方米十兆瓦。","visual":"偏滤器钨靶与主动水冷只对应集中边缘热流；包层/真空室单独处理辐射和中子。WEST照片标为资料照片；10 MW/m² 明确标注 ITER 偏滤器设计值","handoff":"两套热管理路径汇总为‘稳定运行’仪表"},
+    {"id":"s070","from":1675,"to":1953,"durationSec":9.267,"medium":"Remotion + EAST labelled inset","narration":"这也解释了纪录真正难在哪……不是已经商业发电。","visual":"日期 2025-01-20 放屏幕，1066 s 大数字；EAST 示意图只做带来源的小插图，标‘历史研究纪录’","handoff":"1066 秒成为持续时间轴起点"},
+    {"id":"s080","from":1953,"to":2160,"durationSec":6.9,"medium":"Remotion","narration":"答案不是机器不怕热……稳定运行的时间。","visual":"磁约束、偏滤器排热、包层吸热三层合成；落版大厂汤姆猫文字标与来源提示","handoff":"片尾保持约 1.4 秒"}
   ]
 }
-
