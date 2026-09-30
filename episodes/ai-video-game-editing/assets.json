@@ -1,0 +1,17 @@
+[
+  {
+    "id": "cover-pixel-v1",
+    "path": "episodes/ai-video-game-editing/assets/covers/cover-pixel-v1.png",
+    "kind": "ai-generated-cover",
+    "width": 1672,
+    "height": 941,
+    "bytes": 1793526,
+    "sha256": "AA186915E827FB95B499A011FA0C2BCF1D1E4950E50B22019C63D13ABF95CFD2",
+    "generator": "built-in image_gen",
+    "prompt": "cover-prompt.md",
+    "status": "draft-for-user-review",
+    "referenceImages": [],
+    "rightsNote": "Generated without third-party reference assets; usage subject to generation service terms.",
+    "description": "Original pixel cat and editing-timeline platform game; not a recreation of the owner's existing avatar."
+  }
+]
