@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "ai-video-game-editing",
-  "title": "像打游戏一样用AI剪视频",
+  "title": "当AI半夜起来帮我剪视频",
   "brand": "大厂汤姆猫",
   "branch": "episode/04-ai-video-game-editing",
   "stage": "cover-only",
@@ -9,6 +9,6 @@
   "composition": null,
   "videoDurationFrames": null,
   "storyboard": null,
-  "cover": "assets/covers/cover-pixel-v1.png",
+  "cover": "assets/covers/cover-pixel-v2-midnight.png",
   "note": "Only cover requested for this stage; screenplay, timing, voice and animation not authored."
 }

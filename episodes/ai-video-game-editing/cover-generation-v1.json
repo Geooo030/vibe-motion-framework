@@ -1,0 +1,20 @@
+{
+  "title": "像打游戏一样用AI剪视频",
+  "createdOn": "2026-09-30",
+  "mode": "built-in image_gen",
+  "promptFile": "cover-prompt.md",
+  "output": "assets/covers/cover-pixel-v1.png",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "sha256": "AA186915E827FB95B499A011FA0C2BCF1D1E4950E50B22019C63D13ABF95CFD2",
+  "visualCheck": {
+    "headline": "像打游戏一样 / 用AI剪视频",
+    "signature": "大厂汤姆猫",
+    "pixelArt": true,
+    "illustratedEditingTimeline": true,
+    "character": "Original pixel cat; not verified account avatar"
+  },
+  "reviewStatus": "superseded-by-v2"
+}

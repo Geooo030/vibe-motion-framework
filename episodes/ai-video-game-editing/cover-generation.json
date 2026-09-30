@@ -1,20 +1,26 @@
 {
-  "title": "像打游戏一样用AI剪视频",
+  "title": "当AI半夜起来帮我剪视频",
   "createdOn": "2026-09-30",
   "mode": "built-in image_gen",
-  "promptFile": "cover-prompt.md",
-  "output": "assets/covers/cover-pixel-v1.png",
+  "promptFile": "cover-prompt-v2-midnight.md",
+  "output": "assets/covers/cover-pixel-v2-midnight.png",
   "dimensions": [
     1672,
     941
   ],
-  "sha256": "AA186915E827FB95B499A011FA0C2BCF1D1E4950E50B22019C63D13ABF95CFD2",
+  "sha256": "4F741A05D939B0B5B638998F73650994B143234E469ED9E448B0DF0A9560DEE0",
+  "referenceImages": [
+    "assets/covers/cover-pixel-v1.png",
+    "../../public/brand/tomcat/tomcat-pixel-master-v1.png"
+  ],
+  "previousGeneration": "cover-generation-v1.json",
   "visualCheck": {
-    "headline": "像打游戏一样 / 用AI剪视频",
+    "headline": "当AI半夜起来 / 帮我剪视频",
     "signature": "大厂汤姆猫",
     "pixelArt": true,
     "illustratedEditingTimeline": true,
-    "character": "Original pixel cat; not verified account avatar"
+    "character": "Shared canonical pixel cat, sleeping pose",
+    "clock": "02:37"
   },
   "reviewStatus": "awaiting-user-review"
 }
