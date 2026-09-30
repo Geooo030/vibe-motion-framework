@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "tomcat-01",
+  "title": "大厂汤姆猫｜一亿度，为什么没把机器烧穿？",
+  "composition": "TomcatFusion",
+  "fps": 30,
+  "width": 720,
+  "height": 1280,
+  "storyboard": {
+    "projectId": "project-munjw177-z6viav",
+    "url": "http://127.0.0.1:43218/project/project-munjw177-z6viav",
+    "snapshot": "storyboard/project.json",
+    "syncMode": "explicit-mcp-snapshot-not-live"
+  },
+  "sharedAssets": [
+    "narration",
+    "bgm",
+    "captions"
+  ],
+  "sharedCode": [
+    "src/tomcat/TomcatFusion.tsx",
+    "src/Root.tsx",
+    "src/index.css",
+    "remotion.config.ts",
+    "package.json",
+    "package-lock.json"
+  ],
+  "reviewFiles": [
+    "brief.md",
+    "sources.json",
+    "credits.md",
+    "visual-direction.md",
+    "reference-research.md"
+  ],
+  "audio": {
+    "narration": "narration",
+    "captions": "captions"
+  },
+  "renderStatus": "existing-video-imported-not-rerendered",
+  "note": "分镜是创作意图，不代表现有成片完全实现。onetake v2 尚未选定，也未渲染。"
+}

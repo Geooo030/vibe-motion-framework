@@ -1,4 +1,15 @@
-# 热点君 / Remotion 科技解说框架
+# 大厂汤姆猫 / 科普视频制作框架
+
+## 当前制作资料入口（2026-09-30）
+
+- [一亿度：本期脚本、素材与操作说明](episodes/tomcat-01/README.md)：8 个稳定镜头 ID；完整工作台快照；脚本/素材变更定位；渲染前配音一致性检查；镜头级渲染回执。
+- [DeepSeek 工作台归档](episodes/deepseek-v4-flash/storyboard/project.json)：旧项目的 8 镜头原始记录。没有工作台成片素材或音轨，不将归档误报为已完成的新管线。
+- 正式资料统一放 `episodes/<id>/`。先执行 `npm run episode:check -- tomcat-01`；需要渲染时使用 `npm run episode:render -- tomcat-01`。
+- 工作台采用 MCP 显式同步，并非实时双向监听。修改镜头文字会定位需要改的代码和音频，不会自动生成新的动画。
+
+以下保留早期“热点君”视觉原型记录；其中时长、静音说明及素材状态仅指各自旧原型，不代表当前大厂汤姆猫 72 秒成片。
+
+## 早期框架原型
 
 An original 9:16 code-first framework for concise science and technology commentary. It includes two compositions: an 18-second paper-and-ink layout test (`TechExplainerDemo`, with **illustrative** numbers), and a 60-second graphite-and-cyan DeepSeek V4 Flash 0731 explainer (`DeepSeekV4Flash`, with source-checked numbers). Both are silent visual drafts with an original animated 热点君 mark.
 

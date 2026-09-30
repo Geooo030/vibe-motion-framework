@@ -1,0 +1,12 @@
+{
+  "projectId": "project-muf8qszi-14qf3n",
+  "snapshotUpdatedAt": "2026-09-24T07:59:20.390Z",
+  "status": "archive-only",
+  "renderAdapter": "existing src/deepseek, not migrated in this change",
+  "missing": [
+    "design body not returned by MCP",
+    "generated media absent",
+    "audio takes absent"
+  ],
+  "importedAt": "2026-09-30"
+}

@@ -1,0 +1,20 @@
+{
+  "reviewedAt": "2026-09-30T03:40:46.572Z",
+  "note": "目录迁移：继承 qc.md 的既有 70.632 秒音轨；未修改声音。机械核对全部 15 条 SRT 与全文及单调时间戳，已记录跨视觉镜头边界；本次未重新听审。",
+  "subtitleCheck": {
+    "cueCount": 15,
+    "crossingShots": [
+      "s020",
+      "s030",
+      "s050",
+      "s070"
+    ],
+    "note": "Cross-boundary speech preserved; not claimed frame-perfect"
+  },
+  "inputs": {
+    "scriptHash": "37634d7fe5913bf4dffdeace6eb6476bada4c6fde5a5ecfb1f86397867949937",
+    "timingHash": "b705a06f1b4bbe0d0caeeea954f77c23e91d0091eaf70fd7a26bd068d8a4922f",
+    "narrationHash": "71dee5c70b544c41780b14b08ac161c5ff810443ec064382a0293edc6206a3c3",
+    "captionsHash": "7125d386fd6fd51b4674453fe44835d42a9d4774f018d9b3e30ff68d9069460e"
+  }
+}

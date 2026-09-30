@@ -11,3 +11,6 @@ __pycache__/
 
 # Ignore the output video from Git but not videos you import into src/.
 out
+
+# Generated staging copy; canonical sources live beside the episode script.
+public/tomcat-01/

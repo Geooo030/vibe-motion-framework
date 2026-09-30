@@ -27,7 +27,17 @@
     "dev": "remotion studio",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc"
+    "lint": "eslint src && tsc",
+    "episode:check": "node scripts/episode.mjs check",
+    "episode:watch": "node scripts/episode.mjs watch",
+    "episode:prepare": "node scripts/episode.mjs prepare",
+    "episode:render": "node scripts/episode.mjs render",
+    "episode:board-export": "node scripts/episode.mjs board-export",
+    "episode:board-import": "node scripts/episode.mjs board-import",
+    "episode:accept-audio": "node scripts/episode.mjs accept-audio",
+    "test:episodes": "node --test scripts/episode.test.mjs",
+    "predev": "node scripts/episode.mjs prepare tomcat-01",
+    "prebuild": "node scripts/episode.mjs prepare tomcat-01"
   },
   "sideEffects": [
     "*.css"

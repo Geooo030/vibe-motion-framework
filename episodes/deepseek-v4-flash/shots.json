@@ -1,0 +1,95 @@
+{
+  "fps": 30,
+  "endExclusive": true,
+  "targetDurationFrames": 1800,
+  "shots": [
+    {
+      "id": "s010",
+      "storyboardShotId": "shot-muf8qszi-fse5e9",
+      "from": 0,
+      "to": 180,
+      "visual": "9:16 深石墨技术底，热点君原创 Logo 固定。中央证据窗里 V4 字母压入、FLASH 青色光条扫出，问号转为一条可延续的数据线。",
+      "notes": "原创图形；参考本地 HookScene 运动骨架，改为深色证据窗。官方模型卡核实版本。",
+      "generator": "remotion",
+      "mediaUrl": "",
+      "generationStatus": "idle"
+    },
+    {
+      "id": "s020",
+      "storyboardShotId": "shot-muf8qszi-gou1gv",
+      "from": 180,
+      "to": 390,
+      "visual": "中央窗内 Preview 卡片沿上一镜的青色线滑行，抵达 0731 卡片；强调版本变化而非臆造产品画面。",
+      "notes": "复用本地卡片转场；可参考 vibe-motion 镜头库的 story-timeline，需独立适配文案/配色。",
+      "generator": "remotion",
+      "mediaUrl": "",
+      "generationStatus": "idle"
+    },
+    {
+      "id": "s030",
+      "storyboardShotId": "shot-muf8qszi-y9so2e",
+      "from": 390,
+      "to": 660,
+      "visual": "官方公布数据：同零点两根对比条，61.8 与 82.7 逐帧增长；聚焦框推近 82.7，保留页脚来源标签。",
+      "notes": "复用本地 ContrastScene 数据卡骨架；可参考 vibe-motion 的 data-counter。不要宣称独立实测。",
+      "generator": "remotion",
+      "mediaUrl": "",
+      "generationStatus": "idle"
+    },
+    {
+      "id": "s040",
+      "storyboardShotId": "shot-muf8qszi-kfdrqu",
+      "from": 660,
+      "to": 900,
+      "visual": "上一镜青色刻度线连续变形成 DeepSWE 坐标轴；7.3 灰色、54.4 青色，在同一尺度上伸长。",
+      "notes": "延续数据条对象，不整屏重置；数据来自官方模型卡。",
+      "generator": "remotion",
+      "mediaUrl": "",
+      "generationStatus": "idle"
+    },
+    {
+      "id": "s050",
+      "storyboardShotId": "shot-muf8qszi-lm3ika",
+      "from": 900,
+      "to": 1200,
+      "visual": "82.7 分数牌拆成 MODEL、HARNESS、EFFORT 三层卡，青色连线贯穿；最后放大 minimal Harness 与 max effort 两项。",
+      "notes": "语义拆解/持续对象；模型卡注释同时披露 temperature 1.0、top_p 0.95。",
+      "generator": "remotion",
+      "mediaUrl": "",
+      "generationStatus": "idle"
+    },
+    {
+      "id": "s060",
+      "storyboardShotId": "shot-muf8qszi-zy8a7f",
+      "from": 1200,
+      "to": 1440,
+      "visual": "一张输入卡依次经过理解、工具、核验三节点，因果线驱动每一节点亮起，输出绿色核查标记；明显标注流程示意。",
+      "notes": "改造本地 WorkflowScene 三节点，不暗示是 DeepSeek 专有架构。",
+      "generator": "remotion",
+      "mediaUrl": "",
+      "generationStatus": "idle"
+    },
+    {
+      "id": "s070",
+      "storyboardShotId": "shot-muf8qszi-8oncog",
+      "from": 1440,
+      "to": 1650,
+      "visual": "青色线收束成检查框，任务/工具/预算三条清单逐项打勾，底部字幕同步出现。",
+      "notes": "编辑建议，非官方结论；复用本地清单式图解。",
+      "generator": "remotion",
+      "mediaUrl": "",
+      "generationStatus": "idle"
+    },
+    {
+      "id": "s080",
+      "storyboardShotId": "shot-muf8qszi-fxujjt",
+      "from": 1650,
+      "to": 1800,
+      "visual": "数据线收束成热点君原创红色信号 Logo，主标题白字与青柠下划线定格，最后一秒保持完整画面。",
+      "notes": "品牌落版；保留终帧；不复制原片 Logo 或音频。",
+      "generator": "remotion",
+      "mediaUrl": "",
+      "generationStatus": "idle"
+    }
+  ]
+}

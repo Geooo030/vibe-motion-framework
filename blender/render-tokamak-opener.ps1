@@ -8,6 +8,6 @@ try {
   & $Blender --background --factory-startup --python 'blender/tokamak-opener.py' -- $mode
   if($LASTEXITCODE -ne 0){throw 'Blender render failed'}
   if($StillsOnly){return}
-  & '.\node_modules\@remotion\compositor-win32-x64-msvc\ffmpeg.exe' -y -framerate 30 -start_number 1 -i 'out/tomcat-01/blender/frames/tokamak-%04d.png' -c:v libx264 -preset slow -crf 16 -pix_fmt yuv420p -movflags +faststart 'public/tomcat-01/tokamak-opener.mp4'
+  & '.\node_modules\@remotion\compositor-win32-x64-msvc\ffmpeg.exe' -y -framerate 30 -start_number 1 -i 'out/tomcat-01/blender/frames/tokamak-%04d.png' -c:v libx264 -preset slow -crf 16 -pix_fmt yuv420p -movflags +faststart 'episodes/tomcat-01/assets/tokamak-opener.mp4'
   if($LASTEXITCODE -ne 0){throw 'Encoding failed'}
 } finally {Pop-Location}

@@ -13,7 +13,7 @@ from mathutils import Vector
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "out" / "tomcat-01" / "blender"
 FRAMES = OUT / "frames"
-PUBLIC = ROOT / "public" / "tomcat-01"
+PUBLIC = ROOT / "episodes" / "tomcat-01" / "assets"
 for p in (OUT, FRAMES, PUBLIC): p.mkdir(parents=True, exist_ok=True)
 
 parser = argparse.ArgumentParser()

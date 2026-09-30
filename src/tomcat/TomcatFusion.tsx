@@ -1,8 +1,10 @@
 import {Audio, Video} from '@remotion/media';
 import {AbsoluteFill, Img, Sequence, interpolate, staticFile, useCurrentFrame} from 'remotion';
 
-const FPS=30;
-export const TOMCAT_FUSION_DURATION=2160;
+import timeline from '../../episodes/tomcat-01/shots.json';
+
+const FPS=timeline.fps;
+export const TOMCAT_FUSION_DURATION=timeline.targetDurationFrames;
 const cyan='#59E7FF', pink='#FF5B9D', orange='#FF8A3D', lime='#DDF56B', ink='#05090F', white='#F4F7F8', muted='#93A5B0';
 const clamp={extrapolateLeft:'clamp',extrapolateRight:'clamp'} as const;
 type Mode='temperature'|'density'|'magnet'|'paths'|'engineering'|'record'|'end';
@@ -34,8 +36,8 @@ const Engineering=()=>{const f=useCurrentFrame();return <><Brand/><Label>真正�
 const Record=()=> <><Brand/><Label>难点是<span style={{color:lime}}>稳定多久</span></Label><Chamber mode="record"/><div style={{position:'absolute',left:58,top:825,right:58,display:'flex',justifyContent:'space-between',fontSize:23}}><span>2025-01-20</span><span style={{color:muted}}>EAST · 历史研究纪录</span></div><Caption text="稳态高约束模运行 1066 秒，不等于已经商业发电" source="中国科学院，2025-01-21"/></>;
 const End=()=> <><Brand/><Label>不是机器不怕热</Label><Chamber mode="end"/><div style={{position:'absolute',left:62,right:62,top:805,display:'flex',flexDirection:'column',gap:16,fontSize:34,fontWeight:900}}><div><span style={{color:cyan}}>01</span> 磁约束</div><div><span style={{color:orange}}>02</span> 材料承载</div><div><span style={{color:lime}}>03</span> 主动排热</div></div><Caption text="三者一起，争取稳定运行的时间"/></>;
 
-const scenes=[{from:0,to:90,view:Opening},{from:90,to:316,view:Temp},{from:316,to:559,view:Density},{from:559,to:895,view:Magnet},{from:895,to:1247,view:Paths},{from:1247,to:1675,view:Engineering},{from:1675,to:1953,view:Record},{from:1953,to:2160,view:End}];
-export const TomcatFusion:React.FC=()=> <AbsoluteFill style={{background:ink,color:white,fontFamily:'Noto Sans SC, Microsoft YaHei, sans-serif',overflow:'hidden'}}><div style={{position:'absolute',inset:0,backgroundImage:'linear-gradient(#17314255 1px,transparent 1px),linear-gradient(90deg,#17314255 1px,transparent 1px)',backgroundSize:'42px 42px',opacity:.22}}/>{scenes.map((s,i)=><Sequence key={i} from={s.from} durationInFrames={s.to-s.from}><s.view/></Sequence>)}<Audio src={staticFile('tomcat-01/audio/narration.mp3')}/><Audio src={staticFile('tomcat-01/audio/bgm.wav')} loop volume={(f)=>interpolate(f,[0,FPS,2070,2160],[0,.105,.105,0],clamp)}/></AbsoluteFill>;
+const views: Record<string, React.FC>={Opening,Temp,Density,Magnet,Paths,Engineering,Record,End};
+const scenes=timeline.shots.map(shot=>{const view=views[shot.scene];if(!view)throw new Error(`Unknown scene ${shot.scene}`);return {...shot,view};});
+export const TomcatFusion:React.FC=()=> <AbsoluteFill style={{background:ink,color:white,fontFamily:'Noto Sans SC, Microsoft YaHei, sans-serif',overflow:'hidden'}}><div style={{position:'absolute',inset:0,backgroundImage:'linear-gradient(#17314255 1px,transparent 1px),linear-gradient(90deg,#17314255 1px,transparent 1px)',backgroundSize:'42px 42px',opacity:.22}}/>{scenes.map((s,i)=><Sequence key={i} name={s.id} from={s.from} durationInFrames={s.to-s.from}><s.view/></Sequence>)}<Audio src={staticFile('tomcat-01/audio/narration.mp3')}/><Audio src={staticFile('tomcat-01/audio/bgm.wav')} loop volume={(f)=>interpolate(f,[0,FPS,2070,2160],[0,.105,.105,0],clamp)}/></AbsoluteFill>;
 
 export const TomcatFusionCover:React.FC=()=> <AbsoluteFill style={{background:ink,color:white,fontFamily:'Noto Sans SC, Microsoft YaHei, sans-serif',padding:48}}><div style={{position:'absolute',inset:22,border:`2px solid ${cyan}`}}/><div style={{fontSize:30,fontWeight:950}}>大厂汤姆猫</div><div style={{marginTop:180,fontSize:110,fontWeight:950,lineHeight:.98}}>一亿度<br/><span style={{color:lime}}>怎么没烧穿？</span></div><div style={{marginTop:55,fontSize:30,color:muted}}>磁约束不是绝热罩，热究竟去了哪</div><div style={{position:'absolute',left:48,right:48,bottom:76,height:10,background:`linear-gradient(90deg,${cyan},${pink},${orange})`}}/></AbsoluteFill>;
-

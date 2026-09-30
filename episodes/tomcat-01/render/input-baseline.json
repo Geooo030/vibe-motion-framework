@@ -1,0 +1,680 @@
+{
+  "kind": "rendered-not-human-qc",
+  "createdAt": "2026-09-30T03:44:24.543Z",
+  "shot": null,
+  "output": "out/tomcat-01/renders/2026-09-30T03-43-46-096Z/full.mp4",
+  "outputSha256": "798f58d26d41025b25b1ee3afe036c0d4d731bb56996fb8ea094d26484d866aa",
+  "inputs": {
+    "schemaVersion": 1,
+    "id": "tomcat-01",
+    "config": {
+      "schemaVersion": 1,
+      "id": "tomcat-01",
+      "title": "大厂汤姆猫｜一亿度，为什么没把机器烧穿？",
+      "composition": "TomcatFusion",
+      "fps": 30,
+      "width": 720,
+      "height": 1280,
+      "storyboard": {
+        "projectId": "project-munjw177-z6viav",
+        "url": "http://127.0.0.1:43218/project/project-munjw177-z6viav",
+        "snapshot": "storyboard/project.json",
+        "syncMode": "explicit-mcp-snapshot-not-live"
+      },
+      "sharedAssets": [
+        "narration",
+        "bgm",
+        "captions"
+      ],
+      "sharedCode": [
+        "src/tomcat/TomcatFusion.tsx",
+        "src/Root.tsx",
+        "src/index.css",
+        "remotion.config.ts",
+        "package.json",
+        "package-lock.json"
+      ],
+      "reviewFiles": [
+        "brief.md",
+        "sources.json",
+        "credits.md",
+        "visual-direction.md",
+        "reference-research.md"
+      ],
+      "audio": {
+        "narration": "narration",
+        "captions": "captions"
+      },
+      "renderStatus": "existing-video-imported-not-rerendered",
+      "note": "分镜是创作意图，不代表现有成片完全实现。onetake v2 尚未选定，也未渲染。"
+    },
+    "timeline": {
+      "fps": 30,
+      "endExclusive": true,
+      "targetDurationFrames": 2160,
+      "shots": [
+        {
+          "id": "s010",
+          "from": 0,
+          "to": 90,
+          "durationSec": 3,
+          "medium": "Blender",
+          "visual": "近距离穿过发光等离子体环，快速拉出到原创托卡马克剖切腔体与线圈；角标：科学示意",
+          "handoff": "镜头停在同一剖面角度，交给 Remotion 连续图解",
+          "scene": "Opening",
+          "storyboardShotId": "shot-munjw178-vcurhd",
+          "captionCueIds": [
+            1
+          ],
+          "assets": [
+            "blender-opener"
+          ],
+          "code": [
+            "blender/tokamak-opener.py",
+            "blender/render-tokamak-opener.ps1"
+          ]
+        },
+        {
+          "id": "s020",
+          "from": 90,
+          "to": 316,
+          "durationSec": 7.533,
+          "medium": "Remotion",
+          "visual": "延续同一剖面，从发光核心拉到冷色壁面；中心与壁面分别标注，不给未经来源的壁温数值",
+          "handoff": "核心发光粒子疏散成稀薄分布",
+          "scene": "Temp",
+          "storyboardShotId": "shot-munjw178-th3z1o",
+          "captionCueIds": [
+            2,
+            3,
+            4
+          ],
+          "assets": [],
+          "code": []
+        },
+        {
+          "id": "s030",
+          "from": 316,
+          "to": 559,
+          "durationSec": 8.1,
+          "medium": "Remotion",
+          "visual": "只解释粒子运动剧烈与等离子体稀薄；不与铁水做无定量总能量比较；红色热流警示始终保留",
+          "handoff": "带电粒子开始沿磁力线螺旋",
+          "scene": "Density",
+          "storyboardShotId": "shot-munjw178-1kwyzy",
+          "captionCueIds": [
+            5
+          ],
+          "assets": [],
+          "code": []
+        },
+        {
+          "id": "s040",
+          "from": 559,
+          "to": 895,
+          "durationSec": 11.2,
+          "medium": "Remotion",
+          "visual": "剖面放大，磁力线绕成环面，带电粒子螺旋运动；壁面与核心保持明显间距",
+          "handoff": "视图切为能量路径分层",
+          "scene": "Magnet",
+          "storyboardShotId": "shot-munjw178-k8pa14",
+          "captionCueIds": [
+            6,
+            7
+          ],
+          "assets": [],
+          "code": []
+        },
+        {
+          "id": "s050",
+          "from": 895,
+          "to": 1247,
+          "durationSec": 11.733,
+          "medium": "Remotion",
+          "visual": "三条路径明确分开：边缘带电粒子沿磁力线去偏滤器；辐射散向广泛壁面；未来 DT 中子穿越磁场进入包层。屏幕注明‘未来氘氚工况’，不贴在 EAST 纪录画面上",
+          "handoff": "路径保持分离进入各自部件",
+          "scene": "Paths",
+          "storyboardShotId": "shot-munjw178-2c53ph",
+          "captionCueIds": [
+            8,
+            9,
+            10
+          ],
+          "assets": [],
+          "code": []
+        },
+        {
+          "id": "s060",
+          "from": 1247,
+          "to": 1675,
+          "durationSec": 14.267,
+          "medium": "Remotion + WEST labelled photo",
+          "visual": "偏滤器钨靶与主动水冷只对应集中边缘热流；包层/真空室单独处理辐射和中子。WEST照片标为资料照片；10 MW/m² 明确标注 ITER 偏滤器设计值",
+          "handoff": "两套热管理路径汇总为‘稳定运行’仪表",
+          "scene": "Engineering",
+          "storyboardShotId": "shot-munjw178-qndv6r",
+          "captionCueIds": [
+            11,
+            12
+          ],
+          "assets": [
+            "west-vacuum-chamber"
+          ],
+          "code": []
+        },
+        {
+          "id": "s070",
+          "from": 1675,
+          "to": 1953,
+          "durationSec": 9.267,
+          "medium": "Remotion + EAST labelled inset",
+          "visual": "日期 2025-01-20 放屏幕，1066 s 大数字；EAST 示意图只做带来源的小插图，标‘历史研究纪录’",
+          "handoff": "1066 秒成为持续时间轴起点",
+          "scene": "Record",
+          "storyboardShotId": "shot-munjw178-ldplcl",
+          "captionCueIds": [
+            13,
+            14
+          ],
+          "assets": [],
+          "code": []
+        },
+        {
+          "id": "s080",
+          "from": 1953,
+          "to": 2160,
+          "durationSec": 6.9,
+          "medium": "Remotion",
+          "visual": "磁约束、偏滤器排热、包层吸热三层合成；落版大厂汤姆猫文字标与来源提示",
+          "handoff": "片尾保持约 1.4 秒",
+          "scene": "End",
+          "storyboardShotId": "shot-munjw178-pxnshc",
+          "captionCueIds": [
+            15
+          ],
+          "assets": [],
+          "code": []
+        }
+      ]
+    },
+    "shots": {
+      "s010": {
+        "dialogue": "一亿度，为什么没把这台机器烧穿？",
+        "timing": [
+          0,
+          90
+        ],
+        "visual": "近距离穿过发光等离子体环，快速拉出到原创托卡马克剖切腔体与线圈；角标：科学示意",
+        "handoff": "镜头停在同一剖面角度，交给 Remotion 连续图解",
+        "scene": "Opening",
+        "shot": {
+          "id": "s010",
+          "from": 0,
+          "to": 90,
+          "durationSec": 3,
+          "medium": "Blender",
+          "visual": "近距离穿过发光等离子体环，快速拉出到原创托卡马克剖切腔体与线圈；角标：科学示意",
+          "handoff": "镜头停在同一剖面角度，交给 Remotion 连续图解",
+          "scene": "Opening",
+          "storyboardShotId": "shot-munjw178-vcurhd",
+          "captionCueIds": [
+            1
+          ],
+          "assets": [
+            "blender-opener"
+          ],
+          "code": [
+            "blender/tokamak-opener.py",
+            "blender/render-tokamak-opener.ps1"
+          ]
+        },
+        "dependencies": {
+          "src/tomcat/TomcatFusion.tsx": "90f4efcdfc01289447a37e60a9eea8b765938450464f31ed61be8e1d354fe345",
+          "src/Root.tsx": "f6e53411f849bafd126dacff8054db9a25bd8a3a5f13914bdbc2e7b38f7f1783",
+          "src/index.css": "7e7feaef225b7b38dfdf994a28d9b661d18a2b5abd70e0ee749c7ca2a72558c9",
+          "remotion.config.ts": "22beb54e7dc3e01fc2b479471d7317ede7797c993b50fac658356187916bc59d",
+          "package.json": "352166929a53e2e4efed19c1d0486a28743d63f038544d9aa768e1198f53fe46",
+          "package-lock.json": "615bdacdd76ef5021823fbecde90e7f8203184c9f044393ac1c654187a0a886a",
+          "blender/tokamak-opener.py": "c25602b5ffcab1e5ff86c2fa71ebe247c535d6a2cc185378a72f002918572fa6",
+          "blender/render-tokamak-opener.ps1": "99dc52b1480808af0ebcde673e07f2afaf3e5fcf9c9c67cd71e009a32e84579c",
+          "asset:narration": "a368f0f74bb49d4f91f0bd96e2a1109abc3acfd0d2306349824862e23ac3b337",
+          "asset:bgm": "7153f8ce3c77ec7c8b6ec0438ab7d9d393795e34640749a91c305dc76a9d6865",
+          "asset:captions": "31b97e1e451eb830f74688fee1809bb9129db58c6697524f5de3fb15be2965e8",
+          "asset:blender-opener": "fab17d3d6885f8f99693b64d9d9e1286c02294fe61eb9126824578130eef5ec3"
+        },
+        "board": {
+          "dialogue": "一亿度，为什么没把这台机器烧穿？",
+          "visual": "近距离穿过发光等离子体环，快速拉出到原创托卡马克剖切腔体与线圈；角标：科学示意",
+          "duration": 3,
+          "notes": "本地镜头 s010；既有视觉时间线 [0, 90) 帧 / 30 fps。镜头停在同一剖面角度，交给 Remotion 连续图解。此时长来自已渲染视觉分镜，不是新配音强制对齐；部分句子跨视觉边界。现有素材及配音已在本地，不在此重新排队生成。",
+          "mediaUrl": "",
+          "generator": "manual",
+          "mediaType": "video",
+          "rollType": "A-ROLL"
+        }
+      },
+      "s020": {
+        "dialogue": "关键不是找到了哪块能硬扛一亿度的金属。先分清两个温度：核心温度，不等于壁面温度。温度反映粒子运动的剧烈程度。",
+        "timing": [
+          90,
+          316
+        ],
+        "visual": "延续同一剖面，从发光核心拉到冷色壁面；中心与壁面分别标注，不给未经来源的壁温数值",
+        "handoff": "核心发光粒子疏散成稀薄分布",
+        "scene": "Temp",
+        "shot": {
+          "id": "s020",
+          "from": 90,
+          "to": 316,
+          "durationSec": 7.533,
+          "medium": "Remotion",
+          "visual": "延续同一剖面，从发光核心拉到冷色壁面；中心与壁面分别标注，不给未经来源的壁温数值",
+          "handoff": "核心发光粒子疏散成稀薄分布",
+          "scene": "Temp",
+          "storyboardShotId": "shot-munjw178-th3z1o",
+          "captionCueIds": [
+            2,
+            3,
+            4
+          ],
+          "assets": [],
+          "code": []
+        },
+        "dependencies": {
+          "src/tomcat/TomcatFusion.tsx": "90f4efcdfc01289447a37e60a9eea8b765938450464f31ed61be8e1d354fe345",
+          "src/Root.tsx": "f6e53411f849bafd126dacff8054db9a25bd8a3a5f13914bdbc2e7b38f7f1783",
+          "src/index.css": "7e7feaef225b7b38dfdf994a28d9b661d18a2b5abd70e0ee749c7ca2a72558c9",
+          "remotion.config.ts": "22beb54e7dc3e01fc2b479471d7317ede7797c993b50fac658356187916bc59d",
+          "package.json": "352166929a53e2e4efed19c1d0486a28743d63f038544d9aa768e1198f53fe46",
+          "package-lock.json": "615bdacdd76ef5021823fbecde90e7f8203184c9f044393ac1c654187a0a886a",
+          "asset:narration": "a368f0f74bb49d4f91f0bd96e2a1109abc3acfd0d2306349824862e23ac3b337",
+          "asset:bgm": "7153f8ce3c77ec7c8b6ec0438ab7d9d393795e34640749a91c305dc76a9d6865",
+          "asset:captions": "31b97e1e451eb830f74688fee1809bb9129db58c6697524f5de3fb15be2965e8"
+        },
+        "board": {
+          "dialogue": "关键不是找到了哪块能硬扛一亿度的金属。先分清两个温度：核心温度，不等于壁面温度。温度反映粒子运动的剧烈程度。",
+          "visual": "延续同一剖面，从发光核心拉到冷色壁面；中心与壁面分别标注，不给未经来源的壁温数值",
+          "duration": 7.533333333333333,
+          "notes": "本地镜头 s020；既有视觉时间线 [90, 316) 帧 / 30 fps。核心发光粒子疏散成稀薄分布。此时长来自已渲染视觉分镜，不是新配音强制对齐；部分句子跨视觉边界。现有素材及配音已在本地，不在此重新排队生成。",
+          "mediaUrl": "",
+          "generator": "remotion",
+          "mediaType": "video",
+          "rollType": "B-ROLL"
+        }
+      },
+      "s030": {
+        "dialogue": "托卡马克里的高温等离子体非常稀薄，这能减少向壁面传递的能量；但壁面面对的热负荷仍然巨大，绝不是靠“稀薄”两个字就安全了。",
+        "timing": [
+          316,
+          559
+        ],
+        "visual": "只解释粒子运动剧烈与等离子体稀薄；不与铁水做无定量总能量比较；红色热流警示始终保留",
+        "handoff": "带电粒子开始沿磁力线螺旋",
+        "scene": "Density",
+        "shot": {
+          "id": "s030",
+          "from": 316,
+          "to": 559,
+          "durationSec": 8.1,
+          "medium": "Remotion",
+          "visual": "只解释粒子运动剧烈与等离子体稀薄；不与铁水做无定量总能量比较；红色热流警示始终保留",
+          "handoff": "带电粒子开始沿磁力线螺旋",
+          "scene": "Density",
+          "storyboardShotId": "shot-munjw178-1kwyzy",
+          "captionCueIds": [
+            5
+          ],
+          "assets": [],
+          "code": []
+        },
+        "dependencies": {
+          "src/tomcat/TomcatFusion.tsx": "90f4efcdfc01289447a37e60a9eea8b765938450464f31ed61be8e1d354fe345",
+          "src/Root.tsx": "f6e53411f849bafd126dacff8054db9a25bd8a3a5f13914bdbc2e7b38f7f1783",
+          "src/index.css": "7e7feaef225b7b38dfdf994a28d9b661d18a2b5abd70e0ee749c7ca2a72558c9",
+          "remotion.config.ts": "22beb54e7dc3e01fc2b479471d7317ede7797c993b50fac658356187916bc59d",
+          "package.json": "352166929a53e2e4efed19c1d0486a28743d63f038544d9aa768e1198f53fe46",
+          "package-lock.json": "615bdacdd76ef5021823fbecde90e7f8203184c9f044393ac1c654187a0a886a",
+          "asset:narration": "a368f0f74bb49d4f91f0bd96e2a1109abc3acfd0d2306349824862e23ac3b337",
+          "asset:bgm": "7153f8ce3c77ec7c8b6ec0438ab7d9d393795e34640749a91c305dc76a9d6865",
+          "asset:captions": "31b97e1e451eb830f74688fee1809bb9129db58c6697524f5de3fb15be2965e8"
+        },
+        "board": {
+          "dialogue": "托卡马克里的高温等离子体非常稀薄，这能减少向壁面传递的能量；但壁面面对的热负荷仍然巨大，绝不是靠“稀薄”两个字就安全了。",
+          "visual": "只解释粒子运动剧烈与等离子体稀薄；不与铁水做无定量总能量比较；红色热流警示始终保留",
+          "duration": 8.1,
+          "notes": "本地镜头 s030；既有视觉时间线 [316, 559) 帧 / 30 fps。带电粒子开始沿磁力线螺旋。此时长来自已渲染视觉分镜，不是新配音强制对齐；部分句子跨视觉边界。现有素材及配音已在本地，不在此重新排队生成。",
+          "mediaUrl": "",
+          "generator": "remotion",
+          "mediaType": "video",
+          "rollType": "B-ROLL"
+        }
+      },
+      "s040": {
+        "dialogue": "真正的第一道防线是磁约束。带电粒子会绕着磁力线运动，环形磁场把大部分高温等离子体控制在真空室中央，让核心尽量不直接碰壁。",
+        "timing": [
+          559,
+          895
+        ],
+        "visual": "剖面放大，磁力线绕成环面，带电粒子螺旋运动；壁面与核心保持明显间距",
+        "handoff": "视图切为能量路径分层",
+        "scene": "Magnet",
+        "shot": {
+          "id": "s040",
+          "from": 559,
+          "to": 895,
+          "durationSec": 11.2,
+          "medium": "Remotion",
+          "visual": "剖面放大，磁力线绕成环面，带电粒子螺旋运动；壁面与核心保持明显间距",
+          "handoff": "视图切为能量路径分层",
+          "scene": "Magnet",
+          "storyboardShotId": "shot-munjw178-k8pa14",
+          "captionCueIds": [
+            6,
+            7
+          ],
+          "assets": [],
+          "code": []
+        },
+        "dependencies": {
+          "src/tomcat/TomcatFusion.tsx": "90f4efcdfc01289447a37e60a9eea8b765938450464f31ed61be8e1d354fe345",
+          "src/Root.tsx": "f6e53411f849bafd126dacff8054db9a25bd8a3a5f13914bdbc2e7b38f7f1783",
+          "src/index.css": "7e7feaef225b7b38dfdf994a28d9b661d18a2b5abd70e0ee749c7ca2a72558c9",
+          "remotion.config.ts": "22beb54e7dc3e01fc2b479471d7317ede7797c993b50fac658356187916bc59d",
+          "package.json": "352166929a53e2e4efed19c1d0486a28743d63f038544d9aa768e1198f53fe46",
+          "package-lock.json": "615bdacdd76ef5021823fbecde90e7f8203184c9f044393ac1c654187a0a886a",
+          "asset:narration": "a368f0f74bb49d4f91f0bd96e2a1109abc3acfd0d2306349824862e23ac3b337",
+          "asset:bgm": "7153f8ce3c77ec7c8b6ec0438ab7d9d393795e34640749a91c305dc76a9d6865",
+          "asset:captions": "31b97e1e451eb830f74688fee1809bb9129db58c6697524f5de3fb15be2965e8"
+        },
+        "board": {
+          "dialogue": "真正的第一道防线是磁约束。带电粒子会绕着磁力线运动，环形磁场把大部分高温等离子体控制在真空室中央，让核心尽量不直接碰壁。",
+          "visual": "剖面放大，磁力线绕成环面，带电粒子螺旋运动；壁面与核心保持明显间距",
+          "duration": 11.2,
+          "notes": "本地镜头 s040；既有视觉时间线 [559, 895) 帧 / 30 fps。视图切为能量路径分层。此时长来自已渲染视觉分镜，不是新配音强制对齐；部分句子跨视觉边界。现有素材及配音已在本地，不在此重新排队生成。",
+          "mediaUrl": "",
+          "generator": "remotion",
+          "mediaType": "video",
+          "rollType": "B-ROLL"
+        }
+      },
+      "s050": {
+        "dialogue": "但磁场不是绝热罩。边缘带电粒子和热流，需要沿受控路径进入偏滤器；辐射会落到更广的壁面。未来使用氘氚燃料时，还要应对不受磁场约束的高能中子，它们的能量主要由包层吸收并转成热。",
+        "timing": [
+          895,
+          1247
+        ],
+        "visual": "三条路径明确分开：边缘带电粒子沿磁力线去偏滤器；辐射散向广泛壁面；未来 DT 中子穿越磁场进入包层。屏幕注明‘未来氘氚工况’，不贴在 EAST 纪录画面上",
+        "handoff": "路径保持分离进入各自部件",
+        "scene": "Paths",
+        "shot": {
+          "id": "s050",
+          "from": 895,
+          "to": 1247,
+          "durationSec": 11.733,
+          "medium": "Remotion",
+          "visual": "三条路径明确分开：边缘带电粒子沿磁力线去偏滤器；辐射散向广泛壁面；未来 DT 中子穿越磁场进入包层。屏幕注明‘未来氘氚工况’，不贴在 EAST 纪录画面上",
+          "handoff": "路径保持分离进入各自部件",
+          "scene": "Paths",
+          "storyboardShotId": "shot-munjw178-2c53ph",
+          "captionCueIds": [
+            8,
+            9,
+            10
+          ],
+          "assets": [],
+          "code": []
+        },
+        "dependencies": {
+          "src/tomcat/TomcatFusion.tsx": "90f4efcdfc01289447a37e60a9eea8b765938450464f31ed61be8e1d354fe345",
+          "src/Root.tsx": "f6e53411f849bafd126dacff8054db9a25bd8a3a5f13914bdbc2e7b38f7f1783",
+          "src/index.css": "7e7feaef225b7b38dfdf994a28d9b661d18a2b5abd70e0ee749c7ca2a72558c9",
+          "remotion.config.ts": "22beb54e7dc3e01fc2b479471d7317ede7797c993b50fac658356187916bc59d",
+          "package.json": "352166929a53e2e4efed19c1d0486a28743d63f038544d9aa768e1198f53fe46",
+          "package-lock.json": "615bdacdd76ef5021823fbecde90e7f8203184c9f044393ac1c654187a0a886a",
+          "asset:narration": "a368f0f74bb49d4f91f0bd96e2a1109abc3acfd0d2306349824862e23ac3b337",
+          "asset:bgm": "7153f8ce3c77ec7c8b6ec0438ab7d9d393795e34640749a91c305dc76a9d6865",
+          "asset:captions": "31b97e1e451eb830f74688fee1809bb9129db58c6697524f5de3fb15be2965e8"
+        },
+        "board": {
+          "dialogue": "但磁场不是绝热罩。边缘带电粒子和热流，需要沿受控路径进入偏滤器；辐射会落到更广的壁面。未来使用氘氚燃料时，还要应对不受磁场约束的高能中子，它们的能量主要由包层吸收并转成热。",
+          "visual": "三条路径明确分开：边缘带电粒子沿磁力线去偏滤器；辐射散向广泛壁面；未来 DT 中子穿越磁场进入包层。屏幕注明‘未来氘氚工况’，不贴在 EAST 纪录画面上",
+          "duration": 11.733333333333333,
+          "notes": "本地镜头 s050；既有视觉时间线 [895, 1247) 帧 / 30 fps。路径保持分离进入各自部件。此时长来自已渲染视觉分镜，不是新配音强制对齐；部分句子跨视觉边界。现有素材及配音已在本地，不在此重新排队生成。",
+          "mediaUrl": "",
+          "generator": "remotion",
+          "mediaType": "video",
+          "rollType": "B-ROLL"
+        }
+      },
+      "s060": {
+        "dialogue": "所以真正的工程硬仗，是把不同能量送到不同部件：偏滤器用钨面对集中的边缘热流，再靠主动水冷带走；包层和真空室处理更广泛的辐射与中子热负荷。ITER 设计中的偏滤器稳态热流可达每平方米十兆瓦。",
+        "timing": [
+          1247,
+          1675
+        ],
+        "visual": "偏滤器钨靶与主动水冷只对应集中边缘热流；包层/真空室单独处理辐射和中子。WEST照片标为资料照片；10 MW/m² 明确标注 ITER 偏滤器设计值",
+        "handoff": "两套热管理路径汇总为‘稳定运行’仪表",
+        "scene": "Engineering",
+        "shot": {
+          "id": "s060",
+          "from": 1247,
+          "to": 1675,
+          "durationSec": 14.267,
+          "medium": "Remotion + WEST labelled photo",
+          "visual": "偏滤器钨靶与主动水冷只对应集中边缘热流；包层/真空室单独处理辐射和中子。WEST照片标为资料照片；10 MW/m² 明确标注 ITER 偏滤器设计值",
+          "handoff": "两套热管理路径汇总为‘稳定运行’仪表",
+          "scene": "Engineering",
+          "storyboardShotId": "shot-munjw178-qndv6r",
+          "captionCueIds": [
+            11,
+            12
+          ],
+          "assets": [
+            "west-vacuum-chamber"
+          ],
+          "code": []
+        },
+        "dependencies": {
+          "src/tomcat/TomcatFusion.tsx": "90f4efcdfc01289447a37e60a9eea8b765938450464f31ed61be8e1d354fe345",
+          "src/Root.tsx": "f6e53411f849bafd126dacff8054db9a25bd8a3a5f13914bdbc2e7b38f7f1783",
+          "src/index.css": "7e7feaef225b7b38dfdf994a28d9b661d18a2b5abd70e0ee749c7ca2a72558c9",
+          "remotion.config.ts": "22beb54e7dc3e01fc2b479471d7317ede7797c993b50fac658356187916bc59d",
+          "package.json": "352166929a53e2e4efed19c1d0486a28743d63f038544d9aa768e1198f53fe46",
+          "package-lock.json": "615bdacdd76ef5021823fbecde90e7f8203184c9f044393ac1c654187a0a886a",
+          "asset:narration": "a368f0f74bb49d4f91f0bd96e2a1109abc3acfd0d2306349824862e23ac3b337",
+          "asset:bgm": "7153f8ce3c77ec7c8b6ec0438ab7d9d393795e34640749a91c305dc76a9d6865",
+          "asset:captions": "31b97e1e451eb830f74688fee1809bb9129db58c6697524f5de3fb15be2965e8",
+          "asset:west-vacuum-chamber": "bec1b48a047316fc9bbe659ce7d5f1868a27c88ff8c3586d63932ff2f6f7fd94"
+        },
+        "board": {
+          "dialogue": "所以真正的工程硬仗，是把不同能量送到不同部件：偏滤器用钨面对集中的边缘热流，再靠主动水冷带走；包层和真空室处理更广泛的辐射与中子热负荷。ITER 设计中的偏滤器稳态热流可达每平方米十兆瓦。",
+          "visual": "偏滤器钨靶与主动水冷只对应集中边缘热流；包层/真空室单独处理辐射和中子。WEST照片标为资料照片；10 MW/m² 明确标注 ITER 偏滤器设计值",
+          "duration": 14.266666666666667,
+          "notes": "本地镜头 s060；既有视觉时间线 [1247, 1675) 帧 / 30 fps。两套热管理路径汇总为‘稳定运行’仪表。此时长来自已渲染视觉分镜，不是新配音强制对齐；部分句子跨视觉边界。现有素材及配音已在本地，不在此重新排队生成。",
+          "mediaUrl": "",
+          "generator": "remotion",
+          "mediaType": "video",
+          "rollType": "B-ROLL"
+        }
+      },
+      "s070": {
+        "dialogue": "这也解释了纪录真正难在哪：2025 年 1 月，EAST 实现一千零六十六秒稳态高约束模等离子体运行。它是实验研究纪录，不是已经商业发电。",
+        "timing": [
+          1675,
+          1953
+        ],
+        "visual": "日期 2025-01-20 放屏幕，1066 s 大数字；EAST 示意图只做带来源的小插图，标‘历史研究纪录’",
+        "handoff": "1066 秒成为持续时间轴起点",
+        "scene": "Record",
+        "shot": {
+          "id": "s070",
+          "from": 1675,
+          "to": 1953,
+          "durationSec": 9.267,
+          "medium": "Remotion + EAST labelled inset",
+          "visual": "日期 2025-01-20 放屏幕，1066 s 大数字；EAST 示意图只做带来源的小插图，标‘历史研究纪录’",
+          "handoff": "1066 秒成为持续时间轴起点",
+          "scene": "Record",
+          "storyboardShotId": "shot-munjw178-ldplcl",
+          "captionCueIds": [
+            13,
+            14
+          ],
+          "assets": [],
+          "code": []
+        },
+        "dependencies": {
+          "src/tomcat/TomcatFusion.tsx": "90f4efcdfc01289447a37e60a9eea8b765938450464f31ed61be8e1d354fe345",
+          "src/Root.tsx": "f6e53411f849bafd126dacff8054db9a25bd8a3a5f13914bdbc2e7b38f7f1783",
+          "src/index.css": "7e7feaef225b7b38dfdf994a28d9b661d18a2b5abd70e0ee749c7ca2a72558c9",
+          "remotion.config.ts": "22beb54e7dc3e01fc2b479471d7317ede7797c993b50fac658356187916bc59d",
+          "package.json": "352166929a53e2e4efed19c1d0486a28743d63f038544d9aa768e1198f53fe46",
+          "package-lock.json": "615bdacdd76ef5021823fbecde90e7f8203184c9f044393ac1c654187a0a886a",
+          "asset:narration": "a368f0f74bb49d4f91f0bd96e2a1109abc3acfd0d2306349824862e23ac3b337",
+          "asset:bgm": "7153f8ce3c77ec7c8b6ec0438ab7d9d393795e34640749a91c305dc76a9d6865",
+          "asset:captions": "31b97e1e451eb830f74688fee1809bb9129db58c6697524f5de3fb15be2965e8"
+        },
+        "board": {
+          "dialogue": "这也解释了纪录真正难在哪：2025 年 1 月，EAST 实现一千零六十六秒稳态高约束模等离子体运行。它是实验研究纪录，不是已经商业发电。",
+          "visual": "日期 2025-01-20 放屏幕，1066 s 大数字；EAST 示意图只做带来源的小插图，标‘历史研究纪录’",
+          "duration": 9.266666666666667,
+          "notes": "本地镜头 s070；既有视觉时间线 [1675, 1953) 帧 / 30 fps。1066 秒成为持续时间轴起点。此时长来自已渲染视觉分镜，不是新配音强制对齐；部分句子跨视觉边界。现有素材及配音已在本地，不在此重新排队生成。",
+          "mediaUrl": "",
+          "generator": "remotion",
+          "mediaType": "video",
+          "rollType": "B-ROLL"
+        }
+      },
+      "s080": {
+        "dialogue": "答案不是机器不怕热，而是磁约束、材料和主动排热一起争取稳定运行的时间。",
+        "timing": [
+          1953,
+          2160
+        ],
+        "visual": "磁约束、偏滤器排热、包层吸热三层合成；落版大厂汤姆猫文字标与来源提示",
+        "handoff": "片尾保持约 1.4 秒",
+        "scene": "End",
+        "shot": {
+          "id": "s080",
+          "from": 1953,
+          "to": 2160,
+          "durationSec": 6.9,
+          "medium": "Remotion",
+          "visual": "磁约束、偏滤器排热、包层吸热三层合成；落版大厂汤姆猫文字标与来源提示",
+          "handoff": "片尾保持约 1.4 秒",
+          "scene": "End",
+          "storyboardShotId": "shot-munjw178-pxnshc",
+          "captionCueIds": [
+            15
+          ],
+          "assets": [],
+          "code": []
+        },
+        "dependencies": {
+          "src/tomcat/TomcatFusion.tsx": "90f4efcdfc01289447a37e60a9eea8b765938450464f31ed61be8e1d354fe345",
+          "src/Root.tsx": "f6e53411f849bafd126dacff8054db9a25bd8a3a5f13914bdbc2e7b38f7f1783",
+          "src/index.css": "7e7feaef225b7b38dfdf994a28d9b661d18a2b5abd70e0ee749c7ca2a72558c9",
+          "remotion.config.ts": "22beb54e7dc3e01fc2b479471d7317ede7797c993b50fac658356187916bc59d",
+          "package.json": "352166929a53e2e4efed19c1d0486a28743d63f038544d9aa768e1198f53fe46",
+          "package-lock.json": "615bdacdd76ef5021823fbecde90e7f8203184c9f044393ac1c654187a0a886a",
+          "asset:narration": "a368f0f74bb49d4f91f0bd96e2a1109abc3acfd0d2306349824862e23ac3b337",
+          "asset:bgm": "7153f8ce3c77ec7c8b6ec0438ab7d9d393795e34640749a91c305dc76a9d6865",
+          "asset:captions": "31b97e1e451eb830f74688fee1809bb9129db58c6697524f5de3fb15be2965e8"
+        },
+        "board": {
+          "dialogue": "答案不是机器不怕热，而是磁约束、材料和主动排热一起争取稳定运行的时间。",
+          "visual": "磁约束、偏滤器排热、包层吸热三层合成；落版大厂汤姆猫文字标与来源提示",
+          "duration": 6.9,
+          "notes": "本地镜头 s080；既有视觉时间线 [1953, 2160) 帧 / 30 fps。片尾保持约 1.4 秒。此时长来自已渲染视觉分镜，不是新配音强制对齐；部分句子跨视觉边界。现有素材及配音已在本地，不在此重新排队生成。",
+          "mediaUrl": "",
+          "generator": "remotion",
+          "mediaType": "video",
+          "rollType": "A-ROLL"
+        }
+      }
+    },
+    "review": {
+      "brief.md": "ec845ceb34c345aabc403589f3fc8d045d89f463b4c63bf847c2bb9f3a25d185",
+      "sources.json": "3943a9c71a012fd7a8ac74dd64001b7429058cc40b11bb8a6d62ebe90d38a9ac",
+      "credits.md": "b4852f5255de9cd58fac01d0614060c6f4502ed47bc81f1fa5c7ebcd605ab91c",
+      "visual-direction.md": "98567fb3058a092b03656675da73289e232c2030212ab80c7875950576d24d8e",
+      "reference-research.md": "62cda3e5b1869c6498c776a8b45db334ba5e81405d1fe7b6312acf53262a9c35"
+    },
+    "audio": {
+      "scriptHash": "37634d7fe5913bf4dffdeace6eb6476bada4c6fde5a5ecfb1f86397867949937",
+      "timingHash": "b705a06f1b4bbe0d0caeeea954f77c23e91d0091eaf70fd7a26bd068d8a4922f",
+      "narrationHash": "71dee5c70b544c41780b14b08ac161c5ff810443ec064382a0293edc6206a3c3",
+      "captionsHash": "7125d386fd6fd51b4674453fe44835d42a9d4774f018d9b3e30ff68d9069460e"
+    },
+    "boardMetadata": "3c6721804a54ba648d5b5f84dc458e7c7badd5bd8f3e041bae7c9813d3ba1acc",
+    "assets": [
+      {
+        "id": "blender-opener",
+        "path": "episodes/tomcat-01/assets/tokamak-opener.mp4",
+        "kind": "original-render",
+        "source": "blender/tokamak-opener.py",
+        "license": "Repository-owned original",
+        "description": "Scientific schematic, not an EAST or ITER reconstruction"
+      },
+      {
+        "id": "ornl-iter-cutaway",
+        "path": "episodes/tomcat-01/assets/references/ornl-iter-cutaway.jpg",
+        "kind": "image",
+        "author": "Oak Ridge National Laboratory",
+        "source": "https://www.flickr.com/photos/oakridgelab/12507733474/",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "sha256": "D80626AA0F7A6C42707C79203A7CB643D9811910A37118D03A62ED1B2A15DE07",
+        "modification": "Will be cropped and annotated; depicts ITER cutaway, not EAST"
+      },
+      {
+        "id": "east-sketch",
+        "path": "episodes/tomcat-01/assets/references/east-sketch.png",
+        "kind": "scientific-figure",
+        "author": "G. S. Xu et al.",
+        "source": "https://doi.org/10.1088/0029-5515/54/10/103002 (Fig. 1)",
+        "license": "CC BY 3.0",
+        "sha256": "E832DE7DE8C825F71E60564F0643FD1F988BD986C4B5F1D6C3676E97F15D1BC3",
+        "modification": "Small source figure; use only as labelled inset, never upscale full screen"
+      },
+      {
+        "id": "west-vacuum-chamber",
+        "path": "episodes/tomcat-01/assets/references/west-vacuum-chamber.jpg",
+        "kind": "photograph",
+        "author": "Christophe Roux / IRFM",
+        "source": "https://commons.wikimedia.org/wiki/File:Int%C3%A9rieur_Tokamak_WEST.jpg",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "sha256": "818B973D7AC8922D8A16E026CFA6D41C53BCF3D45F3FBE1AC07C2B4FFF54C026",
+        "modification": "Final video will crop, pan and annotate the unmodified source; label WEST, never EAST"
+      },
+      {
+        "id": "brand-avatar",
+        "path": "public/brand/tomcat-avatar.png",
+        "kind": "brand-placeholder-path",
+        "status": "missing-user-authorized-original",
+        "rule": "Do not render a fake final avatar; use text mark until supplied"
+      },
+      {
+        "id": "narration",
+        "path": "episodes/tomcat-01/assets/audio/narration.mp3",
+        "kind": "tts",
+        "license": "Service terms apply; not a cloned creator voice",
+        "voice": "zh-CN-YunxiNeural",
+        "rate": "+32%"
+      },
+      {
+        "id": "bgm",
+        "path": "episodes/tomcat-01/assets/audio/bgm.wav",
+        "kind": "original-music",
+        "license": "Repository-owned original"
+      },
+      {
+        "id": "captions",
+        "path": "episodes/tomcat-01/assets/audio/captions.srt",
+        "kind": "subtitle",
+        "license": "Repository-owned original"
+      }
+    ]
+  }
+}

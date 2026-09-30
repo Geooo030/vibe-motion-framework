@@ -9,5 +9,4 @@ Rebuild:
 ./blender/render-tokamak-opener.ps1
 ```
 
-Generated working files under `out/tomcat-01/blender/` are ignored. The small encoded insert at `public/tomcat-01/tokamak-opener.mp4` is committed for reproducibility.
-
+Generated working files under `out/tomcat-01/blender/` are ignored. The small encoded insert at `episodes/tomcat-01/assets/tokamak-opener.mp4` is committed for reproducibility. Run `npm run episode:prepare -- tomcat-01` to stage it for Remotion.
