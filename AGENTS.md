@@ -1,6 +1,7 @@
 # Episode production contract
 
-- Shared brand mascot exception: use `public/brand/tomcat/tomcat-pixel-master-v1.png` as the canonical 大厂汤姆猫 identity reference in future videos. Read its adjacent README and pass the actual image as a reference when generating new poses. Keep shared masters in this public brand folder; save episode-specific derivatives in that episode's assets directory. Do not redesign or overwrite the master silently.
+- Shared brand mascot exception: use `public/brand/tomcat/tomcat-pixel-master-v3-ant-logo.png` as the canonical 大厂汤姆猫 identity reference in future videos. Read its adjacent README and pass the actual image as a reference when generating new poses. Keep shared masters in this public brand folder; save episode-specific derivatives in that episode's assets directory. Do not redesign or overwrite the master silently.
+- The cat always wears a sky-blue lanyard and badge with ONLY the pixel Ant Group ant-head icon, no wordmark, cat portrait, employee number or QR. Every cat-containing shot must naturally reveal the badge during its action, without advertising closeups or forced poses. Record visibility in each shot brief and manually check rendered footage. This is a production rule, not an automatic render validator. Historical masters/renders remain unchanged; do not imply employment or endorsement.
 
 - Use one Git branch per episode. Preserve unrelated changes and never force-push.
 - Every new episode has one `episodes/<id>/` source package: script, shots, episode configuration, asset registry, real media, source citations, Storyboard snapshot, audio review and render receipts. Do not scatter canonical episode media across `public/` or temporary output folders.

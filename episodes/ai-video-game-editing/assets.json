@@ -19,8 +19,8 @@
     "path": "public/brand/tomcat/tomcat-pixel-master-v1.png",
     "kind": "shared-character-reference",
     "sha256": "06F1FE0E79112FD99256F891393A49119B8A98353003EFAF5F43C8130C55DADB",
-    "identityManifest": "public/brand/tomcat/character.json",
-    "status": "default-reference-awaiting-user-feedback"
+    "identityManifest": "public/brand/tomcat/character-v1.json",
+    "status": "archived-identity-reference"
   },
   {
     "id": "cover-pixel-v2-midnight",
@@ -32,12 +32,74 @@
     "sha256": "4F741A05D939B0B5B638998F73650994B143234E469ED9E448B0DF0A9560DEE0",
     "generator": "built-in image_gen",
     "prompt": "cover-prompt-v2-midnight.md",
-    "status": "draft-for-user-review",
+    "status": "archived-superseded-by-v4",
     "referenceImages": [
       "episodes/ai-video-game-editing/assets/covers/cover-pixel-v1.png",
       "public/brand/tomcat/tomcat-pixel-master-v1.png"
     ],
     "rightsNote": "Derived from project-generated cover and shared mascot; usage subject to generation service terms.",
     "description": "Same pixel cat sleeping beside a workstation while AI edits video at 02:37; updated midnight headline."
+  },
+  {
+    "id": "tomcat-pixel-master-v2-badge",
+    "path": "public/brand/tomcat/tomcat-pixel-master-v2-badge.png",
+    "kind": "shared-character-reference",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 739588,
+    "sha256": "C7F1685F4847FA202C1983478AC791F04695C267AF82F2003E2EA496EF2D56B9",
+    "generator": "built-in image_gen",
+    "status": "superseded-text-badge-draft",
+    "prompt": "public/brand/tomcat/prompts-v3-ant-logo.md",
+    "referenceImages": [
+      "public/brand/tomcat/tomcat-pixel-master-v1.png"
+    ]
+  },
+  {
+    "id": "cover-pixel-v3-midnight-badge",
+    "path": "episodes/ai-video-game-editing/assets/covers/cover-pixel-v3-midnight-badge.png",
+    "kind": "ai-generated-cover",
+    "width": 1672,
+    "height": 941,
+    "bytes": 1910985,
+    "sha256": "06D1C25D029549E016325E0641DE05D0F727A8250554FA9DA2246E7FA6F73EE2",
+    "generator": "built-in image_gen",
+    "status": "superseded-text-badge-draft",
+    "prompt": "cover-prompt-v4-ant-logo.md",
+    "referenceImages": [
+      "episodes/ai-video-game-editing/assets/covers/cover-pixel-v2-midnight.png"
+    ]
+  },
+  {
+    "id": "tomcat-pixel-master-v3-ant-logo",
+    "path": "public/brand/tomcat/tomcat-pixel-master-v3-ant-logo.png",
+    "kind": "shared-character-reference",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 723444,
+    "sha256": "2CACB08DBB7CE7B864BC6A5A98D95E2205FEF2902575FD573E52363F192B1514",
+    "generator": "built-in image_gen",
+    "status": "draft-for-user-review",
+    "prompt": "public/brand/tomcat/prompts-v3-ant-logo.md",
+    "referenceImages": [
+      "public/brand/tomcat/tomcat-pixel-master-v2-badge.png",
+      "public/brand/tomcat/references/ant-group-logo-reference.png"
+    ]
+  },
+  {
+    "id": "cover-pixel-v4-midnight-ant-logo",
+    "path": "episodes/ai-video-game-editing/assets/covers/cover-pixel-v4-midnight-ant-logo.png",
+    "kind": "ai-generated-cover",
+    "width": 1672,
+    "height": 941,
+    "bytes": 2422672,
+    "sha256": "4BB4E544520A01D7DB9CA89F7258B5D226FE57E8356E961DC73FA708C64CCFB2",
+    "generator": "built-in image_gen",
+    "status": "draft-for-user-review",
+    "prompt": "cover-prompt-v4-ant-logo.md",
+    "referenceImages": [
+      "episodes/ai-video-game-editing/assets/covers/cover-pixel-v3-midnight-badge.png",
+      "public/brand/tomcat/references/ant-group-logo-reference.png"
+    ]
   }
 ]

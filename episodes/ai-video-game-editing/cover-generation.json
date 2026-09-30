@@ -2,25 +2,27 @@
   "title": "当AI半夜起来帮我剪视频",
   "createdOn": "2026-09-30",
   "mode": "built-in image_gen",
-  "promptFile": "cover-prompt-v2-midnight.md",
-  "output": "assets/covers/cover-pixel-v2-midnight.png",
+  "promptFile": "cover-prompt-v4-ant-logo.md",
+  "output": "assets/covers/cover-pixel-v4-midnight-ant-logo.png",
   "dimensions": [
     1672,
     941
   ],
-  "sha256": "4F741A05D939B0B5B638998F73650994B143234E469ED9E448B0DF0A9560DEE0",
+  "sha256": "4BB4E544520A01D7DB9CA89F7258B5D226FE57E8356E961DC73FA708C64CCFB2",
   "referenceImages": [
-    "assets/covers/cover-pixel-v1.png",
-    "../../public/brand/tomcat/tomcat-pixel-master-v1.png"
+    "assets/covers/cover-pixel-v3-midnight-badge.png",
+    "../../public/brand/tomcat/references/ant-group-logo-reference.png"
   ],
-  "previousGeneration": "cover-generation-v1.json",
+  "previousGeneration": "cover-generation-v2.json",
   "visualCheck": {
     "headline": "当AI半夜起来 / 帮我剪视频",
     "signature": "大厂汤姆猫",
     "pixelArt": true,
     "illustratedEditingTimeline": true,
     "character": "Shared canonical pixel cat, sleeping pose",
-    "clock": "02:37"
+    "clock": "02:37",
+    "badge": "Sky-blue badge with ant-head symbol only; no lettering or portrait"
   },
-  "reviewStatus": "awaiting-user-review"
+  "reviewStatus": "awaiting-user-review",
+  "characterMaster": "public/brand/tomcat/tomcat-pixel-master-v3-ant-logo.png"
 }
