@@ -1,0 +1,14 @@
+{
+  "title": "Super Mario Bros. 1 — Main Theme & Overworld",
+  "sourcePage": "https://www.mariomayhem.com/downloads/sound_tracks/super_mario_bros_1_soundtrack.php",
+  "downloadUrl": "https://www.mariomayhem.com/downloads/sound_tracks/Super_Mario_Bros._1/01-main-theme-overworld.mp3",
+  "localPath": "out/ai-video-game-editing/music/ground-theme-reference.mp3",
+  "sha256": "99590F33C0C01D7E9AF10B45C12959B36F0C325F7E07B042029339DB851B7027",
+  "durationSeconds": 184.16326530612244,
+  "downloadedOn": "2026-09-30",
+  "acquisition": "user explicitly requested online download",
+  "rights": "Third-party-hosted Nintendo composition/recording; redistribution and publishing license NOT verified. Keep raw recording out of git.",
+  "sourceTrimSeconds": 1.024,
+  "editorialTempoBpm": 200,
+  "analysis": "music-analysis.json"
+}

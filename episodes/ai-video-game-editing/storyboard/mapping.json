@@ -1,0 +1,75 @@
+{
+  "projectId": "project-munnz5fk-hoimot",
+  "url": "http://127.0.0.1:43218/project/project-munnz5fk-hoimot",
+  "syncMode": "explicit-MCP-snapshot-not-live",
+  "notReturned": [
+    "generation media (not generated)"
+  ],
+  "timing": "Storyboard duration 0 pending recorded speech; planned music-grid ranges in notes; shots.json owns provisional frame ranges.",
+  "shots": [
+    {
+      "localId": "s010",
+      "shotId": "shot-munnz5fk-bd0ddm"
+    },
+    {
+      "localId": "s020",
+      "shotId": "shot-munnz5fk-hdr3qy"
+    },
+    {
+      "localId": "s030",
+      "shotId": "shot-munnz5fk-rdqm2d"
+    },
+    {
+      "localId": "s040",
+      "shotId": "shot-munnz5fk-d9wxyn"
+    },
+    {
+      "localId": "s050",
+      "shotId": "shot-munnz5fk-jayr9m"
+    },
+    {
+      "localId": "s060",
+      "shotId": "shot-munnz5fk-3bshni"
+    },
+    {
+      "localId": "s070",
+      "shotId": "shot-munnz5fk-oem8xv"
+    },
+    {
+      "localId": "s080",
+      "shotId": "shot-munnz5fk-ba0590"
+    },
+    {
+      "localId": "s090",
+      "shotId": "shot-munnz5fk-x9owww"
+    },
+    {
+      "localId": "s100",
+      "shotId": "shot-munnz5fk-ys1blh"
+    },
+    {
+      "localId": "s110",
+      "shotId": "shot-munnz5fk-4tzqrw"
+    },
+    {
+      "localId": "s120",
+      "shotId": "shot-munnz5fk-send24"
+    },
+    {
+      "localId": "s130",
+      "shotId": "shot-munnz5fk-0ic6e1"
+    },
+    {
+      "localId": "s140",
+      "shotId": "shot-munnz5fk-981j28"
+    },
+    {
+      "localId": "s150",
+      "shotId": "shot-munnz5fk-046cyg"
+    },
+    {
+      "localId": "s160",
+      "shotId": "shot-munnz5fk-sh5ner"
+    }
+  ]
+}

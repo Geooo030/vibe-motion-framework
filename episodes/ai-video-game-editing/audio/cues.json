@@ -1,0 +1,567 @@
+{
+  "status": "SFX-generated; reference-mix-local-only; dialogue-NOT-generated",
+  "sampleRate": 22050,
+  "durationSeconds": 76.8,
+  "events": [
+    {
+      "shotId": "s010",
+      "beatOffset": 0,
+      "frame": 0,
+      "seconds": 0.0,
+      "asset": "assets/audio/key.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s010",
+      "beatOffset": 1,
+      "frame": 9,
+      "seconds": 0.3,
+      "asset": "assets/audio/key.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s010",
+      "beatOffset": 8,
+      "frame": 72,
+      "seconds": 2.4,
+      "asset": "assets/audio/cloth.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s020",
+      "beatOffset": 0,
+      "frame": 144,
+      "seconds": 4.8,
+      "asset": "assets/audio/bubble.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s020",
+      "beatOffset": 2,
+      "frame": 162,
+      "seconds": 5.4,
+      "asset": "assets/audio/bubble.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s020",
+      "beatOffset": 4,
+      "frame": 180,
+      "seconds": 6.0,
+      "asset": "assets/audio/bubble.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s020",
+      "beatOffset": 10,
+      "frame": 234,
+      "seconds": 7.8,
+      "asset": "assets/audio/wake.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s030",
+      "beatOffset": 1,
+      "frame": 297,
+      "seconds": 9.9,
+      "asset": "assets/audio/jump.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s030",
+      "beatOffset": 4,
+      "frame": 324,
+      "seconds": 10.8,
+      "asset": "assets/audio/land.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s030",
+      "beatOffset": 8,
+      "frame": 360,
+      "seconds": 12.0,
+      "asset": "assets/audio/select.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s040",
+      "beatOffset": 0,
+      "frame": 396,
+      "seconds": 13.2,
+      "asset": "assets/audio/select.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s040",
+      "beatOffset": 4,
+      "frame": 432,
+      "seconds": 14.4,
+      "asset": "assets/audio/bubble.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s040",
+      "beatOffset": 9,
+      "frame": 477,
+      "seconds": 15.9,
+      "asset": "assets/audio/portal.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s050",
+      "beatOffset": 0,
+      "frame": 540,
+      "seconds": 18.0,
+      "asset": "assets/audio/key.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s050",
+      "beatOffset": 1,
+      "frame": 549,
+      "seconds": 18.3,
+      "asset": "assets/audio/key.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s050",
+      "beatOffset": 2,
+      "frame": 558,
+      "seconds": 18.6,
+      "asset": "assets/audio/key.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s050",
+      "beatOffset": 3,
+      "frame": 567,
+      "seconds": 18.9,
+      "asset": "assets/audio/key.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s050",
+      "beatOffset": 4,
+      "frame": 576,
+      "seconds": 19.2,
+      "asset": "assets/audio/key.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s050",
+      "beatOffset": 7,
+      "frame": 603,
+      "seconds": 20.1,
+      "asset": "assets/audio/branch.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s060",
+      "beatOffset": 0,
+      "frame": 684,
+      "seconds": 22.8,
+      "asset": "assets/audio/portal.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s060",
+      "beatOffset": 4,
+      "frame": 720,
+      "seconds": 24.0,
+      "asset": "assets/audio/snap.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s060",
+      "beatOffset": 6,
+      "frame": 738,
+      "seconds": 24.6,
+      "asset": "assets/audio/snap.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s060",
+      "beatOffset": 8,
+      "frame": 756,
+      "seconds": 25.2,
+      "asset": "assets/audio/snap.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s060",
+      "beatOffset": 10,
+      "frame": 774,
+      "seconds": 25.8,
+      "asset": "assets/audio/snap.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s070",
+      "beatOffset": 0,
+      "frame": 828,
+      "seconds": 27.6,
+      "asset": "assets/audio/select.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s070",
+      "beatOffset": 3,
+      "frame": 855,
+      "seconds": 28.5,
+      "asset": "assets/audio/snap.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s070",
+      "beatOffset": 6,
+      "frame": 882,
+      "seconds": 29.4,
+      "asset": "assets/audio/branch.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s070",
+      "beatOffset": 9,
+      "frame": 909,
+      "seconds": 30.3,
+      "asset": "assets/audio/branch.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s070",
+      "beatOffset": 12,
+      "frame": 936,
+      "seconds": 31.2,
+      "asset": "assets/audio/goal.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s080",
+      "beatOffset": 0,
+      "frame": 972,
+      "seconds": 32.4,
+      "asset": "assets/audio/paper.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s080",
+      "beatOffset": 4,
+      "frame": 1008,
+      "seconds": 33.6,
+      "asset": "assets/audio/snap.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s080",
+      "beatOffset": 8,
+      "frame": 1044,
+      "seconds": 34.8,
+      "asset": "assets/audio/snap.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s080",
+      "beatOffset": 12,
+      "frame": 1080,
+      "seconds": 36.0,
+      "asset": "assets/audio/snap.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s090",
+      "beatOffset": 0,
+      "frame": 1116,
+      "seconds": 37.2,
+      "asset": "assets/audio/goal.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s090",
+      "beatOffset": 5,
+      "frame": 1161,
+      "seconds": 38.7,
+      "asset": "assets/audio/select.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s090",
+      "beatOffset": 9,
+      "frame": 1197,
+      "seconds": 39.9,
+      "asset": "assets/audio/land.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s090",
+      "beatOffset": 14,
+      "frame": 1242,
+      "seconds": 41.4,
+      "asset": "assets/audio/key.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s100",
+      "beatOffset": 0,
+      "frame": 1296,
+      "seconds": 43.2,
+      "asset": "assets/audio/jump.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s100",
+      "beatOffset": 3,
+      "frame": 1323,
+      "seconds": 44.1,
+      "asset": "assets/audio/pickup.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s100",
+      "beatOffset": 6,
+      "frame": 1350,
+      "seconds": 45.0,
+      "asset": "assets/audio/jump.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s100",
+      "beatOffset": 9,
+      "frame": 1377,
+      "seconds": 45.9,
+      "asset": "assets/audio/pickup.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s100",
+      "beatOffset": 12,
+      "frame": 1404,
+      "seconds": 46.8,
+      "asset": "assets/audio/jump.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s100",
+      "beatOffset": 15,
+      "frame": 1431,
+      "seconds": 47.7,
+      "asset": "assets/audio/pickup.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s100",
+      "beatOffset": 18,
+      "frame": 1458,
+      "seconds": 48.6,
+      "asset": "assets/audio/snap.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s110",
+      "beatOffset": 2,
+      "frame": 1494,
+      "seconds": 49.8,
+      "asset": "assets/audio/cut.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s110",
+      "beatOffset": 5,
+      "frame": 1521,
+      "seconds": 50.7,
+      "asset": "assets/audio/snap.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s110",
+      "beatOffset": 8,
+      "frame": 1548,
+      "seconds": 51.6,
+      "asset": "assets/audio/cut.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s110",
+      "beatOffset": 11,
+      "frame": 1575,
+      "seconds": 52.5,
+      "asset": "assets/audio/snap.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s110",
+      "beatOffset": 14,
+      "frame": 1602,
+      "seconds": 53.4,
+      "asset": "assets/audio/jump.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s110",
+      "beatOffset": 17,
+      "frame": 1629,
+      "seconds": 54.3,
+      "asset": "assets/audio/land.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s120",
+      "beatOffset": 0,
+      "frame": 1656,
+      "seconds": 55.2,
+      "asset": "assets/audio/error.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s120",
+      "beatOffset": 6,
+      "frame": 1710,
+      "seconds": 57.0,
+      "asset": "assets/audio/cut.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s120",
+      "beatOffset": 10,
+      "frame": 1746,
+      "seconds": 58.2,
+      "asset": "assets/audio/jump.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s120",
+      "beatOffset": 13,
+      "frame": 1773,
+      "seconds": 59.1,
+      "asset": "assets/audio/break.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s120",
+      "beatOffset": 17,
+      "frame": 1809,
+      "seconds": 60.3,
+      "asset": "assets/audio/done.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s130",
+      "beatOffset": 0,
+      "frame": 1836,
+      "seconds": 61.2,
+      "asset": "assets/audio/jump.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s130",
+      "beatOffset": 4,
+      "frame": 1872,
+      "seconds": 62.4,
+      "asset": "assets/audio/land.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s130",
+      "beatOffset": 7,
+      "frame": 1899,
+      "seconds": 63.3,
+      "asset": "assets/audio/success.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s140",
+      "beatOffset": 0,
+      "frame": 1980,
+      "seconds": 66.0,
+      "asset": "assets/audio/key.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s140",
+      "beatOffset": 2,
+      "frame": 1998,
+      "seconds": 66.6,
+      "asset": "assets/audio/key.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s140",
+      "beatOffset": 4,
+      "frame": 2016,
+      "seconds": 67.2,
+      "asset": "assets/audio/key.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s140",
+      "beatOffset": 8,
+      "frame": 2052,
+      "seconds": 68.4,
+      "asset": "assets/audio/done.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s150",
+      "beatOffset": 0,
+      "frame": 2088,
+      "seconds": 69.6,
+      "asset": "assets/audio/portal.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s150",
+      "beatOffset": 8,
+      "frame": 2160,
+      "seconds": 72.0,
+      "asset": "assets/audio/knock.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s150",
+      "beatOffset": 10,
+      "frame": 2178,
+      "seconds": 72.6,
+      "asset": "assets/audio/knock.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s160",
+      "beatOffset": 1,
+      "frame": 2205,
+      "seconds": 73.5,
+      "asset": "assets/audio/done.wav",
+      "gain": 0.65
+    },
+    {
+      "shotId": "s160",
+      "beatOffset": 9,
+      "frame": 2277,
+      "seconds": 75.9,
+      "asset": "assets/audio/cloth.wav",
+      "gain": 0.65
+    }
+  ],
+  "musicDucking": "Dialogue shots -8.35 dB relative to normal BGM; no actual voice yet.",
+  "rights": "SFX synthesized from deterministic oscillators/noise; not Nintendo game effects. BGM publication license unverified.",
+  "sourceFiles": {
+    "branch.wav": "ca1306ca2f4d1d8a8768f0adae21281a83d9bc42b9dc33327b39548a9d0456a5",
+    "break.wav": "b7e067493a2979c8a1987174f1f62e5f238875a2ecd2e2667fb262d012d1add7",
+    "bubble.wav": "89da80630a28106c497045ab07911cd8a1667ae4f8f531949063b9635a379d17",
+    "cloth.wav": "237e9b8c5da76a119dcd27723347843d0a5ed0d7d48431b525de215eb2fa6192",
+    "cut.wav": "c05c6bb804792983040586598ba1d1bdc27483825959b71769add52df57d850d",
+    "done.wav": "b08d83e39b09538f39dbea7b1fa07a7d2e659dad5a60937b71b13bb06790b690",
+    "error.wav": "4b536f6ffbe46490b65a4e006c4f1d7a7fb87c4d231c3984af5941dfadd55c64",
+    "goal.wav": "5827b3615d226ba3782c895ca47b6cee8c31edd49d22481aabf41493506219d4",
+    "jump.wav": "e5118a020677f3abda501ad5805002ed1909aefc9801d9fc58a4a7327401390c",
+    "key.wav": "46221ab39b52afa66d8bff74f93e267d98da9913b763347146b377839d1c2456",
+    "knock.wav": "4b017a4dbc497bc744bc87af0afce4857fd107d6203b5f737235dc0170d00349",
+    "land.wav": "f35f52ef703028637d3393b0f3a7c02747994f81e56785095e558d0f2d8a28cf",
+    "paper.wav": "5db2aa99e53e7091f34ba055d1aa1c83adcfc051b7418ae38181248c00309bd0",
+    "pickup.wav": "8e89f60c8f1fa8430fae6eaab60e990cf5ab4f89f056d350bddeecdf78090172",
+    "portal.wav": "71ce0327c3d68015229592f0daa7e20e98ff8d19925acc088afc8063885b237a",
+    "select.wav": "e66a0fa7a658a689d5b1be796122433002cace27dc25ba84b30c3a5632b14317",
+    "sfx-timeline-v1.wav": "b85a8420c7cc50be9e9b381125215780ec6b451d20095272e2141693bb1ac94c",
+    "snap.wav": "ddbffc1797e51a9d7927318c063e8c565f871e0e01be55c1a3bfddac76e4a453",
+    "success.wav": "1aeb19a231d391a29e910c6ecaca0c78e70689c9d29f4f3619566c3756c2524b",
+    "wake.wav": "27deac5c958c04dc52d984c126891fa858d6587f4ade1950e5577ac7a72ca26d"
+  }
+}

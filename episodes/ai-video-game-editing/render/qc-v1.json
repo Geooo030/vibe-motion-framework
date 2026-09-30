@@ -1,0 +1,27 @@
+{
+  "status": "blocking-review-only",
+  "visualChecks": "All 16 representative Blender frames inspected; fixed washed-out shading, hidden helper, unsupported check glyph and premature initial goal check.",
+  "videoTechnicalCheck": {
+    "width": 960,
+    "height": 540,
+    "durationSeconds": 76.8,
+    "fps": 30,
+    "frames": 2304,
+    "codec": "h264",
+    "audio": "AAC",
+    "decodedInitialVersionFullFrameCount": 2304
+  },
+  "audioSignalCheck": {
+    "peak": 0.643035888671875,
+    "rms": 0.0349964288625001,
+    "clippedSamples": 0,
+    "humanListening": false
+  },
+  "notValidated": [
+    "Final natural acting and badge physics",
+    "Precise musical downbeats",
+    "Natural dialogue (not generated)",
+    "All secondary scripted actions",
+    "Publishing rights"
+  ]
+}

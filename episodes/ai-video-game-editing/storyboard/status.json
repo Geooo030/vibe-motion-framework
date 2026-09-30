@@ -1,5 +1,10 @@
 {
-  "status": "not-created",
-  "reason": "User requested cover first; no complete script or shot list yet.",
-  "projectId": null
+  "status": "created-and-read-back",
+  "projectId": "project-munnz5fk-hoimot",
+  "url": "http://127.0.0.1:43218/project/project-munnz5fk-hoimot",
+  "shotCount": 16,
+  "designImported": true,
+  "syncMode": "explicit",
+  "durationStatus": "0 pending recorded voice; provisional music-grid timing in notes",
+  "mediaStatus": "Blender preview files local; no generated media uploaded into Storyboard"
 }

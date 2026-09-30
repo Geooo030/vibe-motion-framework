@@ -1,23 +1,41 @@
 # 当AI半夜起来帮我剪视频
 
-本期分支：`episode/04-ai-video-game-editing`。
+本期分支：`episode/04-ai-video-game-editing`。按用户新要求改为全片 Blender 独立制作，不使用旧 Remotion 外壳。
 
-## 当前阶段
+## 从这里看
 
-只制作封面，尚未撰写视频脚本、创建工作台分镜、生成配音或渲染视频。不要将此目录标记为可渲染成片。
+- `script.md`：完整导演脚本、16 个分镜、台词、运镜、转场、字幕、音效说明。
+- `shots.json`：音乐网格下的唯一帧表，30 fps / 2304 帧 / 暂定 76.8 秒。
+- `DESIGN.md`：美术方向、场景层级、UI 和字幕布局、验收条件。
+- `assets/concepts/game-editor-keyframe-v1.png`：imagegen 关键美术参考，不是 Blender 成片。
+- `assets/characters/tomcat-sleepy-v1.png`：新生成困困猫咪透明素材。
+- `assets/previews/`：16 张真实 Blender 关键帧（构图预演）。
+- `blender/README.md`：独立搭建/渲染/声音/验证步骤与明确未完成项。
+- 工作台：[16 镜头项目](http://127.0.0.1:43218/project/project-munnz5fk-hoimot)。
 
-- 当前封面：`assets/covers/cover-pixel-v4-midnight-ant-logo.png`，1672 × 941，接近 16:9 的横版构图。
-- 生成记录：`cover-generation.json`；完整提示词：`cover-prompt-v4-ant-logo.md`。
-- 风格：16-bit 深夜像素工作室；汤姆猫在电脑旁睡觉，AI 在凌晨 02:37 操作剪辑时间轴；两行大字标题。
-- 账号署名：大厂汤姆猫。猫咪为原创封面插画，不是用户现有头像的复刻或已确认的账号头像。
-- 当前 v4 供用户审阅，不承诺播放量。旧题《像打游戏一样用AI剪视频》的 v1 封面、`cover-prompt.md`、`cover-generation-v1.json` 保留为历史记录。
-- 最新 v4 是仅含蚂蚁头标志的天蓝色工牌版本；v3 文字工牌为已被用户修订的历史草稿，不再使用。v1/v2 与历史生成记录保留。
-- 本次仅修改展示标题、封面和角色参考，稳定目录 ID 与分支名称保持不变。
+## 当前状态
 
-## 后续制作
+已写脚本、建立工作台分镜、生成美术参考和困困角色、下载指定音乐、分析音频网格、合成 19 个原创音效及 67 个触发点、建立 16 个 Blender 原生场景与初步动作。
 
-本期默认跨期角色母版：`public/brand/tomcat/tomcat-pixel-master-v3-ant-logo.png`，角色设定与复用规则见同目录 README。后续动作和表情以此图作为实际参考。所有猫咪镜头应在动作中自然露出天蓝色工牌，卡面只保留蚂蚁头标志，无文字、猫咪头像、工号或二维码；分镜记录露出时机并逐镜验收，不做工牌特写。本规则尚未实现自动检测，也未重新渲染历史视频。
+本轮输出是 2.5D 像素动画预演：原生几何场景/文字，猫咪为母版透明精灵，不是最终 3D 角色绑定。精细跑跳、抓取约束、金币变素材、轨道与关卡严格联动、独立工牌摆动、配音和嘴型尚未完成。最终发布版 renderReady=false，不能因为编码成功就标成完片。
 
-用户确认内容方向后，补全 script.md、稳定镜头 ID、实际帧表、素材依赖、工作台项目与快照、配音及其校验记录，再接入 episode:check / prepare / render。当前空分镜及 null 时长用于明确“未制作”，不得用旧一期数据凑数。
+完整本地预演：`out/ai-video-game-editing/blender/animatic-v1.mp4`，帧缓存/每镜 .blend/音乐混音都保留在 ignored out/。预演按 10 次/秒采样动作、持帧至 30 fps；含参考 BGM+原创 SFX，无台词音频。
 
-本分支从 193e09a（含最新资料同步工具）创建；此前各期源文件保留为框架历史，未修改上一期视频。
+## 音乐与声音
+
+指定地面曲已下载，来源和 SHA 见 `audio/music-source.json`。实际分析最强候选为 200 BPM，9 帧/拍；工作小节与切分音还待听审。原录音/混音不上传 Git，不将可下载等同于有发布授权。19 个音效不是复制任天堂音效，合成脚本可重建。配音技能缺少本地凭证，因此本轮未合成台词。
+
+## 角色及封面
+
+- 当前角色：`public/brand/tomcat/tomcat-pixel-master-v3-ant-logo.png`。
+- 每个猫咪镜头自然露出天蓝色、仅有蚂蚁头标志的工牌；不加文字，不做广告特写。
+- 当前封面：`assets/covers/cover-pixel-v4-midnight-ant-logo.png`；历史封面、生成记录、提示词原样保留。
+- 没有修改线上头像，也不暗示品牌雇佣或官方合作。
+
+## 同步和复现
+
+`storyboard/snapshot.json` 为 MCP 回读的完整响应，`mapping.json` 保存稳定镜头 ID 映射。同步是显式操作，不是实时监听。Storyboard 时长为 0，待录音后确定；当前音乐预演范围写在 notes，实际暂定帧表以 shots.json 为准。
+
+本期独立验证命令：`python episodes/ai-video-game-editing/blender/validate.py`。旧 `episode:prepare/render` 尚无 Blender adapter，不应使用旧流程假报完成。改 script/shots/素材后需重跑受影响场景、声音编排和 receipts。
+
+本分支继承的其他期内容仅是框架历史，本次没有修改或重渲染它们。

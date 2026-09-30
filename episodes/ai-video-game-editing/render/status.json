@@ -1,5 +1,25 @@
 {
-  "videoRendered": false,
+  "videoRendered": true,
+  "renderType": "76.8s animated Blender blocking",
+  "finalVideoRendered": false,
+  "finalReady": false,
   "coverGenerated": true,
-  "coverReviewedByUser": false
+  "coverReviewedByUser": false,
+  "blenderScenes": 16,
+  "previewFrames": 16,
+  "sourceAnimationFrames": 768,
+  "encodedVideoFrames": 2304,
+  "encodedFps": 30,
+  "actionSamplingFps": 10,
+  "referenceMusicIncluded": true,
+  "originalSfxIncluded": true,
+  "dialogueVoiceIncluded": false,
+  "musicPublishingRightsVerified": false,
+  "previewPath": "out\\ai-video-game-editing\\blender\\animatic-v1.mp4",
+  "receipt": "animatic-receipt.json",
+  "limitations": [
+    "2.5D sprites, not final character rig",
+    "No real voice or lip sync",
+    "Scripted secondary actions and precise music beats still need polish"
+  ]
 }

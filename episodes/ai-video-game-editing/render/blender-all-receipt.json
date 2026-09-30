@@ -1,0 +1,151 @@
+{
+  "status": "blocking-previews-not-final-film",
+  "blender": "4.5.9 LTS",
+  "width": 960,
+  "height": 540,
+  "fps": 30,
+  "frameStep": 3,
+  "sourceHashes": {
+    "shots.json": "a41fb0f19aa4def33b23154cbc43f7e1711cf67b91c335addc969fd8459c7cf6",
+    "script.md": "4ca899f5a6144d25f2ca7306392943b694c3ec95a4c809a79266d4aec12ccbd0",
+    "build_scenes.py": "565f19e23196ba90a6068f49c1b9aa65d2c758e19bda98454b8f92c3dd09bfa2",
+    "tomcat-pixel-master-v3-ant-logo.png": "2cacb08dbb7ce7b864bc6a5a98d95e2205fef2902575fd573e52363f192b1514"
+  },
+  "shots": [
+    {
+      "shotId": "s010",
+      "blend": "out\\ai-video-game-editing\\blender\\scenes\\s010.blend",
+      "preview": "episodes\\ai-video-game-editing\\assets\\previews\\s010.png",
+      "frame": 75,
+      "animationRendered": true,
+      "renderStatus": "blocking-preview"
+    },
+    {
+      "shotId": "s020",
+      "blend": "out\\ai-video-game-editing\\blender\\scenes\\s020.blend",
+      "preview": "episodes\\ai-video-game-editing\\assets\\previews\\s020.png",
+      "frame": 75,
+      "animationRendered": true,
+      "renderStatus": "blocking-preview"
+    },
+    {
+      "shotId": "s030",
+      "blend": "out\\ai-video-game-editing\\blender\\scenes\\s030.blend",
+      "preview": "episodes\\ai-video-game-editing\\assets\\previews\\s030.png",
+      "frame": 56,
+      "animationRendered": true,
+      "renderStatus": "blocking-preview"
+    },
+    {
+      "shotId": "s040",
+      "blend": "out\\ai-video-game-editing\\blender\\scenes\\s040.blend",
+      "preview": "episodes\\ai-video-game-editing\\assets\\previews\\s040.png",
+      "frame": 75,
+      "animationRendered": true,
+      "renderStatus": "blocking-preview"
+    },
+    {
+      "shotId": "s050",
+      "blend": "out\\ai-video-game-editing\\blender\\scenes\\s050.blend",
+      "preview": "episodes\\ai-video-game-editing\\assets\\previews\\s050.png",
+      "frame": 75,
+      "animationRendered": true,
+      "renderStatus": "blocking-preview"
+    },
+    {
+      "shotId": "s060",
+      "blend": "out\\ai-video-game-editing\\blender\\scenes\\s060.blend",
+      "preview": "episodes\\ai-video-game-editing\\assets\\previews\\s060.png",
+      "frame": 75,
+      "animationRendered": true,
+      "renderStatus": "blocking-preview"
+    },
+    {
+      "shotId": "s070",
+      "blend": "out\\ai-video-game-editing\\blender\\scenes\\s070.blend",
+      "preview": "episodes\\ai-video-game-editing\\assets\\previews\\s070.png",
+      "frame": 75,
+      "animationRendered": true,
+      "renderStatus": "blocking-preview"
+    },
+    {
+      "shotId": "s080",
+      "blend": "out\\ai-video-game-editing\\blender\\scenes\\s080.blend",
+      "preview": "episodes\\ai-video-game-editing\\assets\\previews\\s080.png",
+      "frame": 75,
+      "animationRendered": true,
+      "renderStatus": "blocking-preview"
+    },
+    {
+      "shotId": "s090",
+      "blend": "out\\ai-video-game-editing\\blender\\scenes\\s090.blend",
+      "preview": "episodes\\ai-video-game-editing\\assets\\previews\\s090.png",
+      "frame": 94,
+      "animationRendered": true,
+      "renderStatus": "blocking-preview"
+    },
+    {
+      "shotId": "s100",
+      "blend": "out\\ai-video-game-editing\\blender\\scenes\\s100.blend",
+      "preview": "episodes\\ai-video-game-editing\\assets\\previews\\s100.png",
+      "frame": 94,
+      "animationRendered": true,
+      "renderStatus": "blocking-preview"
+    },
+    {
+      "shotId": "s110",
+      "blend": "out\\ai-video-game-editing\\blender\\scenes\\s110.blend",
+      "preview": "episodes\\ai-video-game-editing\\assets\\previews\\s110.png",
+      "frame": 94,
+      "animationRendered": true,
+      "renderStatus": "blocking-preview"
+    },
+    {
+      "shotId": "s120",
+      "blend": "out\\ai-video-game-editing\\blender\\scenes\\s120.blend",
+      "preview": "episodes\\ai-video-game-editing\\assets\\previews\\s120.png",
+      "frame": 94,
+      "animationRendered": true,
+      "renderStatus": "blocking-preview"
+    },
+    {
+      "shotId": "s130",
+      "blend": "out\\ai-video-game-editing\\blender\\scenes\\s130.blend",
+      "preview": "episodes\\ai-video-game-editing\\assets\\previews\\s130.png",
+      "frame": 75,
+      "animationRendered": true,
+      "renderStatus": "blocking-preview"
+    },
+    {
+      "shotId": "s140",
+      "blend": "out\\ai-video-game-editing\\blender\\scenes\\s140.blend",
+      "preview": "episodes\\ai-video-game-editing\\assets\\previews\\s140.png",
+      "frame": 56,
+      "animationRendered": true,
+      "renderStatus": "blocking-preview"
+    },
+    {
+      "shotId": "s150",
+      "blend": "out\\ai-video-game-editing\\blender\\scenes\\s150.blend",
+      "preview": "episodes\\ai-video-game-editing\\assets\\previews\\s150.png",
+      "frame": 56,
+      "animationRendered": true,
+      "renderStatus": "blocking-preview"
+    },
+    {
+      "shotId": "s160",
+      "blend": "out\\ai-video-game-editing\\blender\\scenes\\s160.blend",
+      "preview": "episodes\\ai-video-game-editing\\assets\\previews\\s160.png",
+      "frame": 56,
+      "animationRendered": true,
+      "renderStatus": "blocking-preview"
+    }
+  ],
+  "limitations": [
+    "2.5D sprite blocking, not final rigged character animation",
+    "No dialogue voice",
+    "Keyframes are initial motion blocking, not every scripted action implemented",
+    "No final music beat/listening QC",
+    "No old Remotion framework used"
+  ]
+}

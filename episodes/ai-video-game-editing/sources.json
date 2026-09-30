@@ -1,1 +1,21 @@
-[]
+[
+  {
+    "id": "mario-ground-theme",
+    "type": "third-party-recording",
+    "page": "https://www.mariomayhem.com/downloads/sound_tracks/super_mario_bros_1_soundtrack.php",
+    "details": "audio/music-source.json",
+    "rights": "publication-not-verified; audio-not-committed"
+  },
+  {
+    "id": "ground-theme-primary-context",
+    "type": "official-reference",
+    "url": "https://www.nintendo.com/en-gb/Iwata-Asks/Super-Mario-Bros-25th-Anniversary/Vol-5-Original-Super-Mario-Developers/5-To-Save-Memory/5-To-Save-Memory-212974.html",
+    "usedFor": "Reference track identity; not a recording license"
+  },
+  {
+    "id": "cat-master",
+    "type": "project-generated-reference",
+    "path": "public/brand/tomcat/tomcat-pixel-master-v3-ant-logo.png",
+    "rights": "See shared character manifest; Ant Group trademark not owned by project"
+  }
+]

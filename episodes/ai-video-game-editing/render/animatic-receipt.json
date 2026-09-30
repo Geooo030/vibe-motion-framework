@@ -1,0 +1,11 @@
+{
+  "status": "animated-blocking-not-final",
+  "path": "out\\ai-video-game-editing\\blender\\animatic-v1.mp4",
+  "sha256": "25431a251020eee325dabc81a3ac802655044177e6e52e427004b2932e926d0c",
+  "durationSeconds": 76.8,
+  "fps": 30,
+  "sourceFrameCount": 768,
+  "actionSampleRate": 10.0,
+  "audio": "reference BGM plus original SFX; NO dialogue voice",
+  "rights": "Local review only; music publishing authorization not verified"
+}
