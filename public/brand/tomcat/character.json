@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "brand-tomcat-pixel",
+  "name": "大厂汤姆猫",
+  "version": 1,
+  "status": "default-reference-awaiting-user-feedback",
+  "path": "public/brand/tomcat/tomcat-pixel-master-v1.png",
+  "width": 1254,
+  "height": 1254,
+  "format": "RGBA PNG",
+  "transparent": true,
+  "sha256": "06F1FE0E79112FD99256F891393A49119B8A98353003EFAF5F43C8130C55DADB",
+  "sourceCover": "episodes/ai-video-game-editing/assets/covers/cover-pixel-v1.png",
+  "generator": "built-in image_gen",
+  "promptFile": "public/brand/tomcat/prompts.md",
+  "createdOn": "2026-09-30",
+  "usage": "Shared character identity reference across future episodes; derivative poses require visual identity check.",
+  "onlineAvatarChanged": false
+}

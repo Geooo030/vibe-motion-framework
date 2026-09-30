@@ -13,5 +13,13 @@
     "referenceImages": [],
     "rightsNote": "Generated without third-party reference assets; usage subject to generation service terms.",
     "description": "Original pixel cat and editing-timeline platform game; not a recreation of the owner's existing avatar."
+  },
+  {
+    "id": "shared-tomcat-pixel-master-v1",
+    "path": "public/brand/tomcat/tomcat-pixel-master-v1.png",
+    "kind": "shared-character-reference",
+    "sha256": "06F1FE0E79112FD99256F891393A49119B8A98353003EFAF5F43C8130C55DADB",
+    "identityManifest": "public/brand/tomcat/character.json",
+    "status": "default-reference-awaiting-user-feedback"
   }
 ]
