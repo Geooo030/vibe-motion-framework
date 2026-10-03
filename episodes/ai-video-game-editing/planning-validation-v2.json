@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-03",
+  "planRevision": "v2-paper-stage",
+  "scope": "Planning data only; not render or audiovisual acceptance",
+  "checks": {
+    "shotCount": 16,
+    "frameCount": 2304,
+    "localBeatActionBlocks": 68,
+    "contiguousFrames": true,
+    "actionRangesCoverEachShot": true,
+    "dialogueUnchanged": true,
+    "allEpisodeJsonParsed": true,
+    "storyboardReadBackFieldsMatched": true,
+    "remoteBeforeUpdateMatchedSnapshot": true,
+    "historicalSceneCodeMediaAndReceiptsUnchanged": true
+  },
+  "renderValidation": {
+    "status": "stale-expected",
+    "command": "python episodes/ai-video-game-editing/blender/validate.py",
+    "exitCode": 1,
+    "reason": "Existing v1 render receipt shots.json hash differs from v2 plan; no receipt rewritten."
+  },
+  "legacyFrameworkCheck": {
+    "status": "pre-existing-incompatible-adapter",
+    "command": "npm run episode:check -- ai-video-game-editing",
+    "exitCode": 1,
+    "message": "Wrong storyboard project ID",
+    "observedBeforeEdits": true
+  },
+  "next": "Implement and render three style-test shots before full-film rebuild."
+}

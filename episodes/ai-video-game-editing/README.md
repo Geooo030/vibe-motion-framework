@@ -2,6 +2,12 @@
 
 本期分支：`episode/04-ai-video-game-editing`。按用户新要求改为全片 Blender 独立制作，不使用旧 Remotion 外壳。
 
+## 当前版本：v2 重新规划
+
+本轮按照指定手绘 Remotion 参考项目重排动画，但继续全 Blender 制作：手绘纸面剪辑台 × 保持身份的像素猫/像素关卡。参考不是可安装 SKILL，本轮没有安装或执行它。具体来源与改编见 `style-reference.md`。
+
+16 镜已写入具体的动作因果与 68 段分拍。v2 尚未实现或渲染；下文已有媒体均为 v1。旧回执不改哈希，旧渲染已标 stale。先验证 s040/s070/s110 三镜，不直接渲染全片。v1 文稿可在 Git 11418b3 中恢复查看。
+
 ## 从这里看
 
 - `script.md`：完整导演脚本、16 个分镜、台词、运镜、转场、字幕、音效说明。
@@ -13,7 +19,7 @@
 - `blender/README.md`：独立搭建/渲染/声音/验证步骤与明确未完成项。
 - 工作台：[16 镜头项目](http://127.0.0.1:43218/project/project-munnz5fk-hoimot)。
 
-## 当前状态
+## 历史 v1 状态
 
 已写脚本、建立工作台分镜、生成美术参考和困困角色、下载指定音乐、分析音频网格、合成 19 个原创音效及 67 个触发点、建立 16 个 Blender 原生场景与初步动作。
 
@@ -39,3 +45,6 @@
 本期独立验证命令：`python episodes/ai-video-game-editing/blender/validate.py`。旧 `episode:prepare/render` 尚无 Blender adapter，不应使用旧流程假报完成。改 script/shots/素材后需重跑受影响场景、声音编排和 receipts。
 
 本分支继承的其他期内容仅是框架历史，本次没有修改或重渲染它们。
+## 验证状态
+
+旧通用 `npm run episode:check -- ai-video-game-editing` 在本轮修改前即报 Wrong storyboard project ID，旧适配器不适用于本期，未在规划任务中修改。独立 Blender 验证器此前通过；v2 改动后会在旧渲染源哈希处提示不匹配，这是待重渲染的真实状态，不能更新旧哈希掩盖。新版计划的结构、段内动作覆盖、对白不变与工作台一致性单独检查，结果见 `planning-validation-v2.json`。这些检查不等于渲染 QC。

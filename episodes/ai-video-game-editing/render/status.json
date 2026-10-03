@@ -20,6 +20,31 @@
   "limitations": [
     "2.5D sprites, not final character rig",
     "No real voice or lip sync",
-    "Scripted secondary actions and precise music beats still need polish"
-  ]
+    "Scripted secondary actions and precise music beats still need polish",
+    "Historical v1 output does not implement v2 paper-stage choreography"
+  ],
+  "planRevision": "v2-paper-stage",
+  "renderedPlanRevision": "v1",
+  "matchesCurrentPlan": false,
+  "currentPlanVideoRendered": false,
+  "staleShots": [
+    "s010",
+    "s020",
+    "s030",
+    "s040",
+    "s050",
+    "s060",
+    "s070",
+    "s080",
+    "s090",
+    "s100",
+    "s110",
+    "s120",
+    "s130",
+    "s140",
+    "s150",
+    "s160"
+  ],
+  "audioCueAlignment": "v1 cues/mix retained; v2 action alignment pending",
+  "staleReason": "All shot visual/camera/action briefs changed; scene code and existing render receipts were not regenerated."
 }

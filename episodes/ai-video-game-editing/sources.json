@@ -17,5 +17,14 @@
     "type": "project-generated-reference",
     "path": "public/brand/tomcat/tomcat-pixel-master-v3-ant-logo.png",
     "rights": "See shared character manifest; Ant Group trademark not owned by project"
+  },
+  {
+    "id": "wisewong6-handdrawn-editor",
+    "type": "source-code-style-reference-not-skill",
+    "url": "https://github.com/WiseWong6/claude-video-editing-remotion",
+    "commit": "d5c6dcbb99ab665eac22838daf29020656c18d83",
+    "audit": "style-reference.md",
+    "usedFor": "Paper palette, contact-driven stretchy arms, real clip trimming, motivated camera and paper-note ending adapted to Blender.",
+    "rights": "Code MIT; fonts OFL; soundtrack excluded. No source code or soundtrack copied this turn."
   }
 ]

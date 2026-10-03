@@ -1,5 +1,9 @@
 # Blender 独立制作入口
 
+## v2 规划提醒（2026-10-03）
+
+本页下方列的是 v1 已有实现与命令。当前 script.md / shots.json / DESIGN.md 已升级为手绘纸面 × 像素冒险规划，但 build_scenes.py 尚未实现新美术、68 段动作或抓取/轨道联动。直接运行旧命令不会得到新版效果，且可能覆盖旧预演；先改实现及 v2 输出路径，再执行。旧 .blend、PNG、音轨与回执保留；validate.py 当前在旧源哈希处失败是待重渲染状态，不要修改旧 receipt 绕过。规划检查见 ../planning-validation-v2.json。
+
 本期不经过旧 Remotion 框架。源分镜是 ../shots.json，台词在 ../script.md；Blender Python 根据它建立 16 个独立场景，逐镜保存可编辑 .blend，生成预演关键帧和可选动画。
 
 ## 当前交付层级
