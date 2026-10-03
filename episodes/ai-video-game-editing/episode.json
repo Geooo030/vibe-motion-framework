@@ -4,7 +4,7 @@
   "title": "当AI半夜起来帮我剪视频",
   "brand": "大厂汤姆猫",
   "branch": "episode/04-ai-video-game-editing",
-  "stage": "blender-style-replan",
+  "stage": "blender-v2-animated-draft",
   "renderReady": false,
   "composition": null,
   "videoDurationFrames": 2304,
@@ -14,8 +14,8 @@
     "snapshot": "storyboard/snapshot.json"
   },
   "cover": "assets/covers/cover-pixel-v4-midnight-ant-logo.png",
-  "note": "v2 plan only: hand-drawn paper editor + unchanged pixel cat/game. Blender implementation, voice, sound alignment and rerender pending; v1 output retained as stale reference.",
-  "renderer": "blender-native-2.5d-blocking",
+  "note": "76.8s v2 draft rendered at 1080p30 with local reference BGM and original SFX. No dialogue voice or full character rig; not final-ready. See render/animatic-v2-receipt.json.",
+  "renderer": "blender-native-paper-stage-2.5d",
   "fps": 30,
   "planRevision": "v2-paper-stage"
 }

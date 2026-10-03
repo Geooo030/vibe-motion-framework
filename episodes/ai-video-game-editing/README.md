@@ -2,7 +2,20 @@
 
 本期分支：`episode/04-ai-video-game-editing`。按用户新要求改为全片 Blender 独立制作，不使用旧 Remotion 外壳。
 
-## 当前版本：v2 重新规划
+## 当前交付：v2 动画初稿
+
+本地视频：`out/ai-video-game-editing/blender-v2/tomcat-midnight-v2.mp4`。76.8 秒、1920×1080、30fps、2304 个实际渲染帧；含指定参考 BGM 和 64 处新版原创音效触发，不含对白声音。
+
+- 新版代码：`blender/build_v2.py`；可复现修正、合成与验证步骤见 `blender/README.md`。
+- 渲染回执：`render/animatic-v2-receipt.json`；静帧：`assets/previews-v2/`。
+- 实现/简化范围：`render/v2-implementation.md`。猫是整张精灵，不是独立四肢与工牌绑定。
+- 豆包 TTS 技能缺少 MODEL_SPEECH_API_KEY，未合成台词；没有通过改音频审核哈希冒充审听。
+- BGM/混音/MP4 仅在本地 ignored out/，不上传 GitHub；公开发布范围未核实。
+- C 盘中途耗尽空间，本轮 frames 缓存已迁至 G:/work/agent-render-cache/ai-video-game-editing-v2/frames；原路径目录联接保留，其他文件与 v1 没有删除。
+
+用户尚未审片；本版是动画初稿，不是最终发布片。以下保留原规划与历史说明，当前状态以上面及 render/status.json 为准。
+
+## 历史规划：v2 重新规划
 
 本轮按照指定手绘 Remotion 参考项目重排动画，但继续全 Blender 制作：手绘纸面剪辑台 × 保持身份的像素猫/像素关卡。参考不是可安装 SKILL，本轮没有安装或执行它。具体来源与改编见 `style-reference.md`。
 

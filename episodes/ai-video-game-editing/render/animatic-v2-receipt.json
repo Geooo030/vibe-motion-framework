@@ -1,0 +1,460 @@
+{
+  "status": "v2-animated-draft-not-final",
+  "path": "out\\ai-video-game-editing\\blender-v2\\tomcat-midnight-v2.mp4",
+  "sha256": "04eb83706b4a9d2c2f22db070cb3c8a7bbf5825ae032aa51effd06b7c85e6f44",
+  "durationSeconds": 76.8,
+  "frameCount": 2304,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "audio": "Mario reference BGM + original v2 SFX; no dialogue voice",
+  "planRevision": "v2-paper-stage",
+  "shots": [
+    {
+      "shotId": "s010",
+      "planRevision": "v2-paper-stage",
+      "animationRendered": true,
+      "frameStep": 1,
+      "frames": 144,
+      "width": 1920,
+      "height": 1080,
+      "blender": "4.5.9 LTS",
+      "sourceHashes": {
+        "episodes\\ai-video-game-editing\\shots.json": "058b57e2cc8e9a35ecd06ba56aebd773fe6a052da0e0b51b93f60d24920fab24",
+        "episodes\\ai-video-game-editing\\script.md": "4c4c8f4e425dc9dd1f27fe038a59d41ae83ede378ffa51180ce051cc91fc2207",
+        "episodes\\ai-video-game-editing\\blender\\build_v2.py": "2e4cd54dbb68365f1160797b4992385038298cf568f2e3cd51a49c015caed3df",
+        "episodes\\ai-video-game-editing\\blender\\build_scenes.py": "565f19e23196ba90a6068f49c1b9aa65d2c758e19bda98454b8f92c3dd09bfa2",
+        "public\\brand\\tomcat\\tomcat-pixel-master-v3-ant-logo.png": "2cacb08dbb7ce7b864bc6a5a98d95e2205fef2902575fd573e52363f192b1514",
+        "episodes\\ai-video-game-editing\\assets\\fonts\\LXGWWenKaiTC-Regular.ttf": "4fcc5aec11cbbf737b0cfab7b63796f7f280087a7a656b2f13342cd5e5318d95"
+      },
+      "limitations": [
+        "Whole sprite cat, not separated limb/badge rig",
+        "No dialogue voice",
+        "Some scripted secondary acting remains simplified"
+      ],
+      "secondsSpent": 38.0444438457489,
+      "encodedClip": "out\\ai-video-game-editing\\blender-v2\\clips\\s010.mp4",
+      "encodedSha256": "4e9a81a8a082cff43ab184feddc1a24f3904e4e653236f19f2e9103f4fe4c31d"
+    },
+    {
+      "shotId": "s020",
+      "planRevision": "v2-paper-stage",
+      "animationRendered": true,
+      "frameStep": 1,
+      "frames": 144,
+      "width": 1920,
+      "height": 1080,
+      "blender": "4.5.9 LTS",
+      "sourceHashes": {
+        "episodes\\ai-video-game-editing\\shots.json": "058b57e2cc8e9a35ecd06ba56aebd773fe6a052da0e0b51b93f60d24920fab24",
+        "episodes\\ai-video-game-editing\\script.md": "4c4c8f4e425dc9dd1f27fe038a59d41ae83ede378ffa51180ce051cc91fc2207",
+        "episodes\\ai-video-game-editing\\blender\\build_v2.py": "2e4cd54dbb68365f1160797b4992385038298cf568f2e3cd51a49c015caed3df",
+        "episodes\\ai-video-game-editing\\blender\\build_scenes.py": "565f19e23196ba90a6068f49c1b9aa65d2c758e19bda98454b8f92c3dd09bfa2",
+        "public\\brand\\tomcat\\tomcat-pixel-master-v3-ant-logo.png": "2cacb08dbb7ce7b864bc6a5a98d95e2205fef2902575fd573e52363f192b1514",
+        "episodes\\ai-video-game-editing\\assets\\fonts\\LXGWWenKaiTC-Regular.ttf": "4fcc5aec11cbbf737b0cfab7b63796f7f280087a7a656b2f13342cd5e5318d95"
+      },
+      "limitations": [
+        "Whole sprite cat, not separated limb/badge rig",
+        "No dialogue voice",
+        "Some scripted secondary acting remains simplified"
+      ],
+      "secondsSpent": 36.26641821861267,
+      "encodedClip": "out\\ai-video-game-editing\\blender-v2\\clips\\s020.mp4",
+      "encodedSha256": "dce44c3384ede2df1e8d7ed795d0fda8072bcf0614c92e1600b4f194a41c85b1"
+    },
+    {
+      "shotId": "s030",
+      "planRevision": "v2-paper-stage",
+      "animationRendered": true,
+      "frameStep": 1,
+      "frames": 108,
+      "width": 1920,
+      "height": 1080,
+      "blender": "4.5.9 LTS",
+      "sourceHashes": {
+        "episodes\\ai-video-game-editing\\shots.json": "058b57e2cc8e9a35ecd06ba56aebd773fe6a052da0e0b51b93f60d24920fab24",
+        "episodes\\ai-video-game-editing\\script.md": "4c4c8f4e425dc9dd1f27fe038a59d41ae83ede378ffa51180ce051cc91fc2207",
+        "episodes\\ai-video-game-editing\\blender\\build_v2.py": "2e4cd54dbb68365f1160797b4992385038298cf568f2e3cd51a49c015caed3df",
+        "episodes\\ai-video-game-editing\\blender\\build_scenes.py": "565f19e23196ba90a6068f49c1b9aa65d2c758e19bda98454b8f92c3dd09bfa2",
+        "public\\brand\\tomcat\\tomcat-pixel-master-v3-ant-logo.png": "2cacb08dbb7ce7b864bc6a5a98d95e2205fef2902575fd573e52363f192b1514",
+        "episodes\\ai-video-game-editing\\assets\\fonts\\LXGWWenKaiTC-Regular.ttf": "4fcc5aec11cbbf737b0cfab7b63796f7f280087a7a656b2f13342cd5e5318d95"
+      },
+      "limitations": [
+        "Whole sprite cat, not separated limb/badge rig",
+        "No dialogue voice",
+        "Some scripted secondary acting remains simplified"
+      ],
+      "secondsSpent": 26.535677433013916,
+      "encodedClip": "out\\ai-video-game-editing\\blender-v2\\clips\\s030.mp4",
+      "encodedSha256": "e22ccd02cf88d74084339fd53322f7e138e917e64b12b854ccf87dd0730f92c3"
+    },
+    {
+      "shotId": "s040",
+      "planRevision": "v2-paper-stage",
+      "animationRendered": true,
+      "frameStep": 1,
+      "frames": 144,
+      "width": 1920,
+      "height": 1080,
+      "blender": "4.5.9 LTS",
+      "sourceHashes": {
+        "episodes\\ai-video-game-editing\\shots.json": "058b57e2cc8e9a35ecd06ba56aebd773fe6a052da0e0b51b93f60d24920fab24",
+        "episodes\\ai-video-game-editing\\script.md": "4c4c8f4e425dc9dd1f27fe038a59d41ae83ede378ffa51180ce051cc91fc2207",
+        "episodes\\ai-video-game-editing\\blender\\build_v2.py": "2e4cd54dbb68365f1160797b4992385038298cf568f2e3cd51a49c015caed3df",
+        "episodes\\ai-video-game-editing\\blender\\build_scenes.py": "565f19e23196ba90a6068f49c1b9aa65d2c758e19bda98454b8f92c3dd09bfa2",
+        "public\\brand\\tomcat\\tomcat-pixel-master-v3-ant-logo.png": "2cacb08dbb7ce7b864bc6a5a98d95e2205fef2902575fd573e52363f192b1514",
+        "episodes\\ai-video-game-editing\\assets\\fonts\\LXGWWenKaiTC-Regular.ttf": "4fcc5aec11cbbf737b0cfab7b63796f7f280087a7a656b2f13342cd5e5318d95",
+        "episodes\\ai-video-game-editing\\blender\\repair_v2.py": "c7f15b76ab8ec9eb85f7a628763674fa2443a2ad269e4276a5956e5e817bc30c"
+      },
+      "limitations": [
+        "Whole sprite cat, not separated limb/badge rig",
+        "No dialogue voice",
+        "Some scripted secondary acting remains simplified"
+      ],
+      "secondsSpent": 34.57849454879761,
+      "postprocess": "repair_v2.py: arm behind cat; library thumbnail hidden until held item released",
+      "encodedClip": "out\\ai-video-game-editing\\blender-v2\\clips\\s040.mp4",
+      "encodedSha256": "c490ace03ba356ac7543c6b53aad10b212b3912a1efc54f1374fcdc991258d0e"
+    },
+    {
+      "shotId": "s050",
+      "planRevision": "v2-paper-stage",
+      "animationRendered": true,
+      "frameStep": 1,
+      "frames": 144,
+      "width": 1920,
+      "height": 1080,
+      "blender": "4.5.9 LTS",
+      "sourceHashes": {
+        "episodes\\ai-video-game-editing\\shots.json": "058b57e2cc8e9a35ecd06ba56aebd773fe6a052da0e0b51b93f60d24920fab24",
+        "episodes\\ai-video-game-editing\\script.md": "4c4c8f4e425dc9dd1f27fe038a59d41ae83ede378ffa51180ce051cc91fc2207",
+        "episodes\\ai-video-game-editing\\blender\\build_v2.py": "2e4cd54dbb68365f1160797b4992385038298cf568f2e3cd51a49c015caed3df",
+        "episodes\\ai-video-game-editing\\blender\\build_scenes.py": "565f19e23196ba90a6068f49c1b9aa65d2c758e19bda98454b8f92c3dd09bfa2",
+        "public\\brand\\tomcat\\tomcat-pixel-master-v3-ant-logo.png": "2cacb08dbb7ce7b864bc6a5a98d95e2205fef2902575fd573e52363f192b1514",
+        "episodes\\ai-video-game-editing\\assets\\fonts\\LXGWWenKaiTC-Regular.ttf": "4fcc5aec11cbbf737b0cfab7b63796f7f280087a7a656b2f13342cd5e5318d95",
+        "episodes\\ai-video-game-editing\\blender\\repair_branch_v2.py": "5fb87bdb52002c2c406efdf3ebd22fc0078107a07ee9e8a1aca2927706d9932d"
+      },
+      "limitations": [
+        "Whole sprite cat, not separated limb/badge rig",
+        "No dialogue voice",
+        "Some scripted secondary acting remains simplified"
+      ],
+      "secondsSpent": 35.418009757995605,
+      "postprocess": "repair_branch_v2.py: move cat beside command note to prevent head occlusion",
+      "encodedClip": "out\\ai-video-game-editing\\blender-v2\\clips\\s050.mp4",
+      "encodedSha256": "399c75eabb13996c68d444f275ac4f3adf28241ca6386f2160ba204756a23b43"
+    },
+    {
+      "shotId": "s060",
+      "planRevision": "v2-paper-stage",
+      "animationRendered": true,
+      "frameStep": 1,
+      "frames": 144,
+      "width": 1920,
+      "height": 1080,
+      "blender": "4.5.9 LTS",
+      "sourceHashes": {
+        "episodes\\ai-video-game-editing\\shots.json": "058b57e2cc8e9a35ecd06ba56aebd773fe6a052da0e0b51b93f60d24920fab24",
+        "episodes\\ai-video-game-editing\\script.md": "4c4c8f4e425dc9dd1f27fe038a59d41ae83ede378ffa51180ce051cc91fc2207",
+        "episodes\\ai-video-game-editing\\blender\\build_v2.py": "2e4cd54dbb68365f1160797b4992385038298cf568f2e3cd51a49c015caed3df",
+        "episodes\\ai-video-game-editing\\blender\\build_scenes.py": "565f19e23196ba90a6068f49c1b9aa65d2c758e19bda98454b8f92c3dd09bfa2",
+        "public\\brand\\tomcat\\tomcat-pixel-master-v3-ant-logo.png": "2cacb08dbb7ce7b864bc6a5a98d95e2205fef2902575fd573e52363f192b1514",
+        "episodes\\ai-video-game-editing\\assets\\fonts\\LXGWWenKaiTC-Regular.ttf": "4fcc5aec11cbbf737b0cfab7b63796f7f280087a7a656b2f13342cd5e5318d95"
+      },
+      "limitations": [
+        "Whole sprite cat, not separated limb/badge rig",
+        "No dialogue voice",
+        "Some scripted secondary acting remains simplified"
+      ],
+      "secondsSpent": 36.52063488960266,
+      "encodedClip": "out\\ai-video-game-editing\\blender-v2\\clips\\s060.mp4",
+      "encodedSha256": "19a2cd901da7773c9762061600516b7603cf3c0b2ead6be5a86df9383268a157"
+    },
+    {
+      "shotId": "s070",
+      "planRevision": "v2-paper-stage",
+      "animationRendered": true,
+      "frameStep": 1,
+      "frames": 144,
+      "width": 1920,
+      "height": 1080,
+      "blender": "4.5.9 LTS",
+      "sourceHashes": {
+        "episodes\\ai-video-game-editing\\shots.json": "058b57e2cc8e9a35ecd06ba56aebd773fe6a052da0e0b51b93f60d24920fab24",
+        "episodes\\ai-video-game-editing\\script.md": "4c4c8f4e425dc9dd1f27fe038a59d41ae83ede378ffa51180ce051cc91fc2207",
+        "episodes\\ai-video-game-editing\\blender\\build_v2.py": "2e4cd54dbb68365f1160797b4992385038298cf568f2e3cd51a49c015caed3df",
+        "episodes\\ai-video-game-editing\\blender\\build_scenes.py": "565f19e23196ba90a6068f49c1b9aa65d2c758e19bda98454b8f92c3dd09bfa2",
+        "public\\brand\\tomcat\\tomcat-pixel-master-v3-ant-logo.png": "2cacb08dbb7ce7b864bc6a5a98d95e2205fef2902575fd573e52363f192b1514",
+        "episodes\\ai-video-game-editing\\assets\\fonts\\LXGWWenKaiTC-Regular.ttf": "4fcc5aec11cbbf737b0cfab7b63796f7f280087a7a656b2f13342cd5e5318d95",
+        "episodes\\ai-video-game-editing\\blender\\repair_v2.py": "c7f15b76ab8ec9eb85f7a628763674fa2443a2ad269e4276a5956e5e817bc30c"
+      },
+      "limitations": [
+        "Whole sprite cat, not separated limb/badge rig",
+        "No dialogue voice",
+        "Some scripted secondary acting remains simplified"
+      ],
+      "secondsSpent": 35.67079758644104,
+      "postprocess": "repair_v2.py: arm behind cat; library thumbnail hidden until held item released",
+      "encodedClip": "out\\ai-video-game-editing\\blender-v2\\clips\\s070.mp4",
+      "encodedSha256": "e5110ace109ae413b23be6e75a3051f948552dd4229847cba2e856e54c361328"
+    },
+    {
+      "shotId": "s080",
+      "planRevision": "v2-paper-stage",
+      "animationRendered": true,
+      "frameStep": 1,
+      "frames": 144,
+      "width": 1920,
+      "height": 1080,
+      "blender": "4.5.9 LTS",
+      "sourceHashes": {
+        "episodes\\ai-video-game-editing\\shots.json": "058b57e2cc8e9a35ecd06ba56aebd773fe6a052da0e0b51b93f60d24920fab24",
+        "episodes\\ai-video-game-editing\\script.md": "4c4c8f4e425dc9dd1f27fe038a59d41ae83ede378ffa51180ce051cc91fc2207",
+        "episodes\\ai-video-game-editing\\blender\\build_v2.py": "2e4cd54dbb68365f1160797b4992385038298cf568f2e3cd51a49c015caed3df",
+        "episodes\\ai-video-game-editing\\blender\\build_scenes.py": "565f19e23196ba90a6068f49c1b9aa65d2c758e19bda98454b8f92c3dd09bfa2",
+        "public\\brand\\tomcat\\tomcat-pixel-master-v3-ant-logo.png": "2cacb08dbb7ce7b864bc6a5a98d95e2205fef2902575fd573e52363f192b1514",
+        "episodes\\ai-video-game-editing\\assets\\fonts\\LXGWWenKaiTC-Regular.ttf": "4fcc5aec11cbbf737b0cfab7b63796f7f280087a7a656b2f13342cd5e5318d95"
+      },
+      "limitations": [
+        "Whole sprite cat, not separated limb/badge rig",
+        "No dialogue voice",
+        "Some scripted secondary acting remains simplified"
+      ],
+      "secondsSpent": 37.577274799346924,
+      "encodedClip": "out\\ai-video-game-editing\\blender-v2\\clips\\s080.mp4",
+      "encodedSha256": "8e1df6bd3aca9e7fc8296348ee7eb69e9790ccb9e2115a56f02ccd745f8dfc50"
+    },
+    {
+      "shotId": "s090",
+      "planRevision": "v2-paper-stage",
+      "animationRendered": true,
+      "frameStep": 1,
+      "frames": 180,
+      "width": 1920,
+      "height": 1080,
+      "blender": "4.5.9 LTS",
+      "sourceHashes": {
+        "episodes\\ai-video-game-editing\\shots.json": "058b57e2cc8e9a35ecd06ba56aebd773fe6a052da0e0b51b93f60d24920fab24",
+        "episodes\\ai-video-game-editing\\script.md": "4c4c8f4e425dc9dd1f27fe038a59d41ae83ede378ffa51180ce051cc91fc2207",
+        "episodes\\ai-video-game-editing\\blender\\build_v2.py": "2e4cd54dbb68365f1160797b4992385038298cf568f2e3cd51a49c015caed3df",
+        "episodes\\ai-video-game-editing\\blender\\build_scenes.py": "565f19e23196ba90a6068f49c1b9aa65d2c758e19bda98454b8f92c3dd09bfa2",
+        "public\\brand\\tomcat\\tomcat-pixel-master-v3-ant-logo.png": "2cacb08dbb7ce7b864bc6a5a98d95e2205fef2902575fd573e52363f192b1514",
+        "episodes\\ai-video-game-editing\\assets\\fonts\\LXGWWenKaiTC-Regular.ttf": "4fcc5aec11cbbf737b0cfab7b63796f7f280087a7a656b2f13342cd5e5318d95"
+      },
+      "limitations": [
+        "Whole sprite cat, not separated limb/badge rig",
+        "No dialogue voice",
+        "Some scripted secondary acting remains simplified"
+      ],
+      "secondsSpent": 48.23019480705261,
+      "encodedClip": "out\\ai-video-game-editing\\blender-v2\\clips\\s090.mp4",
+      "encodedSha256": "e0bdc4077d4e8cf6ee983ebdcf6d01e629917d5a7f33ec09ce921c6eb781546f"
+    },
+    {
+      "shotId": "s100",
+      "planRevision": "v2-paper-stage",
+      "animationRendered": true,
+      "frameStep": 1,
+      "frames": 180,
+      "width": 1920,
+      "height": 1080,
+      "blender": "4.5.9 LTS",
+      "sourceHashes": {
+        "episodes\\ai-video-game-editing\\shots.json": "058b57e2cc8e9a35ecd06ba56aebd773fe6a052da0e0b51b93f60d24920fab24",
+        "episodes\\ai-video-game-editing\\script.md": "4c4c8f4e425dc9dd1f27fe038a59d41ae83ede378ffa51180ce051cc91fc2207",
+        "episodes\\ai-video-game-editing\\blender\\build_v2.py": "2e4cd54dbb68365f1160797b4992385038298cf568f2e3cd51a49c015caed3df",
+        "episodes\\ai-video-game-editing\\blender\\build_scenes.py": "565f19e23196ba90a6068f49c1b9aa65d2c758e19bda98454b8f92c3dd09bfa2",
+        "public\\brand\\tomcat\\tomcat-pixel-master-v3-ant-logo.png": "2cacb08dbb7ce7b864bc6a5a98d95e2205fef2902575fd573e52363f192b1514",
+        "episodes\\ai-video-game-editing\\assets\\fonts\\LXGWWenKaiTC-Regular.ttf": "4fcc5aec11cbbf737b0cfab7b63796f7f280087a7a656b2f13342cd5e5318d95"
+      },
+      "limitations": [
+        "Whole sprite cat, not separated limb/badge rig",
+        "No dialogue voice",
+        "Some scripted secondary acting remains simplified"
+      ],
+      "secondsSpent": 49.68437671661377,
+      "encodedClip": "out\\ai-video-game-editing\\blender-v2\\clips\\s100.mp4",
+      "encodedSha256": "8c4e24f53ac38ec90b47054d8d8b14cc3ece29fef9050df6df3d9ce631e72595"
+    },
+    {
+      "shotId": "s110",
+      "planRevision": "v2-paper-stage",
+      "animationRendered": true,
+      "frameStep": 1,
+      "frames": 180,
+      "width": 1920,
+      "height": 1080,
+      "blender": "4.5.9 LTS",
+      "sourceHashes": {
+        "episodes\\ai-video-game-editing\\shots.json": "058b57e2cc8e9a35ecd06ba56aebd773fe6a052da0e0b51b93f60d24920fab24",
+        "episodes\\ai-video-game-editing\\script.md": "4c4c8f4e425dc9dd1f27fe038a59d41ae83ede378ffa51180ce051cc91fc2207",
+        "episodes\\ai-video-game-editing\\blender\\build_v2.py": "2e4cd54dbb68365f1160797b4992385038298cf568f2e3cd51a49c015caed3df",
+        "episodes\\ai-video-game-editing\\blender\\build_scenes.py": "565f19e23196ba90a6068f49c1b9aa65d2c758e19bda98454b8f92c3dd09bfa2",
+        "public\\brand\\tomcat\\tomcat-pixel-master-v3-ant-logo.png": "2cacb08dbb7ce7b864bc6a5a98d95e2205fef2902575fd573e52363f192b1514",
+        "episodes\\ai-video-game-editing\\assets\\fonts\\LXGWWenKaiTC-Regular.ttf": "4fcc5aec11cbbf737b0cfab7b63796f7f280087a7a656b2f13342cd5e5318d95"
+      },
+      "limitations": [
+        "Whole sprite cat, not separated limb/badge rig",
+        "No dialogue voice",
+        "Some scripted secondary acting remains simplified"
+      ],
+      "secondsSpent": 46.33724761009216,
+      "encodedClip": "out\\ai-video-game-editing\\blender-v2\\clips\\s110.mp4",
+      "encodedSha256": "b98146ad08230ecfd96a02d2a299c09b62089bab5f8d89fa53bcdeff9f02a1dd"
+    },
+    {
+      "shotId": "s120",
+      "planRevision": "v2-paper-stage",
+      "animationRendered": true,
+      "frameStep": 1,
+      "frames": 180,
+      "width": 1920,
+      "height": 1080,
+      "blender": "4.5.9 LTS",
+      "sourceHashes": {
+        "episodes\\ai-video-game-editing\\shots.json": "058b57e2cc8e9a35ecd06ba56aebd773fe6a052da0e0b51b93f60d24920fab24",
+        "episodes\\ai-video-game-editing\\script.md": "4c4c8f4e425dc9dd1f27fe038a59d41ae83ede378ffa51180ce051cc91fc2207",
+        "episodes\\ai-video-game-editing\\blender\\build_v2.py": "2e4cd54dbb68365f1160797b4992385038298cf568f2e3cd51a49c015caed3df",
+        "episodes\\ai-video-game-editing\\blender\\build_scenes.py": "565f19e23196ba90a6068f49c1b9aa65d2c758e19bda98454b8f92c3dd09bfa2",
+        "public\\brand\\tomcat\\tomcat-pixel-master-v3-ant-logo.png": "2cacb08dbb7ce7b864bc6a5a98d95e2205fef2902575fd573e52363f192b1514",
+        "episodes\\ai-video-game-editing\\assets\\fonts\\LXGWWenKaiTC-Regular.ttf": "4fcc5aec11cbbf737b0cfab7b63796f7f280087a7a656b2f13342cd5e5318d95",
+        "episodes\\ai-video-game-editing\\blender\\repair_finish_v2.py": "614e8b73a8d82be0c1b6958fa210c36919f30f63a27c3aa10488d4ae38443ce9"
+      },
+      "limitations": [
+        "Whole sprite cat, not separated limb/badge rig",
+        "No dialogue voice",
+        "Some scripted secondary acting remains simplified"
+      ],
+      "secondsSpent": 47.438854455947876,
+      "postprocess": "repair_finish_v2.py: cat occlusion and completed-screen label corrections",
+      "encodedClip": "out\\ai-video-game-editing\\blender-v2\\clips\\s120.mp4",
+      "encodedSha256": "2bd2c8483c6a264104e4b0357b93bf67aa9033074504c69df1272cefc7ec3cee"
+    },
+    {
+      "shotId": "s130",
+      "planRevision": "v2-paper-stage",
+      "animationRendered": true,
+      "frameStep": 1,
+      "frames": 144,
+      "width": 1920,
+      "height": 1080,
+      "blender": "4.5.9 LTS",
+      "sourceHashes": {
+        "episodes\\ai-video-game-editing\\shots.json": "058b57e2cc8e9a35ecd06ba56aebd773fe6a052da0e0b51b93f60d24920fab24",
+        "episodes\\ai-video-game-editing\\script.md": "4c4c8f4e425dc9dd1f27fe038a59d41ae83ede378ffa51180ce051cc91fc2207",
+        "episodes\\ai-video-game-editing\\blender\\build_v2.py": "2e4cd54dbb68365f1160797b4992385038298cf568f2e3cd51a49c015caed3df",
+        "episodes\\ai-video-game-editing\\blender\\build_scenes.py": "565f19e23196ba90a6068f49c1b9aa65d2c758e19bda98454b8f92c3dd09bfa2",
+        "public\\brand\\tomcat\\tomcat-pixel-master-v3-ant-logo.png": "2cacb08dbb7ce7b864bc6a5a98d95e2205fef2902575fd573e52363f192b1514",
+        "episodes\\ai-video-game-editing\\assets\\fonts\\LXGWWenKaiTC-Regular.ttf": "4fcc5aec11cbbf737b0cfab7b63796f7f280087a7a656b2f13342cd5e5318d95"
+      },
+      "limitations": [
+        "Whole sprite cat, not separated limb/badge rig",
+        "No dialogue voice",
+        "Some scripted secondary acting remains simplified"
+      ],
+      "secondsSpent": 37.20734167098999,
+      "encodedClip": "out\\ai-video-game-editing\\blender-v2\\clips\\s130.mp4",
+      "encodedSha256": "7fbf73bee64b068f46e9ef1d82cd01cb72032d498efc44da4d84cfb8d075b25b"
+    },
+    {
+      "shotId": "s140",
+      "planRevision": "v2-paper-stage",
+      "animationRendered": true,
+      "frameStep": 1,
+      "frames": 108,
+      "width": 1920,
+      "height": 1080,
+      "blender": "4.5.9 LTS",
+      "sourceHashes": {
+        "episodes\\ai-video-game-editing\\shots.json": "058b57e2cc8e9a35ecd06ba56aebd773fe6a052da0e0b51b93f60d24920fab24",
+        "episodes\\ai-video-game-editing\\script.md": "4c4c8f4e425dc9dd1f27fe038a59d41ae83ede378ffa51180ce051cc91fc2207",
+        "episodes\\ai-video-game-editing\\blender\\build_v2.py": "2e4cd54dbb68365f1160797b4992385038298cf568f2e3cd51a49c015caed3df",
+        "episodes\\ai-video-game-editing\\blender\\build_scenes.py": "565f19e23196ba90a6068f49c1b9aa65d2c758e19bda98454b8f92c3dd09bfa2",
+        "public\\brand\\tomcat\\tomcat-pixel-master-v3-ant-logo.png": "2cacb08dbb7ce7b864bc6a5a98d95e2205fef2902575fd573e52363f192b1514",
+        "episodes\\ai-video-game-editing\\assets\\fonts\\LXGWWenKaiTC-Regular.ttf": "4fcc5aec11cbbf737b0cfab7b63796f7f280087a7a656b2f13342cd5e5318d95",
+        "episodes\\ai-video-game-editing\\blender\\repair_finish_v2.py": "614e8b73a8d82be0c1b6958fa210c36919f30f63a27c3aa10488d4ae38443ce9"
+      },
+      "limitations": [
+        "Whole sprite cat, not separated limb/badge rig",
+        "No dialogue voice",
+        "Some scripted secondary acting remains simplified"
+      ],
+      "secondsSpent": 28.29569101333618,
+      "postprocess": "repair_finish_v2.py: cat occlusion and completed-screen label corrections",
+      "encodedClip": "out\\ai-video-game-editing\\blender-v2\\clips\\s140.mp4",
+      "encodedSha256": "fda367d87649570e3edebbda671ac8592f3a912454d118494002ecc38b21129e"
+    },
+    {
+      "shotId": "s150",
+      "planRevision": "v2-paper-stage",
+      "animationRendered": true,
+      "frameStep": 1,
+      "frames": 108,
+      "width": 1920,
+      "height": 1080,
+      "blender": "4.5.9 LTS",
+      "sourceHashes": {
+        "episodes\\ai-video-game-editing\\shots.json": "058b57e2cc8e9a35ecd06ba56aebd773fe6a052da0e0b51b93f60d24920fab24",
+        "episodes\\ai-video-game-editing\\script.md": "4c4c8f4e425dc9dd1f27fe038a59d41ae83ede378ffa51180ce051cc91fc2207",
+        "episodes\\ai-video-game-editing\\blender\\build_v2.py": "2e4cd54dbb68365f1160797b4992385038298cf568f2e3cd51a49c015caed3df",
+        "episodes\\ai-video-game-editing\\blender\\build_scenes.py": "565f19e23196ba90a6068f49c1b9aa65d2c758e19bda98454b8f92c3dd09bfa2",
+        "public\\brand\\tomcat\\tomcat-pixel-master-v3-ant-logo.png": "2cacb08dbb7ce7b864bc6a5a98d95e2205fef2902575fd573e52363f192b1514",
+        "episodes\\ai-video-game-editing\\assets\\fonts\\LXGWWenKaiTC-Regular.ttf": "4fcc5aec11cbbf737b0cfab7b63796f7f280087a7a656b2f13342cd5e5318d95",
+        "episodes\\ai-video-game-editing\\blender\\repair_finish_v2.py": "614e8b73a8d82be0c1b6958fa210c36919f30f63a27c3aa10488d4ae38443ce9"
+      },
+      "limitations": [
+        "Whole sprite cat, not separated limb/badge rig",
+        "No dialogue voice",
+        "Some scripted secondary acting remains simplified"
+      ],
+      "secondsSpent": 26.885082960128784,
+      "postprocess": "repair_finish_v2.py: cat occlusion and completed-screen label corrections",
+      "encodedClip": "out\\ai-video-game-editing\\blender-v2\\clips\\s150.mp4",
+      "encodedSha256": "a4af02b6c3397ec801b754cd61c148914e9e20e6e6e1c637eb3e450cc0940de8"
+    },
+    {
+      "shotId": "s160",
+      "planRevision": "v2-paper-stage",
+      "animationRendered": true,
+      "frameStep": 1,
+      "frames": 108,
+      "width": 1920,
+      "height": 1080,
+      "blender": "4.5.9 LTS",
+      "sourceHashes": {
+        "episodes\\ai-video-game-editing\\shots.json": "058b57e2cc8e9a35ecd06ba56aebd773fe6a052da0e0b51b93f60d24920fab24",
+        "episodes\\ai-video-game-editing\\script.md": "4c4c8f4e425dc9dd1f27fe038a59d41ae83ede378ffa51180ce051cc91fc2207",
+        "episodes\\ai-video-game-editing\\blender\\build_v2.py": "2e4cd54dbb68365f1160797b4992385038298cf568f2e3cd51a49c015caed3df",
+        "episodes\\ai-video-game-editing\\blender\\build_scenes.py": "565f19e23196ba90a6068f49c1b9aa65d2c758e19bda98454b8f92c3dd09bfa2",
+        "public\\brand\\tomcat\\tomcat-pixel-master-v3-ant-logo.png": "2cacb08dbb7ce7b864bc6a5a98d95e2205fef2902575fd573e52363f192b1514",
+        "episodes\\ai-video-game-editing\\assets\\fonts\\LXGWWenKaiTC-Regular.ttf": "4fcc5aec11cbbf737b0cfab7b63796f7f280087a7a656b2f13342cd5e5318d95",
+        "episodes\\ai-video-game-editing\\blender\\repair_finish_v2.py": "614e8b73a8d82be0c1b6958fa210c36919f30f63a27c3aa10488d4ae38443ce9"
+      },
+      "limitations": [
+        "Whole sprite cat, not separated limb/badge rig",
+        "No dialogue voice",
+        "Some scripted secondary acting remains simplified"
+      ],
+      "secondsSpent": 27.41408348083496,
+      "postprocess": "repair_finish_v2.py: cat occlusion and completed-screen label corrections",
+      "encodedClip": "out\\ai-video-game-editing\\blender-v2\\clips\\s160.mp4",
+      "encodedSha256": "3eb065c5fdbe876578562613ad4505a42f2f5f5ff758968a620a4d5e0e7523ef"
+    }
+  ],
+  "checks": [
+    "all 2304 source frames exist",
+    "source hashes match actual inputs",
+    "full audio/video decode passed"
+  ],
+  "limitations": [
+    "Whole-sprite cat, no separate limb/badge rig",
+    "No dialogue voice or lip sync",
+    "Secondary acting and some match cuts simplified",
+    "Human listening/QC and publishing rights pending"
+  ],
+  "assemblySourceHashes": {
+    "episodes\\ai-video-game-editing\\blender\\finish_v2.py": "224cc4826302b9b3b275d544b2e186ea29c82492675ed8ca34f73ce637e4192f",
+    "episodes\\ai-video-game-editing\\audio\\cues-v2.json": "2d4fcc59dd14d17bd421851b7070e1bdad973383add60af70b36259951d7b32f",
+    "out\\ai-video-game-editing\\blender-v2\\mix-v2-no-voice.wav": "e1e8d521163a0f43f09bc5efb3ed356d860b03488e77dcd5758305b12025239d"
+  }
+}

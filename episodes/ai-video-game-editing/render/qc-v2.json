@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-03",
+  "status": "technical-pass-visual-sampling-complete-not-final",
+  "frameCount": 2304,
+  "resolution": "1920x1080",
+  "fps": 30,
+  "durationSeconds": 76.8,
+  "audioCodec": "AAC",
+  "audioEvents": 64,
+  "dialogueVoice": false,
+  "allSourceHashesMatched": true,
+  "allShotPreviewSamplesInspected": true,
+  "motionFrameSamples": [
+    "s040:1,60,144",
+    "s070:12,54,142",
+    "s100:80",
+    "s110:1,112,175",
+    "s120:100"
+  ],
+  "repairs": [
+    "s040 arm behind cat",
+    "s070 library thumbnail reveal after held item",
+    "s050/s140 cat beside card",
+    "s120 reduce keycap occlusion",
+    "s150/s160 completed-screen wording"
+  ],
+  "technicalCommand": "python episodes/ai-video-game-editing/blender/validate_v2.py",
+  "humanAudioReview": false,
+  "userApproval": false,
+  "remaining": [
+    "Whole sprite cat, no independent limbs/badge",
+    "Secondary actions and transitions simplified",
+    "No dialogue voice or mouth animation",
+    "Music publication rights unverified"
+  ]
+}

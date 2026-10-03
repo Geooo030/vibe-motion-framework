@@ -557,5 +557,235 @@
     "reference": "git:11418b3:episodes/ai-video-game-editing/shots.json",
     "prompt": null,
     "rightsNote": "See episode source and brand records; publication scope not verified."
+  },
+  {
+    "id": "v2-font-LXGWWenKaiTC-Regular.ttf",
+    "path": "episodes\\ai-video-game-editing\\assets\\fonts\\LXGWWenKaiTC-Regular.ttf",
+    "bytes": 13110528,
+    "sha256": "4FCC5AEC11CBBF737B0CFAB7B63796F7F280087A7A656B2F13342CD5E5318D95",
+    "kind": "font",
+    "status": "used-in-v2-draft",
+    "source": "https://github.com/google/fonts/tree/main/ofl/lxgwwenkaitc",
+    "license": "SIL OFL 1.1; assets/fonts/OFL.txt"
+  },
+  {
+    "id": "v2-font-OFL.txt",
+    "path": "episodes\\ai-video-game-editing\\assets\\fonts\\OFL.txt",
+    "bytes": 4390,
+    "sha256": "4FFF27D35DB0E22CD81D58DA6F20E09F415CF354A3338E3CF1FC0EB9222C7174",
+    "kind": "font-license",
+    "status": "used-in-v2-draft",
+    "source": "https://github.com/google/fonts/tree/main/ofl/lxgwwenkaitc",
+    "license": "SIL OFL 1.1; assets/fonts/OFL.txt"
+  },
+  {
+    "id": "v2-fold.wav",
+    "path": "episodes\\ai-video-game-editing\\assets\\audio-v2\\fold.wav",
+    "bytes": 8864,
+    "sha256": "110DB7F379BD9D57BD6EEC324B70C8700D3905B107FB1AC3EAED39858EC72E9F",
+    "kind": "original-synthesized-sfx",
+    "status": "generated-human-listening-review-pending",
+    "source": "blender/finish_v2.py",
+    "reference": "audio/cues-v2.json"
+  },
+  {
+    "id": "v2-keycap.wav",
+    "path": "episodes\\ai-video-game-editing\\assets\\audio-v2\\keycap.wav",
+    "bytes": 2470,
+    "sha256": "21B444E5E8DD792E294E50C5AC389B56526EF651B080155C5C9E82B7346DEC56",
+    "kind": "original-synthesized-sfx",
+    "status": "generated-human-listening-review-pending",
+    "source": "blender/finish_v2.py",
+    "reference": "audio/cues-v2.json"
+  },
+  {
+    "id": "v2-peel.wav",
+    "path": "episodes\\ai-video-game-editing\\assets\\audio-v2\\peel.wav",
+    "bytes": 7982,
+    "sha256": "5612962A06BC02738DD0046455D0ED749CE2F757259E8141417A325FACA06500",
+    "kind": "original-synthesized-sfx",
+    "status": "generated-human-listening-review-pending",
+    "source": "blender/finish_v2.py",
+    "reference": "audio/cues-v2.json"
+  },
+  {
+    "id": "v2-pencil.wav",
+    "path": "episodes\\ai-video-game-editing\\assets\\audio-v2\\pencil.wav",
+    "bytes": 10628,
+    "sha256": "D3B1A77712FC586E68DFA247CCEBE62335E55CEC3BD3517F61A759C7F49F02DF",
+    "kind": "original-synthesized-sfx",
+    "status": "generated-human-listening-review-pending",
+    "source": "blender/finish_v2.py",
+    "reference": "audio/cues-v2.json"
+  },
+  {
+    "id": "v2-sfx-timeline-v2.wav",
+    "path": "episodes\\ai-video-game-editing\\assets\\audio-v2\\sfx-timeline-v2.wav",
+    "bytes": 3386924,
+    "sha256": "B1FD0805792FC4D4E47AFE70E14BDCF66F89183FD49AC54C1EBE6AADE9A78ACD",
+    "kind": "original-synthesized-sfx",
+    "status": "generated-human-listening-review-pending",
+    "source": "blender/finish_v2.py",
+    "reference": "audio/cues-v2.json"
+  },
+  {
+    "id": "s010-v2",
+    "path": "episodes/ai-video-game-editing/assets/previews-v2/s010.png",
+    "bytes": 1225549,
+    "sha256": "A184572DA46AB9145D07EC4D0FB19D793F2170CE1C079F3BACB7B0CF8900FD93",
+    "kind": "blender-v2-draft-preview",
+    "status": "rendered-draft-user-review-pending",
+    "generator": "Blender 4.5.9; build_v2.py plus recorded repairs",
+    "reference": "render/animatic-v2-receipt.json"
+  },
+  {
+    "id": "s020-v2",
+    "path": "episodes/ai-video-game-editing/assets/previews-v2/s020.png",
+    "bytes": 1229066,
+    "sha256": "6E24BC2D137A14B093CE8718B4C30781F531810F399ED06285460BDD71A4D201",
+    "kind": "blender-v2-draft-preview",
+    "status": "rendered-draft-user-review-pending",
+    "generator": "Blender 4.5.9; build_v2.py plus recorded repairs",
+    "reference": "render/animatic-v2-receipt.json"
+  },
+  {
+    "id": "s030-v2",
+    "path": "episodes/ai-video-game-editing/assets/previews-v2/s030.png",
+    "bytes": 1217043,
+    "sha256": "09FDFF6221AFD51C96535E7DF3ABF7EA690455F2B699A19B84FA6B4FA7C56640",
+    "kind": "blender-v2-draft-preview",
+    "status": "rendered-draft-user-review-pending",
+    "generator": "Blender 4.5.9; build_v2.py plus recorded repairs",
+    "reference": "render/animatic-v2-receipt.json"
+  },
+  {
+    "id": "s040-v2",
+    "path": "episodes/ai-video-game-editing/assets/previews-v2/s040.png",
+    "bytes": 1108795,
+    "sha256": "8355DD3AC4545393AF046C5BDCCAB762893BAB291A401B63648A9EF22E6CA19C",
+    "kind": "blender-v2-draft-preview",
+    "status": "rendered-draft-user-review-pending",
+    "generator": "Blender 4.5.9; build_v2.py plus recorded repairs",
+    "reference": "render/animatic-v2-receipt.json"
+  },
+  {
+    "id": "s050-v2",
+    "path": "episodes/ai-video-game-editing/assets/previews-v2/s050.png",
+    "bytes": 1293412,
+    "sha256": "8253D8B08429940974FB4F80556F2E91074E87488AD31D3F413F64BB3FC28D62",
+    "kind": "blender-v2-draft-preview",
+    "status": "rendered-draft-user-review-pending",
+    "generator": "Blender 4.5.9; build_v2.py plus recorded repairs",
+    "reference": "render/animatic-v2-receipt.json"
+  },
+  {
+    "id": "s060-v2",
+    "path": "episodes/ai-video-game-editing/assets/previews-v2/s060.png",
+    "bytes": 1281594,
+    "sha256": "C4A1FF17ABF70B2DB2CE581DE0A09491BF6D53AA1ED0E2250FF18DF675ECB162",
+    "kind": "blender-v2-draft-preview",
+    "status": "rendered-draft-user-review-pending",
+    "generator": "Blender 4.5.9; build_v2.py plus recorded repairs",
+    "reference": "render/animatic-v2-receipt.json"
+  },
+  {
+    "id": "s070-v2",
+    "path": "episodes/ai-video-game-editing/assets/previews-v2/s070.png",
+    "bytes": 1305156,
+    "sha256": "A34D019FCDD248394B4C0AF9508D3D13439576720786C8529347D69AAB00E1AA",
+    "kind": "blender-v2-draft-preview",
+    "status": "rendered-draft-user-review-pending",
+    "generator": "Blender 4.5.9; build_v2.py plus recorded repairs",
+    "reference": "render/animatic-v2-receipt.json"
+  },
+  {
+    "id": "s080-v2",
+    "path": "episodes/ai-video-game-editing/assets/previews-v2/s080.png",
+    "bytes": 1316342,
+    "sha256": "EC4AA38B53984723685DF230319F23E6D17C960BDE3B539A5E2464F129653A72",
+    "kind": "blender-v2-draft-preview",
+    "status": "rendered-draft-user-review-pending",
+    "generator": "Blender 4.5.9; build_v2.py plus recorded repairs",
+    "reference": "render/animatic-v2-receipt.json"
+  },
+  {
+    "id": "s090-v2",
+    "path": "episodes/ai-video-game-editing/assets/previews-v2/s090.png",
+    "bytes": 1283720,
+    "sha256": "CF1B081BE0C885BC8D7A8DCD73AC0E78D05402C01F950F4F794F2A54104E2A58",
+    "kind": "blender-v2-draft-preview",
+    "status": "rendered-draft-user-review-pending",
+    "generator": "Blender 4.5.9; build_v2.py plus recorded repairs",
+    "reference": "render/animatic-v2-receipt.json"
+  },
+  {
+    "id": "s100-v2",
+    "path": "episodes/ai-video-game-editing/assets/previews-v2/s100.png",
+    "bytes": 1268843,
+    "sha256": "007B7DAF211B672FA4039911E603DE56F3FB7B42D359D8232FFA345AAEA928DE",
+    "kind": "blender-v2-draft-preview",
+    "status": "rendered-draft-user-review-pending",
+    "generator": "Blender 4.5.9; build_v2.py plus recorded repairs",
+    "reference": "render/animatic-v2-receipt.json"
+  },
+  {
+    "id": "s110-v2",
+    "path": "episodes/ai-video-game-editing/assets/previews-v2/s110.png",
+    "bytes": 1292454,
+    "sha256": "065DE227B3E16E869FDF09D119E741A644ED9516DA76EDC74D19D584D9ADE483",
+    "kind": "blender-v2-draft-preview",
+    "status": "rendered-draft-user-review-pending",
+    "generator": "Blender 4.5.9; build_v2.py plus recorded repairs",
+    "reference": "render/animatic-v2-receipt.json"
+  },
+  {
+    "id": "s120-v2",
+    "path": "episodes/ai-video-game-editing/assets/previews-v2/s120.png",
+    "bytes": 1294667,
+    "sha256": "2EC4F46ADF0318B2B78DC70E6090723DD0EA2DAAF61033DE8960C6A3C19EC5E3",
+    "kind": "blender-v2-draft-preview",
+    "status": "rendered-draft-user-review-pending",
+    "generator": "Blender 4.5.9; build_v2.py plus recorded repairs",
+    "reference": "render/animatic-v2-receipt.json"
+  },
+  {
+    "id": "s130-v2",
+    "path": "episodes/ai-video-game-editing/assets/previews-v2/s130.png",
+    "bytes": 1290211,
+    "sha256": "519A5FAEF5226E0759DD9EB0F2EC04CC69321C090A3AD9C8AE7B6A2C4D8C7AFD",
+    "kind": "blender-v2-draft-preview",
+    "status": "rendered-draft-user-review-pending",
+    "generator": "Blender 4.5.9; build_v2.py plus recorded repairs",
+    "reference": "render/animatic-v2-receipt.json"
+  },
+  {
+    "id": "s140-v2",
+    "path": "episodes/ai-video-game-editing/assets/previews-v2/s140.png",
+    "bytes": 1313025,
+    "sha256": "74B623FE26AE4A9578D96E69599D3751DDC739A892AAF082765B5568365CCAFE",
+    "kind": "blender-v2-draft-preview",
+    "status": "rendered-draft-user-review-pending",
+    "generator": "Blender 4.5.9; build_v2.py plus recorded repairs",
+    "reference": "render/animatic-v2-receipt.json"
+  },
+  {
+    "id": "s150-v2",
+    "path": "episodes/ai-video-game-editing/assets/previews-v2/s150.png",
+    "bytes": 1221137,
+    "sha256": "9FF1E32507FCC3661077A287887925F385916CB63E304F13EBA7CE3B2383BC68",
+    "kind": "blender-v2-draft-preview",
+    "status": "rendered-draft-user-review-pending",
+    "generator": "Blender 4.5.9; build_v2.py plus recorded repairs",
+    "reference": "render/animatic-v2-receipt.json"
+  },
+  {
+    "id": "s160-v2",
+    "path": "episodes/ai-video-game-editing/assets/previews-v2/s160.png",
+    "bytes": 1241204,
+    "sha256": "03DB808ECE580153637C8B38F4D39A36EB7DA5B8D6A696D368025305D670D267",
+    "kind": "blender-v2-draft-preview",
+    "status": "rendered-draft-user-review-pending",
+    "generator": "Blender 4.5.9; build_v2.py plus recorded repairs",
+    "reference": "render/animatic-v2-receipt.json"
   }
 ]
