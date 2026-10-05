@@ -1,0 +1,52 @@
+import type { RenderPlan } from "./types";
+
+/** A self-contained Studio preview. Real productions pass the compiled plan. */
+export const defaultPlan: RenderPlan = {
+  schemaVersion: 1,
+  id: "production-preview",
+  title: "CODEX VIDEO / PRODUCTION ENGINE",
+  fps: 30,
+  width: 1280,
+  height: 720,
+  durationInFrames: 360,
+  audioMode: "none",
+  tracks: [],
+  scenes: [
+    {
+      id: "stage",
+      renderer: "dom",
+      title: "每一个镜头，来自同一条时间线",
+      body: "脚本、画面、配音与字幕，按帧对齐。",
+      accent: "#66E3CA",
+      items: ["脚本", "画面", "配音", "字幕"],
+      from: 0,
+      durationInFrames: 120,
+      narration: "",
+      captions: [],
+    },
+    {
+      id: "space",
+      renderer: "three",
+      title: "用代码搭建真正的 3D 摄影棚",
+      body: "灯光、模型与摄像机，共用确定的帧时钟。",
+      accent: "#92A5FF",
+      items: ["MODEL", "LIGHT", "CAMERA"],
+      from: 120,
+      durationInFrames: 120,
+      narration: "",
+      captions: [],
+    },
+    {
+      id: "pixels",
+      renderer: "shader",
+      title: "从像素到最终成片",
+      body: "GLSL 光效逐帧计算，支持任意帧重新渲染。",
+      accent: "#FFA8D7",
+      items: ["GLSL", "FRAME", "MP4"],
+      from: 240,
+      durationInFrames: 120,
+      narration: "",
+      captions: [],
+    },
+  ],
+};

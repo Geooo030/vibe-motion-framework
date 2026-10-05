@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "production-demo",
+  "title": "从脚本到成片：确定性视频流水线",
+  "fps": 30,
+  "width": 1280,
+  "height": 720,
+  "audio": {
+    "mode": "none"
+  },
+  "scenes": [
+    {
+      "id": "s010",
+      "renderer": "dom",
+      "title": "一份脚本，一条时间线",
+      "body": "HTML 与 CSS 负责内容和版式，所有动作按帧定位。",
+      "narration": "",
+      "durationSeconds": 2,
+      "tailSeconds": 0.25,
+      "accent": "#60A5FA",
+      "items": ["脚本", "镜头", "整数帧"]
+    },
+    {
+      "id": "s020",
+      "renderer": "canvas",
+      "title": "二维画面，可重复绘制",
+      "body": "粒子、图表和路径，从相同的帧编号计算状态。",
+      "narration": "",
+      "durationSeconds": 2,
+      "tailSeconds": 0.25,
+      "accent": "#2DD4BF",
+      "items": ["Canvas 2D", "固定种子", "逐帧绘制"]
+    },
+    {
+      "id": "s030",
+      "renderer": "three",
+      "title": "三维镜头，共用时钟",
+      "body": "模型、灯光和摄像机，跟随统一的画面时间。",
+      "narration": "",
+      "durationSeconds": 2,
+      "tailSeconds": 0.25,
+      "accent": "#A78BFA",
+      "items": ["Three.js", "模型", "摄像机"]
+    },
+    {
+      "id": "s040",
+      "renderer": "shader",
+      "title": "声画合成，输出成片",
+      "body": "GLSL 处理像素效果；Remotion 与 FFmpeg 完成渲染和封装。",
+      "narration": "",
+      "durationSeconds": 2,
+      "tailSeconds": 0.25,
+      "accent": "#F472B6",
+      "items": ["GLSL", "音轨", "MP4"]
+    }
+  ],
+  "tracks": []
+}

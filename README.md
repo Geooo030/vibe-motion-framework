@@ -1,5 +1,20 @@
 # 热点君 / Remotion 科技解说框架
 
+## 新制作管线（2026-10-06）
+
+[制作框架说明](docs/video-framework.md) · [Qwen 云端声音复刻](docs/qwen-tts.md) · [可运行四镜样本](examples/production-demo/README.md)
+
+新增 `ProductionVideo`：episode 清单 → 本地或 Qwen 配音 → 实测时长与整数帧编译 → DOM/GSAP、Canvas、Three、GLSL 或媒体镜头 → 混音、响度与 MP4 → 技术验收记录。历史 composition 保留。配音缓存、音色 profile 和成片输出在 Git 忽略目录。
+
+```powershell
+npm ci
+npm run video:doctor
+npm run test:production
+npm run video:render -- examples/production-demo/episode.json
+```
+
+示例为 8 秒无旁白的引擎演示；真实声音复刻还需 `DASHSCOPE_API_KEY`、本人或授权录音、音色注册和试听。字幕默认按完整镜头显示，导入实际对齐时间后可获得逐句字幕；编码与技术 QC 通过不代表人工审片完成。产物在 `out/production/<id>/`，包括 `video.mp4`、字幕、逐镜静帧、制作清单与 `qc.json`。
+
 An original 9:16 code-first framework for concise science and technology commentary. It includes two compositions: an 18-second paper-and-ink layout test (`TechExplainerDemo`, with **illustrative** numbers), and a 60-second graphite-and-cyan DeepSeek V4 Flash 0731 explainer (`DeepSeekV4Flash`, with source-checked numbers). Both are silent visual drafts with an original animated 热点君 mark.
 
 The editing approach was informed by a visual study of [this Bilibili video](https://www.bilibili.com/video/BV1abuA6pES2/); see [the observed-frame analysis](docs/reference-analysis.md) and the [DeepSeek episode's original script, sources, and design](docs/deepseek-v4-flash-design.md). The relevant starred motion reference is [vibe-motion/remotion-code-motion-explainer](https://github.com/vibe-motion/remotion-code-motion-explainer). We use its principles of semantic shot planning and frame-level QC, but have not copied its shot code. The 60-second example holds a common brand shell and progress/data line across eight shots; full continuous-object choreography remains future work. The Bilibili video's full transcript was unavailable, so this is **not** a line-by-line or frame-by-frame replica. No third-party footage, logo, narration, or music is included.
