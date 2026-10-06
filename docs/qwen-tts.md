@@ -44,19 +44,38 @@ WAV 在本地检查格式、采样率、声道和时长；MP3/M4A 还要求可�
 
 ## 按句生成并缓存
 
+默认只复用完整、摘要匹配的本地缓存。新增云端合成需要对本次运行显式授权，并给出请求次数和字符数两个非负安全整数上限；仅有 API key 或 `audio.mode: "qwen"` 不会触发新请求。声音使用授权与云端调用授权分别确认，录音注册仍是单独的外部操作。
+
 ```js
 import {readFile} from 'node:fs/promises';
-import {synthesize} from './scripts/production/qwen.mjs';
+import {synthesizeBatch} from './scripts/production/qwen.mjs';
 
 const profile = JSON.parse(await readFile('private/voice/profile.json', 'utf8'));
-const audio = await synthesize({
-  text: '先生成旁白，再用实际音频长度安排镜头。',
+const {segments, cloudUsage} = await synthesizeBatch({
+  texts: ['先生成旁白，再用实际音频长度安排镜头。'],
   profile,
-  cacheDir: 'public/production/narration',
+  cacheDir: '.cache/qwen-tts',
   language: 'Chinese',
+  // 仅在本次外部操作及限额已获批准后启用；数值是示例，不是默认预算。
+  allowCloud: true,
+  maxCloudRequests: 1,
+  maxCloudCharacters: 100,
 });
-// audio = {path, hash, requestId?, cached}
+// segments[i] = {path, hash, requestId?, cached}; cloudUsage 只含计数与上限。
 ```
+
+整集预检会校验所有文本和缓存，按唯一缓存键统计缺失请求及 Unicode 字符数；已知总量超限时在第一条请求前退出。每个 POST 尝试（含临时错误重试）均占用一次请求额度并再次计入文本字符；运行中预算耗尽会阻止后续请求，不自动扩大限额。预算是本次命令的用量上限，不是货币报价，也不是跨进程或跨任务的账户总预算。运输结果未知时仍不重试，重新运行前应核对已有缓存和服务端结果。
+
+CLI 的 `prepare` 和 `render` 共用此边界：
+
+```powershell
+# 默认离线：全缓存命中可复用；存在缺失缓存时会拒绝新增云端请求。
+npm run video:prepare -- episodes/001/episode.json
+# 仅在明确批准该次外部调用后使用；请求次数包含重试。
+npm run video:prepare -- episodes/001/episode.json --allow-cloud --max-cloud-requests=2 --max-cloud-characters=600
+```
+
+`render` 接受相同参数。渲染参数和输出尺寸先于配音准备检查；无效 `scale` / `concurrency` 不产生云端合成，也不覆盖已有 props、manifest 或 QC。准备成功后仍须检查 `cloudUsage`、音频实长、字幕和实际成片；缓存命中或 mock 通过不能标成真实云端验收。
 
 每次最多 600 字符，长文案请按完整句子或镜头分段；模块拒绝超长输入。固定模型必须与注册时一致。VC 不支持 `instructions` 和方言；`qwen3-tts-instruct-flash` 是另一类系统音色模型，不能替代此 profile 的目标模型。[模型能力](https://help.aliyun.com/zh/model-studio/tts-model)
 

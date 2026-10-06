@@ -153,12 +153,15 @@ async function cloudRequest({
   body,
   fetchImpl = globalThis.fetch,
   retry = false,
+  beforeRequest,
 }) {
   if (typeof fetchImpl !== "function")
     throw new QwenTtsError("Node.js with fetch support is required.");
   const key = apiKey();
   const attempts = retry ? 3 : 1;
   for (let attempt = 0; attempt < attempts; attempt++) {
+    // Charge every POST attempt, including retries, before it reaches fetch.
+    beforeRequest?.();
     let response;
     try {
       response = await fetchImpl(`${baseUrl}${apiPath}`, {
@@ -690,14 +693,9 @@ async function audioBytes(audio, fetchImpl) {
   return pcmWav(bytes);
 }
 
-/** Synthesize one <=600-character segment, immediately cache a complete WAV, and reuse it offline. */
-export async function synthesize({
-  text,
-  profile,
-  cacheDir,
-  language = "Chinese",
-  fetchImpl = globalThis.fetch,
-}) {
+function synthesisInput({ text, profile, cacheDir, language = "Chinese" }) {
+  // Keep the request identity fixed even if a caller later edits its profile object.
+  profile = { ...profile };
   const urls = validateProfile(profile);
   if (typeof text !== "string" || !text.trim() || Array.from(text).length > 600)
     throw new QwenTtsError(
@@ -735,6 +733,25 @@ export async function synthesize({
   );
   const filePath = path.resolve(cacheDir, `${hash}.wav`);
   const metadataPath = path.resolve(cacheDir, `${hash}.json`);
+  return {
+    text,
+    characters: Array.from(text).length,
+    profile,
+    language,
+    urls,
+    endpointIdentity,
+    hash,
+    filePath,
+    metadataPath,
+  };
+}
+
+async function cachedSynthesis({
+  filePath,
+  metadataPath,
+  hash,
+  endpointIdentity,
+}) {
   try {
     const [bytes, metadataText] = await Promise.all([
       readFile(filePath),
@@ -763,6 +780,79 @@ export async function synthesize({
     )
       throw error;
   }
+  return undefined;
+}
+
+const validLimit = (value) => Number.isSafeInteger(value) && value >= 0;
+
+function cloudUsage(ledger) {
+  return {
+    requests: ledger.requests,
+    characters: ledger.characters,
+    maxCloudRequests: validLimit(ledger.maxCloudRequests)
+      ? ledger.maxCloudRequests
+      : null,
+    maxCloudCharacters: validLimit(ledger.maxCloudCharacters)
+      ? ledger.maxCloudCharacters
+      : null,
+    cacheHits: ledger.cacheHits,
+    cacheMisses: ledger.cacheMisses,
+  };
+}
+
+function requireCloudBudget(ledger) {
+  if (ledger.allowCloud !== true)
+    throw new QwenTtsError("Qwen cloud synthesis requires allowCloud=true.", {
+      code: "CloudAuthorizationRequired",
+      cloudUsage: cloudUsage(ledger),
+    });
+  if (
+    !validLimit(ledger.maxCloudRequests) ||
+    !validLimit(ledger.maxCloudCharacters)
+  )
+    throw new QwenTtsError(
+      "Qwen cloud synthesis requires explicit nonnegative safe integer maxCloudRequests and maxCloudCharacters limits.",
+      { code: "CloudBudgetRequired", cloudUsage: cloudUsage(ledger) },
+    );
+}
+
+function consumeCloudBudget(ledger, characters) {
+  requireCloudBudget(ledger);
+  if (
+    ledger.requests >= ledger.maxCloudRequests ||
+    characters > ledger.maxCloudCharacters - ledger.characters
+  )
+    throw new QwenTtsError(
+      "Qwen cloud synthesis budget exhausted before the next POST.",
+      {
+        code: "CloudBudgetExceeded",
+        cloudUsage: cloudUsage(ledger),
+      },
+    );
+  ledger.requests++;
+  ledger.characters += characters;
+}
+
+async function synthesizeInput(input, fetchImpl, ledger) {
+  const cached = await cachedSynthesis(input);
+  if (cached) return cached;
+  if (!ledger.approvedMisses.has(input.filePath))
+    throw new QwenTtsError(
+      "A Qwen cache hit changed after preflight; rerun preflight before authorizing new synthesis.",
+      { code: "CacheChangedAfterPreflight", cloudUsage: cloudUsage(ledger) },
+    );
+  requireCloudBudget(ledger);
+  const {
+    text,
+    characters,
+    profile,
+    language,
+    urls,
+    endpointIdentity,
+    hash,
+    filePath,
+    metadataPath,
+  } = input;
   if (pendingAudio.has(filePath)) return pendingAudio.get(filePath);
   const work = (async () => {
     const payload = await cloudRequest({
@@ -770,6 +860,7 @@ export async function synthesize({
       apiPath: SYNTHESIS_PATH,
       fetchImpl,
       retry: true,
+      beforeRequest: () => consumeCloudBudget(ledger, characters),
       body: {
         model: profile.model,
         input: { text, voice: profile.voice, language_type: language },
@@ -799,4 +890,87 @@ export async function synthesize({
   } finally {
     pendingAudio.delete(filePath);
   }
+}
+
+/** Preflight every segment and unique cache miss before authorizing any synthesis POST. */
+export async function synthesizeBatch({
+  texts,
+  profile,
+  cacheDir,
+  language = "Chinese",
+  allowCloud = false,
+  maxCloudRequests,
+  maxCloudCharacters,
+  fetchImpl = globalThis.fetch,
+}) {
+  if (!Array.isArray(texts) || texts.length === 0)
+    throw new QwenTtsError("A nonempty texts array is required for synthesis.");
+  // Validate the entire batch first; a bad later segment must never follow a paid request.
+  const inputs = texts.map((text) =>
+    synthesisInput({ text, profile, cacheDir, language }),
+  );
+  const unique = new Map(inputs.map((input) => [input.filePath, input]));
+  const inspected = await Promise.all(
+    [...unique.values()].map(async (input) => ({
+      input,
+      cached: await cachedSynthesis(input),
+    })),
+  );
+  const misses = inspected.filter(({ cached }) => !cached);
+  const ledger = {
+    allowCloud,
+    maxCloudRequests,
+    maxCloudCharacters,
+    requests: 0,
+    characters: 0,
+    cacheHits: unique.size - misses.length,
+    cacheMisses: misses.length,
+    approvedMisses: new Set(misses.map(({ input }) => input.filePath)),
+  };
+  if (misses.length) {
+    requireCloudBudget(ledger);
+    const minimumCharacters = misses.reduce(
+      (sum, { input }) => sum + input.characters,
+      0,
+    );
+    if (
+      misses.length > maxCloudRequests ||
+      minimumCharacters > maxCloudCharacters
+    )
+      throw new QwenTtsError(
+        "The complete Qwen synthesis batch exceeds the cloud budget before any POST.",
+        {
+          code: "CloudBudgetPreflightExceeded",
+          cloudUsage: cloudUsage(ledger),
+          minimumRequests: misses.length,
+          minimumCharacters,
+        },
+      );
+  }
+  const results = new Map();
+  try {
+    for (const input of unique.values())
+      results.set(
+        input.filePath,
+        await synthesizeInput(input, fetchImpl, ledger),
+      );
+  } catch (error) {
+    // Deduplicated work can share an error across callers; keep each caller's usage separate.
+    if (error instanceof QwenTtsError)
+      throw new QwenTtsError(error.message, {
+        ...error,
+        cloudUsage: cloudUsage(ledger),
+      });
+    throw error;
+  }
+  return {
+    segments: inputs.map((input) => results.get(input.filePath)),
+    cloudUsage: cloudUsage(ledger),
+  };
+}
+
+/** A single segment uses the same explicit authorization and bounded budget as a batch. */
+export async function synthesize({ text, ...options }) {
+  const { segments } = await synthesizeBatch({ ...options, texts: [text] });
+  return segments[0];
 }

@@ -35,7 +35,10 @@ export async function loadEpisode(file) {
 }
 
 export async function checkEpisode(file) {
-  const context = await loadEpisode(file);
+  return checkContext(await loadEpisode(file));
+}
+
+async function checkContext(context) {
   const { episode, base } = context;
   for (const scene of episode.scenes) {
     let voiceFrames = 0;
@@ -79,14 +82,28 @@ export async function checkEpisode(file) {
   return context;
 }
 
-export async function prepareEpisode(file, dir) {
-  const { episode, base, source, sourceHash } = await checkEpisode(file);
+export async function prepareEpisode(file, dir, cloudOptions = {}) {
+  return prepareContext(await checkEpisode(file), dir, cloudOptions);
+}
+
+async function prepareContext(context, dir, cloudOptions) {
+  const { episode, base, source, sourceHash } = context;
   const assets = { scenes: Object.create(null), tracks: [] };
   const inputs = [];
   let profile;
   if (episode.audio.mode === "qwen")
     profile = await readJson(path.resolve(ROOT, episode.audio.voiceProfile));
-  for (const scene of episode.scenes) {
+  let speechBatch;
+  if (profile) {
+    const { synthesizeBatch } = await import("./qwen.mjs");
+    speechBatch = await synthesizeBatch({
+      ...cloudOptions,
+      texts: episode.scenes.map((scene) => scene.narration),
+      profile,
+      cacheDir: path.join(ROOT, ".cache", "qwen-tts"),
+    });
+  }
+  for (const [index, scene] of episode.scenes.entries()) {
     assets.scenes[scene.id] = {};
     if (episode.audio.mode !== "none") {
       let audioFile;
@@ -94,12 +111,7 @@ export async function prepareEpisode(file, dir) {
       if (episode.audio.mode === "local")
         audioFile = assetPath(base, scene.audioFile);
       else {
-        const { synthesize } = await import("./qwen.mjs");
-        const speech = await synthesize({
-          text: scene.narration,
-          profile,
-          cacheDir: path.join(ROOT, ".cache", "qwen-tts"),
-        });
+        const speech = speechBatch.segments[index];
         audioFile = speech.path;
         speechReceipt = {
           cacheHash: speech.hash,
@@ -192,6 +204,7 @@ export async function prepareEpisode(file, dir) {
         }
       : {}),
     humanReview: "pending",
+    ...(speechBatch ? { cloudUsage: speechBatch.cloudUsage } : {}),
   };
   await writeJson(path.join(dir, "props.json"), { plan });
   await writeJson(path.join(dir, "production-manifest.json"), manifest);
@@ -330,20 +343,27 @@ export async function verifyOutput(output, plan, scale) {
 export async function renderEpisode(
   file,
   dir,
-  { scale = 1, concurrency = 2 } = {},
+  { scale = 1, concurrency = 2, ...cloudOptions } = {},
 ) {
-  const { plan, manifest } = await prepareEpisode(file, dir);
+  const context = await loadEpisode(file);
   if (
     !(
+      typeof scale === "number" &&
+      Number.isFinite(scale) &&
       scale > 0 &&
       scale <= 1 &&
-      Number.isInteger((plan.width * scale) / 2) &&
-      Number.isInteger((plan.height * scale) / 2)
+      Number.isInteger((context.episode.width * scale) / 2) &&
+      Number.isInteger((context.episode.height * scale) / 2)
     )
   )
     throw new Error("scale 应在 (0,1] 且输出宽高为偶数");
   if (!Number.isInteger(concurrency) || concurrency < 1 || concurrency > 32)
     throw new Error("concurrency 需要 1–32 的整数");
+  const { plan, manifest } = await prepareContext(
+    await checkContext(context),
+    dir,
+    cloudOptions,
+  );
   const { bundle } = await import("@remotion/bundler");
   const { selectComposition, renderMedia, renderStill } =
     await import("@remotion/renderer");

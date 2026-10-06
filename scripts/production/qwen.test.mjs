@@ -5,11 +5,33 @@ import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { promisify } from "node:util";
-import { createVoice, listVoices, QwenTtsError, synthesize } from "./qwen.mjs";
+import {
+  createVoice,
+  listVoices,
+  QwenTtsError,
+  synthesize as synthesizeApi,
+  synthesizeBatch,
+} from "./qwen.mjs";
 
 const model = "qwen3-tts-vc-2026-01-22";
 const profile = { voice: "qwen-tts-vc-test-voice", model, region: "beijing" };
 const runChild = promisify(execFile);
+// Existing provider-behavior tests explicitly authorize a small mocked request budget.
+const synthesize = (options) =>
+  synthesizeApi({
+    allowCloud: true,
+    maxCloudRequests: 3,
+    maxCloudCharacters: 1800,
+    ...options,
+  });
+const originalFetch = globalThis.fetch;
+test.before(() => {
+  globalThis.fetch = () =>
+    assert.fail("Qwen tests must never use the real network");
+});
+test.after(() => {
+  globalThis.fetch = originalFetch;
+});
 
 function wav({
   seconds = 3,
@@ -818,4 +840,367 @@ test("lists Qwen voices using the correct paginated action and region", async (t
   assert.equal(result.voices[0].model, model);
   assert.equal(result.totalCount, 21);
   assert.equal(result.pageIndex, 2);
+});
+
+test("synthesis cache misses require explicit cloud authorization even when a key exists", async (t) => {
+  const dir = await scratch(t);
+  let calls = 0;
+  const args = {
+    profile,
+    cacheDir: dir,
+    maxCloudRequests: 1,
+    maxCloudCharacters: 20,
+    fetchImpl: () => {
+      calls++;
+      assert.fail("Unauthorized synthesis must not fetch");
+    },
+  };
+  for (const allowCloud of [undefined, false, "true", 1]) {
+    await assert.rejects(
+      synthesizeBatch({ ...args, texts: ["private narration"], allowCloud }),
+      (error) =>
+        error.code === "CloudAuthorizationRequired" &&
+        error.cloudUsage.requests === 0,
+    );
+  }
+  await assert.rejects(
+    synthesizeApi({ ...args, text: "private narration" }),
+    /allowCloud=true/,
+  );
+  assert.equal(calls, 0);
+});
+
+test("both cloud limits must be explicit nonnegative safe integers before any request", async (t) => {
+  const dir = await scratch(t);
+  let calls = 0;
+  const args = {
+    texts: ["a"],
+    profile,
+    cacheDir: dir,
+    allowCloud: true,
+    maxCloudRequests: 1,
+    maxCloudCharacters: 1,
+    fetchImpl: () => {
+      calls++;
+      assert.fail("Invalid budgets must not fetch");
+    },
+  };
+  for (const value of [
+    undefined,
+    null,
+    -1,
+    1.5,
+    NaN,
+    Infinity,
+    Number.MAX_SAFE_INTEGER + 1,
+    "1",
+  ]) {
+    for (const field of ["maxCloudRequests", "maxCloudCharacters"])
+      await assert.rejects(
+        synthesizeBatch({ ...args, [field]: value }),
+        (error) => error.code === "CloudBudgetRequired",
+      );
+  }
+  for (const field of ["maxCloudRequests", "maxCloudCharacters"])
+    await assert.rejects(
+      synthesizeBatch({ ...args, [field]: 0 }),
+      (error) => error.code === "CloudBudgetPreflightExceeded",
+    );
+  assert.equal(calls, 0);
+});
+
+test("whole-batch request and Unicode character minima are checked before the first POST", async (t) => {
+  const dir = await scratch(t);
+  let calls = 0;
+  const args = {
+    texts: ["ab", "c😀"],
+    profile,
+    cacheDir: dir,
+    allowCloud: true,
+    maxCloudRequests: 2,
+    maxCloudCharacters: 4,
+    fetchImpl: () => {
+      calls++;
+      assert.fail("The entire batch must preflight before fetching");
+    },
+  };
+  await assert.rejects(
+    synthesizeBatch({ ...args, maxCloudRequests: 1 }),
+    (error) => {
+      assert.equal(error.minimumRequests, 2);
+      assert.equal(error.minimumCharacters, 4);
+      return error.code === "CloudBudgetPreflightExceeded";
+    },
+  );
+  await assert.rejects(
+    synthesizeBatch({ ...args, maxCloudCharacters: 3 }),
+    /complete.*batch exceeds/,
+  );
+  assert.equal(calls, 0);
+});
+
+test("invalid later narration, profile, or language prevents earlier requests", async (t) => {
+  const dir = await scratch(t);
+  const args = {
+    texts: ["valid", "a".repeat(601)],
+    profile,
+    cacheDir: dir,
+    allowCloud: true,
+    maxCloudRequests: 2,
+    maxCloudCharacters: 1200,
+    fetchImpl: () =>
+      assert.fail("Invalid batch input must prevent every request"),
+  };
+  await assert.rejects(synthesizeBatch(args), /600 characters/);
+  for (const texts of [[], null, "valid", ["valid", " "]])
+    await assert.rejects(synthesizeBatch({ ...args, texts }), QwenTtsError);
+  await assert.rejects(
+    synthesizeBatch({
+      ...args,
+      texts: ["valid"],
+      profile: { ...profile, region: "unknown" },
+    }),
+    /beijing or singapore/,
+  );
+  await assert.rejects(
+    synthesizeBatch({ ...args, texts: ["valid"], language: "unsupported" }),
+    /Unsupported/,
+  );
+});
+
+test("duplicate hashes use one request budget and return segments in original order", async (t) => {
+  const dir = await scratch(t);
+  let calls = 0;
+  const result = await synthesizeBatch({
+    texts: ["ab", "😀", "ab"],
+    profile,
+    cacheDir: dir,
+    allowCloud: true,
+    maxCloudRequests: 2,
+    maxCloudCharacters: 3,
+    fetchImpl: async () => {
+      calls++;
+      return json({ output: { audio: { data: wav().toString("base64") } } });
+    },
+  });
+  assert.equal(calls, 2);
+  assert.equal(result.segments.length, 3);
+  assert.equal(result.segments[0].hash, result.segments[2].hash);
+  assert.notEqual(result.segments[0].hash, result.segments[1].hash);
+  assert.deepEqual(result.cloudUsage, {
+    requests: 2,
+    characters: 3,
+    maxCloudRequests: 2,
+    maxCloudCharacters: 3,
+    cacheHits: 0,
+    cacheMisses: 2,
+  });
+});
+
+test("complete caches remain reusable offline without authorization, limits, or API keys", async (t) => {
+  const dir = await scratch(t);
+  const text = "offline narration";
+  await synthesize({
+    text,
+    profile,
+    cacheDir: dir,
+    fetchImpl: async () =>
+      json({ output: { audio: { data: wav().toString("base64") } } }),
+  });
+  delete process.env.DASHSCOPE_API_KEY;
+  for (const limits of [{}, { maxCloudRequests: 0, maxCloudCharacters: 0 }]) {
+    const result = await synthesizeBatch({
+      texts: [text, text],
+      profile,
+      cacheDir: dir,
+      ...limits,
+      fetchImpl: () => assert.fail("Offline caches must not fetch"),
+    });
+    assert.ok(result.segments.every((segment) => segment.cached));
+    assert.equal(result.cloudUsage.requests, 0);
+    assert.equal(result.cloudUsage.characters, 0);
+    assert.equal(result.cloudUsage.cacheHits, 1);
+    assert.equal(result.cloudUsage.cacheMisses, 0);
+  }
+  assert.equal(
+    (await synthesizeApi({ text, profile, cacheDir: dir })).cached,
+    true,
+  );
+});
+
+test("partial caches budget only missing unique segments and expose no narration or credentials", async (t) => {
+  const dir = await scratch(t);
+  const cachedText = "already cached private narration";
+  const fetchImpl = async () =>
+    json({ output: { audio: { data: wav().toString("base64") } } });
+  await synthesize({ text: cachedText, profile, cacheDir: dir, fetchImpl });
+  const result = await synthesizeBatch({
+    texts: [cachedText, "new", "new"],
+    profile,
+    cacheDir: dir,
+    allowCloud: true,
+    maxCloudRequests: 1,
+    maxCloudCharacters: 3,
+    fetchImpl,
+  });
+  assert.equal(result.segments[0].cached, true);
+  assert.deepEqual(result.cloudUsage, {
+    requests: 1,
+    characters: 3,
+    maxCloudRequests: 1,
+    maxCloudCharacters: 3,
+    cacheHits: 1,
+    cacheMisses: 1,
+  });
+  const serialized = JSON.stringify(result.cloudUsage);
+  assert.equal(serialized.includes(cachedText), false);
+  assert.equal(serialized.includes(process.env.DASHSCOPE_API_KEY), false);
+});
+
+test("corrupt caches cannot silently trigger cloud synthesis without authorization", async (t) => {
+  const dir = await scratch(t);
+  const args = { text: "cached text", profile, cacheDir: dir };
+  const first = await synthesize({
+    ...args,
+    fetchImpl: async () =>
+      json({ output: { audio: { data: wav().toString("base64") } } }),
+  });
+  const modified = await readFile(first.path);
+  modified[44] ^= 1;
+  await writeFile(first.path, modified);
+  await assert.rejects(
+    synthesizeApi({
+      ...args,
+      fetchImpl: () =>
+        assert.fail("Corrupt cache must require new authorization"),
+    }),
+    (error) => error.code === "CloudAuthorizationRequired",
+  );
+});
+
+test("every retry consumes shared requests and Unicode characters across the entire batch", async (t) => {
+  const dir = await scratch(t);
+  let calls = 0;
+  const result = await synthesizeBatch({
+    texts: ["😀", "bb"],
+    profile,
+    cacheDir: dir,
+    allowCloud: true,
+    maxCloudRequests: 3,
+    maxCloudCharacters: 4,
+    fetchImpl: async () => {
+      calls++;
+      if (calls === 1) return json({ code: "Throttling.RateQuota" }, 429);
+      return json({ output: { audio: { data: wav().toString("base64") } } });
+    },
+  });
+  assert.equal(calls, 3);
+  assert.equal(result.cloudUsage.requests, 3);
+  assert.equal(result.cloudUsage.characters, 4);
+});
+
+test("retry exhaustion stops before an over-budget POST and prevents later segment requests", async (t) => {
+  const dir = await scratch(t);
+  for (const [index, limits] of [
+    { maxCloudRequests: 1, maxCloudCharacters: 10 },
+    { maxCloudRequests: 3, maxCloudCharacters: 1 },
+  ].entries()) {
+    let calls = 0;
+    await assert.rejects(
+      synthesizeBatch({
+        texts: ["😀"],
+        profile,
+        cacheDir: path.join(dir, String(index)),
+        allowCloud: true,
+        ...limits,
+        fetchImpl: async () => {
+          calls++;
+          return json({ code: "Throttling.RateQuota" }, 429);
+        },
+      }),
+      (error) => {
+        assert.equal(error.cloudUsage.requests, 1);
+        assert.equal(error.cloudUsage.characters, 1);
+        return error.code === "CloudBudgetExceeded";
+      },
+    );
+    assert.equal(calls, 1);
+  }
+  let calls = 0;
+  await assert.rejects(
+    synthesizeBatch({
+      texts: ["a", "b"],
+      profile,
+      cacheDir: path.join(dir, "later"),
+      allowCloud: true,
+      maxCloudRequests: 2,
+      maxCloudCharacters: 3,
+      fetchImpl: async (_url, options) => {
+        calls++;
+        assert.equal(JSON.parse(options.body).input.text, "a");
+        if (calls === 1) return json({ code: "InternalError" }, 503);
+        return json({ output: { audio: { data: wav().toString("base64") } } });
+      },
+    }),
+    (error) =>
+      error.code === "CloudBudgetExceeded" && error.cloudUsage.requests === 2,
+  );
+  assert.equal(calls, 2);
+});
+
+test("unknown transport outcomes consume one attempt and are not retried", async (t) => {
+  const dir = await scratch(t);
+  let calls = 0;
+  await assert.rejects(
+    synthesizeBatch({
+      texts: ["one", "later"],
+      profile,
+      cacheDir: dir,
+      allowCloud: true,
+      maxCloudRequests: 5,
+      maxCloudCharacters: 20,
+      fetchImpl: async () => {
+        calls++;
+        throw new Error("private transport data");
+      },
+    }),
+    (error) => {
+      assert.equal(error.cloudUsage.requests, 1);
+      assert.equal(error.cloudUsage.characters, 3);
+      assert.equal(error.message.includes("private transport data"), false);
+      return error.code === "TransportError";
+    },
+  );
+  assert.equal(calls, 1);
+});
+
+test("a cache lost after preflight cannot add a POST even with spare authorized budget", async (t) => {
+  const dir = await scratch(t);
+  const cached = await synthesize({
+    text: "later",
+    profile,
+    cacheDir: dir,
+    fetchImpl: async () =>
+      json({ output: { audio: { data: wav().toString("base64") } } }),
+  });
+  let calls = 0;
+  await assert.rejects(
+    synthesizeBatch({
+      texts: ["first", "later"],
+      profile,
+      cacheDir: dir,
+      allowCloud: true,
+      maxCloudRequests: 2,
+      maxCloudCharacters: 10,
+      fetchImpl: async () => {
+        calls++;
+        await rm(cached.path);
+        return json({ output: { audio: { data: wav().toString("base64") } } });
+      },
+    }),
+    (error) =>
+      error.code === "CacheChangedAfterPreflight" &&
+      error.cloudUsage.requests === 1,
+  );
+  assert.equal(calls, 1);
 });

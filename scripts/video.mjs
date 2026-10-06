@@ -98,14 +98,26 @@ async function main() {
     return;
   }
   const { episode } = await loadEpisode(file);
+  const cloudOptions = {
+    allowCloud: args.includes("--allow-cloud"),
+    maxCloudRequests:
+      option("max-cloud-requests") === undefined
+        ? undefined
+        : Number(option("max-cloud-requests")),
+    maxCloudCharacters:
+      option("max-cloud-characters") === undefined
+        ? undefined
+        : Number(option("max-cloud-characters")),
+  };
   await withLock(episode.id, async (dir) => {
     if (command === "prepare") {
-      const { plan } = await prepareEpisode(file, dir);
+      const { plan } = await prepareEpisode(file, dir, cloudOptions);
       console.log(
         `已准备 ${plan.durationInFrames} 帧 (${(plan.durationInFrames / plan.fps).toFixed(3)} 秒): ${dir}`,
       );
     } else {
       const { output, qc } = await renderEpisode(file, dir, {
+        ...cloudOptions,
         scale: Number(option("scale", 1)),
         concurrency: Number(option("concurrency", 2)),
       });

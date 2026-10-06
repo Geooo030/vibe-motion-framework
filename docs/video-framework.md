@@ -75,6 +75,8 @@ npm run video:render -- examples/production-demo/episode.json --scale=0.5
 
 Qwen 音色管理：
 
+`qwen` 模式的 `prepare` / `render` 默认只复用本地有效缓存。新增合成必须在本次命令提供 `--allow-cloud --max-cloud-requests=N --max-cloud-characters=N`，两项均为明确的非负安全整数上限，包含 POST 重试用量；整集已知缺失请求或字符总量超限会在第一条请求前拒绝。仅设置 key 或音色 profile 不构成调用授权。完整边界和示例见 [qwen-tts.md](qwen-tts.md)。
+
 ```powershell
 npm run voice:create -- --sample C:/path/to/authorized-recording.wav --name george --profile voices/george.json --authorized
 npm run voice:list -- --region beijing
